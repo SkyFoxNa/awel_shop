@@ -28,3 +28,14 @@ class AdminPromoAdd(StatesGroup):
 class CatalogState(StatesGroup):
     waiting_for_search_query = State() # Очікуємо текст для пошуку
 
+# новини
+class NewsStates(StatesGroup):
+    waiting_for_title = State()      # Заголовок
+    waiting_for_content = State()    # Опис
+    waiting_for_photo = State()      # Фото
+    waiting_for_product = State()    # Код товару (необов'язково)
+    confirm_news = State()           # Фінальне прев'ю та збереження
+
+class NewsAdminStates(StatesGroup):
+    in_editor = State()         # Основний стан перегляду чернетки
+    waiting_for_field = State()  # Очікування введення конкретного поля

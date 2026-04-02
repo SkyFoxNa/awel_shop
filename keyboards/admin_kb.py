@@ -2,13 +2,16 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 from aiogram.types import InlineKeyboardButton, KeyboardButton, ReplyKeyboardMarkup
 from utils.states import AdminUserAction
 
+from keyboards.reply import BTN_PROMO, BTN_NEWS
+
 # 1. Головне меню Панелі Керування
 def get_admin_panel_kb() -> ReplyKeyboardMarkup:
     builder = ReplyKeyboardBuilder()
     # Ряд 1: Текстові кнопки для Reply-меню
     builder.row(
         KeyboardButton(text="👥 Користувачі"),
-        KeyboardButton(text="📢 Акції")  # Нова кнопка
+        KeyboardButton(text="📢 Акції"),  # Нова кнопка
+        KeyboardButton(text=BTN_NEWS)
     )
     builder.row(KeyboardButton(text="🏠")) # Повернення до головного меню
     return builder.as_markup(resize_keyboard=True)

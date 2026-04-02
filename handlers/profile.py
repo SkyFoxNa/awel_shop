@@ -10,7 +10,7 @@ from aiogram.types import (
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from db.models import User, UserReview
+from db.models import User, Review
 from states.user_states import ProfileEdit
 from keyboards.reply import get_main_kb
 from utils.validators import validate_ua_phone
@@ -20,11 +20,16 @@ router = Router()
 
 # --- ДОПОМІЖНІ ФУНКЦІЇ ---
 
-def calculate_user_rating(reviews: list[UserReview]) -> tuple[float, str]:
+# --- розрахунку рейтингу ---
+def calculate_user_rating(reviews: list[Review]) -> tuple[float, str]:
     """Розрахунок рейтингу для профілю"""
-    if not reviews:
+    # Відфільтровуємо лише відгуки типу 'user' (від менеджерів про клієнта)
+    user_reviews = [r for r in reviews if r.review_type.value == "user"]
+
+    if not user_reviews:
         return 5.0, "⭐" * 5
-    avg = sum(r.rating for r in reviews) / len(reviews)
+
+    avg = sum(r.rating for r in user_reviews) / len(user_reviews)
     avg = round(avg, 1)
     stars = "⭐" * int(avg) + ("🌓" if (avg - int(avg)) >= 0.4 else "")
     return avg, stars
@@ -44,7 +49,7 @@ async def send_profile_info(message: types.Message, user: User):
     phone = user.phone or "❌ Не додано"
 
     # Розрахунок рейтингу (reviews мають бути підвантажені через selectinload)
-    rating_val, stars = calculate_user_rating(user.reviews)
+    rating_val, stars = calculate_user_rating(user.received_reviews)
 
     # Ролі (красивий список)
     roles_list = [r.role.description for r in user.roles if r.role.description]
@@ -88,25 +93,36 @@ async def send_profile_info(message: types.Message, user: User):
 
 @router.message(F.text == "👤 Профіль")
 async def show_profile_cmd(message: types.Message, user: User, session: AsyncSession):
-    # Оскільки нам потрібні відгуки та описи ролей, переконуємось, що вони завантажені
     from sqlalchemy import select
     from db.models import UserRole, Role
 
-    # Оновлюємо об'єкт user з усіма зв'язками для коректного відображення
+    # Оновлюємо завантаження: тепер завантажуємо 'received_reviews'
+    # (це ті відгуки, які отримав цей користувач від інших)
     stmt = select(User).where(User.id == user.id).options(
         selectinload(User.roles).joinedload(UserRole.role),
-        selectinload(User.reviews)
+        selectinload(User.received_reviews)  # Змінено з reviews на received_reviews
     )
-    user_updated = (await session.execute(stmt)).scalar_one()
+    result = await session.execute(stmt)
+    user_updated = result.scalar_one()
 
+    # ВАЖЛИВО: Передаємо в функцію рейтингу саме отримані відгуки
+    rating_val, stars = calculate_user_rating(user_updated.received_reviews)
+
+    # Далі ваш код генерації штрихкоду...
     from utils.barcode_gen import generate_user_barcode
     from aiogram.types import BufferedInputFile
 
     barcode_img = generate_user_barcode(user_updated.barcode)
     photo = BufferedInputFile(barcode_img.getvalue(), filename=f"profile_{user_updated.id}.png")
 
-    await message.delete()
-    await message.answer_photo(photo=photo)
+    # Видаляємо старе повідомлення (команду) і відправляємо нове
+    try:
+        await message.delete()
+    except:
+        pass
+
+    await message.answer_photo(photo=photo, caption="Ваш штрихкод клієнта")
+    # Передаємо оновленого юзера в send_profile_info
     await send_profile_info(message, user_updated)
 
 

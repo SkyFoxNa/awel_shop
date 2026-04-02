@@ -6,22 +6,18 @@ from sqlalchemy import select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from dotenv import load_dotenv
 
-# Імпортуємо ваші налаштування та моделі
 from db.session import AsyncSessionLocal
 from db.models import (
     Location, Product, ProductPhoto, ProductStock,
-    Package, PackageStock, ProductComponent, ProductAnalogue
+    ProductComponent, ProductAnalogue
 )
 
-# Завантажуємо змінні з .env
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 async def migrate():
-    # 1. Підключення до старої бази (дані з .env)
     try:
         old_conn = await asyncpg.connect(
             user=os.getenv('OLD_DB_USER'),
@@ -37,84 +33,101 @@ async def migrate():
 
     async with AsyncSessionLocal() as new_session:
         try:
-            # --- КРОК 1: Локація (Склад Запоріжжя) ---
-            logger.info("Пошук локації 'Склад Запоріжжя'...")
+            # 1. Отримуємо головну локацію
             stmt = select(Location).where(Location.name == "Склад Запоріжжя")
             result = await new_session.execute(stmt)
             main_loc = result.scalar_one_or_none()
-
             if not main_loc:
-                logger.info("Локацію не знайдено, створюємо нову...")
                 main_loc = Location(name="Склад Запоріжжя")
                 new_session.add(main_loc)
                 await new_session.flush()
-            else:
-                logger.info(f"Використовуємо існуючу локацію ID: {main_loc.id}")
 
-            # --- КРОК 2: Пакування (packages) ---
-            logger.info("Перенесення пакування...")
+            # 2. МІГРАЦІЯ ТАРИ ТА НАЛІПОК (зі старої таблиці packages у нову products)
+            logger.info("📦 Перенесення пакування та наліпок...")
             old_pkgs = await old_conn.fetch("SELECT * FROM packages")
-            pkg_id_map = {}  # Словник для зв'язку старого ID з новим
+            pkg_map = {} # Для мапінгу старого ID на новий згенерований код
 
             for p in old_pkgs:
-                new_pkg = Package(
-                    name=p['name'],
-                    info=p['info'],
-                    price=float(p['price'] or 0),
-                    is_sticker=p['is_sticker']
-                )
-                new_session.add(new_pkg)
-                await new_session.flush()
-                pkg_id_map[p['id']] = new_pkg.id
+                # Генеруємо код: наприклад PKG_10 або STK_5
+                prefix = "STK" if p['is_sticker'] else "PKG"
+                gen_code = f"{prefix}_{p['id']}"
+                pkg_map[p['id']] = {"code": gen_code, "is_sticker": p['is_sticker']}
 
-                # Додаємо залишок пакування на склад
-                new_session.add(PackageStock(
-                    package_id=new_pkg.id,
+                # Додаємо як товар
+                new_pkg_product = Product(
+                    code=gen_code,
+                    name_ua=p['name'],
+                    info=p['info'],
+                    is_sticker=p['is_sticker'],
+                    category="Логістика"
+                )
+                new_session.add(new_pkg_product)
+
+                # Додаємо залишок для цієї тари
+                new_session.add(ProductStock(
+                    product_code=gen_code,
                     location_id=main_loc.id,
-                    balance=float(p['balance'] or 0)
+                    price=float(p['price'] or 0),
+                    balance=float(p['balance'] or 0),
+                    storage_address="Склад пакування",
+                    is_active=True
                 ))
 
-            # --- КРОК 3: Товари та Залишки ---
-            logger.info("Перенесення товарів та залишків...")
+            # 3. МІГРАЦІЯ ОСНОВНИХ ТОВАРІВ
+            logger.info("🛒 Перенесення основних товарів...")
             old_prods = await old_conn.fetch("SELECT * FROM products")
-            existing_codes = set()  # Для перевірки Foreign Keys на наступних кроках
+            existing_codes = set()
 
             for pr in old_prods:
                 existing_codes.add(pr['code'])
-
-                # Основна картка
-                new_p = Product(
+                new_session.add(Product(
                     code=pr['code'],
                     name_ua=pr['name_ua'] or pr['name'],
                     catalog_number=pr['catalog_number'],
                     category=pr['category'],
                     url=pr['url'],
                     is_package=pr['is_package'] or False
-                )
-                new_session.add(new_p)
-
-                # Створюємо запис у ProductStock (неупакований за замовчуванням)
+                ))
                 new_session.add(ProductStock(
                     product_code=pr['code'],
                     location_id=main_loc.id,
                     price=float(pr['price'] or 0),
                     balance=float(pr['balance'] or 0),
                     storage_address=pr['storages'],
-                    is_packed=False,
-                    min_balance=0.0,  # Поки що нуль, налаштуєте пізніше
                     is_active=True
                 ))
 
-                # Аналоги (якщо є в колонці analogues через кому)
-                if pr.get('analogues'):
-                    codes = [c.strip() for c in pr['analogues'].split(',') if c.strip()]
-                    for a_code in codes:
-                        new_session.add(ProductAnalogue(
-                            product_code=pr['code'],
-                            analogue_code=a_code
-                        ))
+            # 4. МІГРАЦІЯ КОМПЛЕКТАЦІЇ (ProductComponent)
+            logger.info("🛠 Збірка компонентів комплектів...")
+            old_comps = await old_conn.fetch("SELECT * FROM product_components")
+            for c in old_comps:
+                if c['product_code'] not in existing_codes:
+                    continue
 
-            # --- КРОК 4: Фотографії (з захистом від "сиріт") ---
+                # Визначаємо код компонента та прапорці
+                comp_code = c['component_code']
+                is_boxing = False
+                is_sticker_flag = False
+
+                # Якщо в старій базі було посилання на package_id
+                if c['id_package']:
+                    p_info = pkg_map.get(c['id_package'])
+                    if p_info:
+                        comp_code = p_info['code']
+                        if p_info['is_sticker']:
+                            is_sticker_flag = True
+                        else:
+                            is_boxing = True
+
+                new_session.add(ProductComponent(
+                    parent_code=c['product_code'],
+                    component_code=comp_code,
+                    quantity=float(c['quantity'] or 1),
+                    is_boxing=is_boxing,
+                    is_sticker=is_sticker_flag
+                ))
+
+            # --- КРОК 5: Фотографії (з захистом від "сиріт") ---
             logger.info("Перенесення фотографій...")
             old_photos = await old_conn.fetch("SELECT * FROM photo_tg")
             for ph in old_photos:
@@ -137,31 +150,14 @@ async def migrate():
                     display_order=order
                 ))
 
-            # --- КРОК 5: Комплекти ---
-            logger.info("Перенесення компонентів комплектів...")
-            old_comps = await old_conn.fetch("SELECT * FROM product_components")
-            for c in old_comps:
-                if c['product_code'] not in existing_codes:
-                    continue
-
-                new_session.add(ProductComponent(
-                    parent_code=c['product_code'],
-                    component_code=c['component_code'],
-                    quantity=float(c['quantity'] or 1),
-                    is_sticker=c['is_sticker'],
-                    package_id=pkg_id_map.get(c['id_package'])  # Мапінг ID пакування
-                ))
-
-            # Фінальний коміт
             await new_session.commit()
-            logger.info("✨ МІГРАЦІЯ ЗАВЕРШЕНА УСПІШНО!")
+            logger.info("✨ МІГРАЦІЯ ЗАВЕРШЕНА!")
 
         except Exception as e:
             await new_session.rollback()
-            logger.error(f"💥 Помилка під час міграції: {e}", exc_info=True)
+            logger.error(f"💥 Помилка: {e}", exc_info=True)
         finally:
             await old_conn.close()
-
 
 if __name__ == "__main__":
     asyncio.run(migrate())

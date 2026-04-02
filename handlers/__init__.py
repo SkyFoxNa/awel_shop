@@ -1,7 +1,11 @@
 from .start import router as start_router
 from .common import router as common_router
 from .product_search import router as product_search_router
+from .product_package import router as product_package_router
+from .cart import router as cart_router
+from .analog import router as analog_router
 from .profile import router as profile_router
+from .news import router as news_router
 from .admin_users import router as admin_users_router
 from .admin_promos import router as admin_promos_router
 # from .admin_shares import router as admin_shares_router
@@ -13,7 +17,11 @@ routers = [
     start_router,
     common_router,
     product_search_router,
+    product_package_router,
+    cart_router,
+    analog_router,
     profile_router,
+    news_router,
     admin_users_router,
     admin_promos_router,
     # admin_shares_router,

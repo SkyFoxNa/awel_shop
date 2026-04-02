@@ -8336,3 +8336,1364 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: messa
 2026-03-25 00:46:22,157 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
 2026-03-25 00:46:22,157 - INFO - aiogram.dispatcher - Polling stopped
 2026-03-25 00:46:22,408 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 13:04:39,288 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 13:04:39,493 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 13:04:39,568 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 13:05:11,853 - INFO - aiogram.event - Update id=933186106 is handled. Duration 844 ms by bot id=8350144188
+2026-03-29 13:05:17,825 - INFO - aiogram.event - Update id=933186107 is handled. Duration 484 ms by bot id=8350144188
+2026-03-29 13:05:22,204 - INFO - aiogram.event - Update id=933186108 is handled. Duration 1640 ms by bot id=8350144188
+2026-03-29 13:05:31,658 - INFO - aiogram.event - Update id=933186109 is handled. Duration 1411 ms by bot id=8350144188
+2026-03-29 13:05:38,737 - INFO - aiogram.event - Update id=933186110 is not handled. Duration 371 ms by bot id=8350144188
+2026-03-29 13:05:46,281 - INFO - aiogram.event - Update id=933186111 is not handled. Duration 364 ms by bot id=8350144188
+2026-03-29 13:05:51,660 - INFO - aiogram.event - Update id=933186112 is handled. Duration 1028 ms by bot id=8350144188
+2026-03-29 13:11:50,522 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 13:11:50,523 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 13:11:50,523 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 13:11:50,774 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 13:11:50,948 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 13:11:50,949 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 13:14:07,383 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 13:14:07,573 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 13:14:07,632 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 13:14:15,476 - INFO - aiogram.event - Update id=933186113 is handled. Duration 698 ms by bot id=8350144188
+2026-03-29 13:14:20,507 - INFO - aiogram.event - Update id=933186114 is handled. Duration 1554 ms by bot id=8350144188
+2026-03-29 13:14:23,320 - INFO - aiogram.event - Update id=933186115 is handled. Duration 1474 ms by bot id=8350144188
+2026-03-29 13:19:57,158 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 13:19:57,159 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 13:19:57,160 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 13:19:57,411 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 14:40:14,193 - INFO - root - Додано роль: admin
+2026-03-29 14:40:14,341 - INFO - root - Додано роль: owner
+2026-03-29 14:40:14,433 - INFO - root - Додано роль: manager
+2026-03-29 14:40:14,525 - INFO - root - Додано роль: creator
+2026-03-29 14:40:14,617 - INFO - root - Додано роль: seller
+2026-03-29 14:40:14,709 - INFO - root - Додано роль: pro_client
+2026-03-29 14:40:14,802 - INFO - root - Додано роль: client
+2026-03-29 14:40:14,895 - INFO - root - Додано роль: warehouse
+2026-03-29 14:40:15,558 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 14:40:15,733 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 14:40:15,792 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 14:40:20,423 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 14:40:20,424 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 14:40:20,425 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 14:40:20,675 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 14:40:20,840 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 14:40:20,840 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 14:54:12,441 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 14:54:12,618 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 14:54:12,674 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 14:54:23,966 - INFO - aiogram.event - Update id=933186116 is handled. Duration 562 ms by bot id=8350144188
+2026-03-29 14:54:32,332 - INFO - aiogram.event - Update id=933186117 is handled. Duration 1552 ms by bot id=8350144188
+2026-03-29 14:54:35,907 - INFO - aiogram.event - Update id=933186118 is handled. Duration 492 ms by bot id=8350144188
+2026-03-29 14:54:40,228 - INFO - aiogram.event - Update id=933186119 is handled. Duration 1667 ms by bot id=8350144188
+2026-03-29 14:55:05,483 - INFO - aiogram.event - Update id=933186120 is handled. Duration 1543 ms by bot id=8350144188
+2026-03-29 14:55:09,058 - INFO - aiogram.event - Update id=933186121 is not handled. Duration 368 ms by bot id=8350144188
+2026-03-29 14:56:32,677 - INFO - aiogram.event - Update id=933186122 is handled. Duration 1118 ms by bot id=8350144188
+2026-03-29 14:57:07,294 - INFO - aiogram.event - Update id=933186123 is handled. Duration 683 ms by bot id=8350144188
+2026-03-29 14:57:09,136 - INFO - aiogram.event - Update id=933186124 is handled. Duration 434 ms by bot id=8350144188
+2026-03-29 14:57:13,998 - INFO - aiogram.event - Update id=933186125 is handled. Duration 1303 ms by bot id=8350144188
+2026-03-29 15:00:23,448 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 15:00:23,449 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:00:23,449 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 15:02:08,180 - INFO - root - Додано роль: admin
+2026-03-29 15:02:08,322 - INFO - root - Додано роль: owner
+2026-03-29 15:02:08,411 - INFO - root - Додано роль: manager
+2026-03-29 15:02:08,499 - INFO - root - Додано роль: creator
+2026-03-29 15:02:08,587 - INFO - root - Додано роль: seller
+2026-03-29 15:02:08,676 - INFO - root - Додано роль: pro_client
+2026-03-29 15:02:08,764 - INFO - root - Додано роль: client
+2026-03-29 15:02:08,852 - INFO - root - Додано роль: warehouse
+2026-03-29 15:02:09,390 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:02:09,566 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:02:09,625 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:02:12,273 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 15:02:12,274 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:02:12,274 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 15:02:12,525 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:02:12,686 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:02:12,686 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:02:59,511 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:02:59,679 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:02:59,729 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:03:13,697 - INFO - aiogram.event - Update id=933186126 is handled. Duration 1830 ms by bot id=8350144188
+2026-03-29 15:03:16,120 - INFO - aiogram.event - Update id=933186127 is handled. Duration 448 ms by bot id=8350144188
+2026-03-29 15:03:24,807 - INFO - aiogram.event - Update id=933186128 is handled. Duration 5418 ms by bot id=8350144188
+2026-03-29 15:03:28,418 - INFO - aiogram.event - Update id=933186129 is handled. Duration 1307 ms by bot id=8350144188
+2026-03-29 15:03:31,377 - INFO - aiogram.event - Update id=933186130 is not handled. Duration 341 ms by bot id=8350144188
+2026-03-29 15:03:40,764 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 15:03:40,765 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:03:40,765 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 15:07:21,950 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:07:22,124 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:07:22,179 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:07:28,453 - INFO - aiogram.event - Update id=933186131 is handled. Duration 702 ms by bot id=8350144188
+2026-03-29 15:07:32,927 - INFO - aiogram.event - Update id=933186132 is handled. Duration 1517 ms by bot id=8350144188
+2026-03-29 15:07:35,921 - INFO - aiogram.event - Update id=933186133 is handled. Duration 1818 ms by bot id=8350144188
+2026-03-29 15:07:42,751 - INFO - aiogram.event - Update id=933186134 is handled. Duration 586 ms by bot id=8350144188
+2026-03-29 15:10:14,425 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 15:10:14,426 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:10:14,426 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 15:54:01,415 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:54:01,604 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:54:01,663 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:54:08,078 - INFO - aiogram.event - Update id=933186135 is handled. Duration 701 ms by bot id=8350144188
+2026-03-29 15:54:14,081 - INFO - aiogram.event - Update id=933186136 is handled. Duration 1658 ms by bot id=8350144188
+2026-03-29 15:54:17,583 - INFO - aiogram.event - Update id=933186137 is handled. Duration 1313 ms by bot id=8350144188
+2026-03-29 15:54:30,494 - ERROR - handlers.product_package - Error sending kit item 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:54:30,651 - ERROR - handlers.product_package - Error sending kit item 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:54:30,803 - ERROR - handlers.product_package - Error sending kit item 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:54:31,437 - INFO - aiogram.event - Update id=933186138 is handled. Duration 1616 ms by bot id=8350144188
+2026-03-29 15:59:27,340 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 15:59:27,341 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:59:27,341 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 15:59:36,489 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 15:59:36,654 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 15:59:36,704 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 15:59:44,373 - INFO - aiogram.event - Update id=933186139 is handled. Duration 716 ms by bot id=8350144188
+2026-03-29 15:59:48,321 - INFO - aiogram.event - Update id=933186140 is handled. Duration 1476 ms by bot id=8350144188
+2026-03-29 15:59:50,967 - INFO - aiogram.event - Update id=933186141 is handled. Duration 1459 ms by bot id=8350144188
+2026-03-29 15:59:54,037 - ERROR - handlers.product_package - Error sending kit item 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:59:54,186 - ERROR - handlers.product_package - Error sending kit item 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:59:54,423 - ERROR - handlers.product_package - Error sending kit item 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 15:59:55,035 - INFO - aiogram.event - Update id=933186142 is handled. Duration 1598 ms by bot id=8350144188
+2026-03-29 16:00:05,306 - INFO - aiogram.event - Update id=933186143 is handled. Duration 1084 ms by bot id=8350144188
+2026-03-29 16:00:21,605 - ERROR - handlers.product_package - Error sending kit item 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:00:21,783 - ERROR - handlers.product_package - Error sending kit item 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:00:22,180 - ERROR - handlers.product_package - Error sending kit item 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:00:22,860 - INFO - aiogram.event - Update id=933186144 is handled. Duration 1882 ms by bot id=8350144188
+2026-03-29 16:01:30,386 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:01:30,387 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:01:30,387 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:01:30,639 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:01:30,811 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:01:30,811 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:01:39,308 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:01:39,475 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:01:39,531 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:01:43,616 - INFO - aiogram.event - Update id=933186145 is handled. Duration 697 ms by bot id=8350144188
+2026-03-29 16:01:47,316 - INFO - aiogram.event - Update id=933186146 is handled. Duration 1591 ms by bot id=8350144188
+2026-03-29 16:01:49,959 - INFO - aiogram.event - Update id=933186147 is handled. Duration 1360 ms by bot id=8350144188
+2026-03-29 16:01:52,202 - ERROR - handlers.product_package - Error sending kit item 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:01:52,363 - ERROR - handlers.product_package - Error sending kit item 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:01:52,521 - ERROR - handlers.product_package - Error sending kit item 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:01:53,252 - INFO - aiogram.event - Update id=933186148 is handled. Duration 1668 ms by bot id=8350144188
+2026-03-29 16:01:55,905 - INFO - aiogram.event - Update id=933186149 is handled. Duration 518 ms by bot id=8350144188
+2026-03-29 16:02:21,361 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:02:21,362 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:02:21,363 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:02:21,614 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:02:21,760 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:02:21,760 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:14:13,243 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:14:13,421 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:14:13,474 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:14:25,341 - INFO - aiogram.event - Update id=933186150 is handled. Duration 842 ms by bot id=8350144188
+2026-03-29 16:14:29,554 - INFO - aiogram.event - Update id=933186151 is handled. Duration 1667 ms by bot id=8350144188
+2026-03-29 16:14:32,417 - INFO - aiogram.event - Update id=933186152 is handled. Duration 1483 ms by bot id=8350144188
+2026-03-29 16:14:35,425 - ERROR - handlers.product_package - Error sending kit part 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:14:35,623 - ERROR - handlers.product_package - Error sending kit part 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:14:35,826 - ERROR - handlers.product_package - Error sending kit part 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:14:36,462 - INFO - aiogram.event - Update id=933186153 is handled. Duration 1695 ms by bot id=8350144188
+2026-03-29 16:16:41,004 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:16:41,005 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:16:41,006 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:16:41,257 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:23:16,408 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:23:16,621 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:23:16,688 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:24:21,575 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:24:21,576 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:24:21,576 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:24:31,807 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:24:31,966 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:24:32,020 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:24:40,837 - INFO - aiogram.event - Update id=933186154 is handled. Duration 1029 ms by bot id=8350144188
+2026-03-29 16:24:46,300 - INFO - aiogram.event - Update id=933186155 is handled. Duration 421 ms by bot id=8350144188
+2026-03-29 16:24:48,415 - INFO - aiogram.event - Update id=933186156 is handled. Duration 603 ms by bot id=8350144188
+2026-03-29 16:24:50,408 - INFO - aiogram.event - Update id=933186157 is handled. Duration 798 ms by bot id=8350144188
+2026-03-29 16:24:53,154 - INFO - aiogram.event - Update id=933186158 is handled. Duration 811 ms by bot id=8350144188
+2026-03-29 16:24:59,974 - INFO - aiogram.event - Update id=933186159 is handled. Duration 1798 ms by bot id=8350144188
+2026-03-29 16:25:05,108 - INFO - aiogram.event - Update id=933186160 is handled. Duration 680 ms by bot id=8350144188
+2026-03-29 16:25:10,372 - INFO - aiogram.event - Update id=933186161 is handled. Duration 1876 ms by bot id=8350144188
+2026-03-29 16:25:13,123 - INFO - aiogram.event - Update id=933186162 is handled. Duration 1414 ms by bot id=8350144188
+2026-03-29 16:25:17,907 - ERROR - handlers.product_package - Error sending kit part 1177000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:25:18,053 - ERROR - handlers.product_package - Error sending kit part 932000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:25:18,201 - ERROR - handlers.product_package - Error sending kit part 931000: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-29 16:25:18,699 - INFO - aiogram.event - Update id=933186163 is handled. Duration 1573 ms by bot id=8350144188
+2026-03-29 16:27:24,476 - INFO - aiogram.event - Update id=933186164 is handled. Duration 518 ms by bot id=8350144188
+2026-03-29 16:27:33,454 - INFO - aiogram.event - Update id=933186165 is handled. Duration 3063 ms by bot id=8350144188
+2026-03-29 16:27:58,860 - INFO - aiogram.event - Update id=933186166 is handled. Duration 3242 ms by bot id=8350144188
+2026-03-29 16:28:07,303 - INFO - aiogram.event - Update id=933186167 is handled. Duration 662 ms by bot id=8350144188
+2026-03-29 16:28:21,584 - INFO - aiogram.event - Update id=933186168 is handled. Duration 2764 ms by bot id=8350144188
+2026-03-29 16:28:35,473 - INFO - aiogram.event - Update id=933186170 is handled. Duration 1928 ms by bot id=8350144188
+2026-03-29 16:28:37,674 - INFO - aiogram.event - Update id=933186169 is handled. Duration 12102 ms by bot id=8350144188
+2026-03-29 16:29:24,181 - INFO - aiogram.event - Update id=933186171 is handled. Duration 2416 ms by bot id=8350144188
+2026-03-29 16:29:27,711 - INFO - aiogram.event - Update id=933186172 is handled. Duration 1657 ms by bot id=8350144188
+2026-03-29 16:29:45,717 - INFO - aiogram.event - Update id=933186173 is handled. Duration 992 ms by bot id=8350144188
+2026-03-29 16:30:01,821 - INFO - aiogram.event - Update id=933186174 is handled. Duration 1179 ms by bot id=8350144188
+2026-03-29 16:30:14,672 - INFO - aiogram.event - Update id=933186175 is handled. Duration 453 ms by bot id=8350144188
+2026-03-29 16:30:19,707 - INFO - aiogram.event - Update id=933186176 is handled. Duration 1774 ms by bot id=8350144188
+2026-03-29 16:30:22,388 - INFO - aiogram.event - Update id=933186177 is handled. Duration 1149 ms by bot id=8350144188
+2026-03-29 16:30:27,696 - INFO - aiogram.event - Update id=933186178 is handled. Duration 1785 ms by bot id=8350144188
+2026-03-29 16:31:04,889 - INFO - aiogram.event - Update id=933186179 is handled. Duration 1190 ms by bot id=8350144188
+2026-03-29 16:47:32,543 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:47:32,544 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:47:32,544 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:47:32,795 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:47:32,948 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:47:32,949 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:50:43,180 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:50:43,355 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:50:43,409 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:50:47,404 - INFO - aiogram.event - Update id=933186180 is handled. Duration 2159 ms by bot id=8350144188
+2026-03-29 16:50:49,801 - INFO - aiogram.event - Update id=933186181 is handled. Duration 1300 ms by bot id=8350144188
+2026-03-29 16:50:51,619 - INFO - aiogram.event - Update id=933186182 is handled. Duration 457 ms by bot id=8350144188
+2026-03-29 16:53:26,890 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:53:26,891 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:53:26,891 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:55:57,862 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:55:58,032 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:55:58,082 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:56:18,051 - INFO - aiogram.event - Update id=933186183 is handled. Duration 740 ms by bot id=8350144188
+2026-03-29 16:56:21,876 - INFO - aiogram.event - Update id=933186184 is handled. Duration 1721 ms by bot id=8350144188
+2026-03-29 16:56:24,878 - INFO - aiogram.event - Update id=933186185 is handled. Duration 1548 ms by bot id=8350144188
+2026-03-29 16:56:27,126 - INFO - aiogram.event - Update id=933186186 is handled. Duration 444 ms by bot id=8350144188
+2026-03-29 16:56:36,447 - INFO - aiogram.event - Update id=933186187 is handled. Duration 482 ms by bot id=8350144188
+2026-03-29 16:58:52,316 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 16:58:52,317 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 16:58:52,317 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 16:58:52,568 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 16:58:52,743 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 16:58:52,744 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 19:34:05,288 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 19:34:05,481 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 19:34:05,543 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 19:34:16,197 - INFO - aiogram.event - Update id=933186189 is handled. Duration 1053 ms by bot id=8350144188
+2026-03-29 19:34:22,346 - INFO - aiogram.event - Update id=933186190 is handled. Duration 1387 ms by bot id=8350144188
+2026-03-29 19:34:54,823 - INFO - aiogram.event - Update id=933186191 is handled. Duration 492 ms by bot id=8350144188
+2026-03-29 19:35:06,145 - INFO - aiogram.event - Update id=933186192 is handled. Duration 1133 ms by bot id=8350144188
+2026-03-29 19:35:10,944 - INFO - aiogram.event - Update id=933186193 is handled. Duration 416 ms by bot id=8350144188
+2026-03-29 19:35:15,600 - INFO - aiogram.event - Update id=933186194 is handled. Duration 622 ms by bot id=8350144188
+2026-03-29 19:35:17,478 - ERROR - root - 🚨 Виникла помилка: 'User' object has no attribute 'reviews'
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/admin_users.py", line 161, in view_user_card
+    text, kb = await get_user_card_content(user)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/admin_users.py", line 52, in get_user_card_content
+    f"📊 <b>Рейтинг:</b> {rating_val} {stars} ({len(user.reviews) if user.reviews else 0} відгуків)\n"
+                                                                     ^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'reviews'
+2026-03-29 19:35:17,984 - INFO - aiogram.event - Update id=933186195 is handled. Duration 992 ms by bot id=8350144188
+2026-03-29 19:36:47,431 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 19:36:47,431 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 19:36:47,432 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 19:38:43,111 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 19:38:43,291 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 19:38:43,345 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 19:38:47,964 - INFO - aiogram.event - Update id=933186196 is handled. Duration 837 ms by bot id=8350144188
+2026-03-29 19:38:50,708 - INFO - aiogram.event - Update id=933186197 is handled. Duration 415 ms by bot id=8350144188
+2026-03-29 19:38:52,526 - INFO - aiogram.event - Update id=933186198 is handled. Duration 657 ms by bot id=8350144188
+2026-03-29 19:38:54,827 - INFO - aiogram.event - Update id=933186199 is handled. Duration 1087 ms by bot id=8350144188
+2026-03-29 19:38:59,902 - INFO - aiogram.event - Update id=933186200 is handled. Duration 620 ms by bot id=8350144188
+2026-03-29 19:39:01,531 - INFO - aiogram.event - Update id=933186201 is handled. Duration 491 ms by bot id=8350144188
+2026-03-29 19:39:14,655 - INFO - aiogram.event - Update id=933186202 is handled. Duration 606 ms by bot id=8350144188
+2026-03-29 19:39:17,120 - INFO - aiogram.event - Update id=933186203 is handled. Duration 655 ms by bot id=8350144188
+2026-03-29 19:39:34,535 - INFO - aiogram.event - Update id=933186204 is handled. Duration 441 ms by bot id=8350144188
+2026-03-29 19:39:37,862 - INFO - aiogram.event - Update id=933186205 is handled. Duration 1128 ms by bot id=8350144188
+2026-03-29 19:40:03,948 - INFO - aiogram.event - Update id=933186206 is handled. Duration 494 ms by bot id=8350144188
+2026-03-29 19:41:43,995 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 19:41:43,996 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 19:41:43,996 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 21:59:57,011 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 21:59:57,192 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 21:59:57,242 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 22:00:09,638 - INFO - aiogram.event - Update id=933186207 is handled. Duration 1132 ms by bot id=8350144188
+2026-03-29 22:00:10,760 - INFO - aiogram.event - Update id=933186208 is handled. Duration 650 ms by bot id=8350144188
+2026-03-29 22:00:21,226 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 22:00:21,227 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 22:00:21,227 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 23:22:56,640 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 23:22:56,818 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 23:22:56,874 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 23:23:02,409 - INFO - aiogram.event - Update id=933186209 is handled. Duration 992 ms by bot id=8350144188
+2026-03-29 23:23:04,509 - INFO - aiogram.event - Update id=933186210 is handled. Duration 635 ms by bot id=8350144188
+2026-03-29 23:23:08,213 - INFO - aiogram.event - Update id=933186211 is handled. Duration 622 ms by bot id=8350144188
+2026-03-29 23:23:45,690 - INFO - aiogram.event - Update id=933186212 is handled. Duration 611 ms by bot id=8350144188
+2026-03-29 23:23:51,238 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 23:23:51,239 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 23:23:51,239 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 23:23:51,490 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 23:39:28,443 - INFO - root - Бот AWEL Shop запускається...
+2026-03-29 23:39:28,622 - INFO - aiogram.dispatcher - Start polling
+2026-03-29 23:39:28,676 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 23:39:36,890 - INFO - aiogram.event - Update id=933186213 is handled. Duration 858 ms by bot id=8350144188
+2026-03-29 23:39:38,672 - INFO - aiogram.event - Update id=933186214 is handled. Duration 590 ms by bot id=8350144188
+2026-03-29 23:39:40,571 - INFO - aiogram.event - Update id=933186215 is handled. Duration 550 ms by bot id=8350144188
+2026-03-29 23:39:49,283 - INFO - aiogram.event - Update id=933186216 is handled. Duration 536 ms by bot id=8350144188
+2026-03-29 23:39:54,843 - INFO - aiogram.event - Update id=933186217 is handled. Duration 535 ms by bot id=8350144188
+2026-03-29 23:40:04,365 - INFO - aiogram.event - Update id=933186218 is handled. Duration 608 ms by bot id=8350144188
+2026-03-29 23:40:37,357 - INFO - aiogram.event - Update id=933186219 is handled. Duration 679 ms by bot id=8350144188
+2026-03-29 23:40:43,448 - INFO - aiogram.event - Update id=933186220 is handled. Duration 585 ms by bot id=8350144188
+2026-03-29 23:42:42,797 - INFO - aiogram.event - Update id=933186221 is handled. Duration 479 ms by bot id=8350144188
+2026-03-29 23:42:44,141 - INFO - aiogram.event - Update id=933186222 is handled. Duration 518 ms by bot id=8350144188
+2026-03-29 23:42:47,716 - INFO - aiogram.event - Update id=933186223 is handled. Duration 565 ms by bot id=8350144188
+2026-03-29 23:43:05,011 - INFO - aiogram.event - Update id=933186224 is handled. Duration 448 ms by bot id=8350144188
+2026-03-29 23:43:09,407 - INFO - aiogram.event - Update id=933186225 is handled. Duration 512 ms by bot id=8350144188
+2026-03-29 23:43:36,318 - INFO - aiogram.event - Update id=933186226 is handled. Duration 438 ms by bot id=8350144188
+2026-03-29 23:43:43,269 - INFO - aiogram.event - Update id=933186227 is handled. Duration 492 ms by bot id=8350144188
+2026-03-29 23:43:48,210 - INFO - aiogram.event - Update id=933186228 is handled. Duration 527 ms by bot id=8350144188
+2026-03-29 23:43:54,401 - INFO - aiogram.event - Update id=933186229 is handled. Duration 488 ms by bot id=8350144188
+2026-03-29 23:44:08,019 - INFO - aiogram.event - Update id=933186230 is handled. Duration 558 ms by bot id=8350144188
+2026-03-29 23:44:24,182 - ERROR - root - 🚨 Виникла помилка: 'tg_file_id' is an invalid keyword argument for ProductNews
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 237, in process_publish
+    session.add(ProductNews(title=data["title"], content=data["content"], product_code=data["product_code"],
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            tg_file_id=data["photo_id"], published_at=pub_date, is_active=True))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 596, in _initialize_instance
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 594, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/decl_base.py", line 2179, in _declarative_constructor
+    raise TypeError(
+        "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
+    )
+TypeError: 'tg_file_id' is an invalid keyword argument for ProductNews
+2026-03-29 23:44:24,708 - INFO - aiogram.event - Update id=933186231 is handled. Duration 1317 ms by bot id=8350144188
+2026-03-29 23:44:43,532 - INFO - aiogram.event - Update id=933186232 is handled. Duration 548 ms by bot id=8350144188
+2026-03-29 23:45:51,679 - INFO - aiogram.event - Update id=933186233 is handled. Duration 472 ms by bot id=8350144188
+2026-03-29 23:45:54,176 - INFO - aiogram.event - Update id=933186234 is handled. Duration 593 ms by bot id=8350144188
+2026-03-29 23:53:47,238 - INFO - aiogram.event - Update id=933186235 is handled. Duration 1608 ms by bot id=8350144188
+2026-03-29 23:53:49,973 - INFO - aiogram.event - Update id=933186236 is handled. Duration 592 ms by bot id=8350144188
+2026-03-29 23:54:59,200 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-29 23:54:59,201 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-29 23:54:59,201 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-29 23:54:59,452 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:05:28,178 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:05:28,352 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:05:28,405 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:05:36,154 - INFO - aiogram.event - Update id=933186237 is handled. Duration 852 ms by bot id=8350144188
+2026-03-30 22:05:45,485 - INFO - aiogram.event - Update id=933186238 is handled. Duration 585 ms by bot id=8350144188
+2026-03-30 22:05:48,016 - INFO - aiogram.event - Update id=933186239 is handled. Duration 637 ms by bot id=8350144188
+2026-03-30 22:05:55,984 - INFO - aiogram.event - Update id=933186240 is handled. Duration 507 ms by bot id=8350144188
+2026-03-30 22:06:03,109 - ERROR - root - 🚨 Виникла помилка: 'Product' object has no attribute 'price'
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 257, in process_editor_input
+    await refresh_editor_msg(message, state, session)
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 104, in refresh_editor_msg
+    text, kb, photo_id = await get_editor_markup(data, session)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 71, in get_editor_markup
+    f"└ <b>Ціна:</b> {product.price} грн"
+                      ^^^^^^^^^^^^^
+AttributeError: 'Product' object has no attribute 'price'
+2026-03-30 22:06:03,610 - INFO - aiogram.event - Update id=933186241 is handled. Duration 1282 ms by bot id=8350144188
+2026-03-30 22:07:11,583 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 22:07:11,583 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:07:11,584 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 22:07:11,835 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:07:12,005 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:07:12,005 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:12:08,852 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:12:09,021 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:12:09,070 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:12:13,884 - INFO - aiogram.event - Update id=933186242 is handled. Duration 691 ms by bot id=8350144188
+2026-03-30 22:12:18,844 - INFO - aiogram.event - Update id=933186243 is handled. Duration 803 ms by bot id=8350144188
+2026-03-30 22:12:20,673 - INFO - aiogram.event - Update id=933186244 is handled. Duration 482 ms by bot id=8350144188
+2026-03-30 22:13:08,543 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 22:13:08,544 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:13:08,544 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 22:13:08,795 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:13:08,976 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:13:08,976 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:16:36,460 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:16:36,663 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:16:36,726 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:16:40,591 - INFO - aiogram.event - Update id=933186245 is handled. Duration 883 ms by bot id=8350144188
+2026-03-30 22:16:42,459 - INFO - aiogram.event - Update id=933186246 is handled. Duration 571 ms by bot id=8350144188
+2026-03-30 22:16:44,201 - INFO - aiogram.event - Update id=933186247 is handled. Duration 705 ms by bot id=8350144188
+2026-03-30 22:16:48,378 - INFO - aiogram.event - Update id=933186248 is handled. Duration 466 ms by bot id=8350144188
+2026-03-30 22:16:53,321 - INFO - aiogram.event - Update id=933186249 is handled. Duration 989 ms by bot id=8350144188
+2026-03-30 22:16:56,982 - INFO - aiogram.event - Update id=933186250 is handled. Duration 1192 ms by bot id=8350144188
+2026-03-30 22:17:23,530 - INFO - aiogram.event - Update id=933186251 is handled. Duration 488 ms by bot id=8350144188
+2026-03-30 22:17:37,701 - INFO - aiogram.event - Update id=933186252 is handled. Duration 846 ms by bot id=8350144188
+2026-03-30 22:17:42,726 - INFO - aiogram.event - Update id=933186253 is handled. Duration 494 ms by bot id=8350144188
+2026-03-30 22:17:56,540 - INFO - aiogram.event - Update id=933186254 is handled. Duration 803 ms by bot id=8350144188
+2026-03-30 22:18:03,296 - ERROR - root - 🚨 Виникла помилка: 'is_active' is an invalid keyword argument for ProductNews
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 292, in n_pub
+    session.add(ProductNews(title=data["title"], content=data["content"], product_code=data["product_code"],
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            photo_id=data["photo_id"], published_at=dt, is_active=True))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 596, in _initialize_instance
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 594, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/sqlalchemy/orm/decl_base.py", line 2179, in _declarative_constructor
+    raise TypeError(
+        "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
+    )
+TypeError: 'is_active' is an invalid keyword argument for ProductNews
+2026-03-30 22:18:03,850 - INFO - aiogram.event - Update id=933186255 is handled. Duration 1057 ms by bot id=8350144188
+2026-03-30 22:22:51,296 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 22:22:51,297 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:22:51,297 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 22:22:51,548 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:30:45,211 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:30:45,401 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:30:45,459 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:31:06,611 - INFO - aiogram.event - Update id=933186256 is handled. Duration 817 ms by bot id=8350144188
+2026-03-30 22:31:08,247 - INFO - aiogram.event - Update id=933186257 is handled. Duration 492 ms by bot id=8350144188
+2026-03-30 22:31:12,797 - INFO - aiogram.event - Update id=933186258 is handled. Duration 539 ms by bot id=8350144188
+2026-03-30 22:31:24,672 - INFO - aiogram.event - Update id=933186259 is handled. Duration 798 ms by bot id=8350144188
+2026-03-30 22:31:26,910 - INFO - aiogram.event - Update id=933186260 is handled. Duration 929 ms by bot id=8350144188
+2026-03-30 22:31:35,015 - INFO - aiogram.event - Update id=933186261 is handled. Duration 411 ms by bot id=8350144188
+2026-03-30 22:31:51,995 - INFO - aiogram.event - Update id=933186262 is handled. Duration 657 ms by bot id=8350144188
+2026-03-30 22:31:54,287 - INFO - aiogram.event - Update id=933186263 is handled. Duration 469 ms by bot id=8350144188
+2026-03-30 22:32:05,023 - INFO - aiogram.event - Update id=933186264 is handled. Duration 625 ms by bot id=8350144188
+2026-03-30 22:32:12,973 - INFO - aiogram.event - Update id=933186265 is handled. Duration 641 ms by bot id=8350144188
+2026-03-30 22:32:18,419 - INFO - aiogram.event - Update id=933186266 is handled. Duration 1120 ms by bot id=8350144188
+2026-03-30 22:32:37,390 - INFO - aiogram.event - Update id=933186267 is handled. Duration 1065 ms by bot id=8350144188
+2026-03-30 22:32:43,493 - INFO - aiogram.event - Update id=933186268 is handled. Duration 1011 ms by bot id=8350144188
+2026-03-30 22:32:45,430 - INFO - aiogram.event - Update id=933186269 is handled. Duration 505 ms by bot id=8350144188
+2026-03-30 22:32:48,265 - INFO - aiogram.event - Update id=933186270 is handled. Duration 487 ms by bot id=8350144188
+2026-03-30 22:32:59,258 - INFO - aiogram.event - Update id=933186271 is handled. Duration 442 ms by bot id=8350144188
+2026-03-30 22:33:14,823 - INFO - aiogram.event - Update id=933186272 is not handled. Duration 353 ms by bot id=8350144188
+2026-03-30 22:33:35,256 - INFO - aiogram.event - Update id=933186273 is handled. Duration 516 ms by bot id=8350144188
+2026-03-30 22:36:58,769 - INFO - aiogram.event - Update id=933186274 is handled. Duration 1769 ms by bot id=8350144188
+2026-03-30 22:37:00,818 - INFO - aiogram.event - Update id=933186275 is handled. Duration 555 ms by bot id=8350144188
+2026-03-30 22:37:03,573 - INFO - aiogram.event - Update id=933186276 is handled. Duration 475 ms by bot id=8350144188
+2026-03-30 22:37:15,814 - INFO - aiogram.event - Update id=933186277 is handled. Duration 639 ms by bot id=8350144188
+2026-03-30 22:41:11,868 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 22:41:11,869 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:41:11,869 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 22:41:12,120 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:45:34,717 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:45:34,910 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:45:34,967 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:45:41,966 - INFO - aiogram.event - Update id=933186278 is handled. Duration 1464 ms by bot id=8350144188
+2026-03-30 22:45:43,857 - INFO - aiogram.event - Update id=933186279 is handled. Duration 518 ms by bot id=8350144188
+2026-03-30 22:45:49,860 - INFO - aiogram.event - Update id=933186280 is handled. Duration 487 ms by bot id=8350144188
+2026-03-30 22:45:56,598 - INFO - aiogram.event - Update id=933186281 is handled. Duration 548 ms by bot id=8350144188
+2026-03-30 22:46:03,498 - INFO - aiogram.event - Update id=933186282 is not handled. Duration 351 ms by bot id=8350144188
+2026-03-30 22:46:22,264 - INFO - aiogram.event - Update id=933186283 is handled. Duration 536 ms by bot id=8350144188
+2026-03-30 22:46:29,519 - INFO - aiogram.event - Update id=933186284 is handled. Duration 515 ms by bot id=8350144188
+2026-03-30 22:46:31,483 - INFO - aiogram.event - Update id=933186285 is not handled. Duration 361 ms by bot id=8350144188
+2026-03-30 22:47:04,693 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 22:47:04,693 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:47:04,694 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 22:47:04,945 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:51:41,410 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 22:51:41,602 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 22:51:41,666 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 22:51:48,495 - INFO - aiogram.event - Update id=933186286 is handled. Duration 1584 ms by bot id=8350144188
+2026-03-30 22:51:50,296 - INFO - aiogram.event - Update id=933186287 is handled. Duration 529 ms by bot id=8350144188
+2026-03-30 22:51:52,932 - INFO - aiogram.event - Update id=933186288 is handled. Duration 681 ms by bot id=8350144188
+2026-03-30 22:52:02,763 - INFO - aiogram.event - Update id=933186289 is handled. Duration 542 ms by bot id=8350144188
+2026-03-30 22:52:04,951 - INFO - aiogram.event - Update id=933186290 is handled. Duration 491 ms by bot id=8350144188
+2026-03-30 22:52:11,683 - INFO - aiogram.event - Update id=933186291 is handled. Duration 771 ms by bot id=8350144188
+2026-03-30 22:52:14,187 - INFO - aiogram.event - Update id=933186292 is handled. Duration 885 ms by bot id=8350144188
+2026-03-30 22:52:29,631 - INFO - aiogram.event - Update id=933186293 is handled. Duration 712 ms by bot id=8350144188
+2026-03-30 22:52:32,875 - INFO - aiogram.event - Update id=933186294 is handled. Duration 460 ms by bot id=8350144188
+2026-03-30 22:52:36,200 - INFO - aiogram.event - Update id=933186295 is handled. Duration 635 ms by bot id=8350144188
+2026-03-30 22:52:38,836 - INFO - aiogram.event - Update id=933186296 is handled. Duration 870 ms by bot id=8350144188
+2026-03-30 22:52:42,086 - INFO - aiogram.event - Update id=933186297 is handled. Duration 757 ms by bot id=8350144188
+2026-03-30 22:52:49,337 - INFO - aiogram.event - Update id=933186298 is handled. Duration 683 ms by bot id=8350144188
+2026-03-30 22:53:13,300 - INFO - aiogram.event - Update id=933186299 is handled. Duration 495 ms by bot id=8350144188
+2026-03-30 22:53:18,119 - INFO - aiogram.event - Update id=933186300 is handled. Duration 698 ms by bot id=8350144188
+2026-03-30 22:53:24,646 - INFO - aiogram.event - Update id=933186301 is handled. Duration 429 ms by bot id=8350144188
+2026-03-30 22:53:32,627 - INFO - aiogram.event - Update id=933186302 is handled. Duration 516 ms by bot id=8350144188
+2026-03-30 22:53:38,322 - INFO - aiogram.event - Update id=933186303 is handled. Duration 690 ms by bot id=8350144188
+2026-03-30 22:53:42,331 - INFO - aiogram.event - Update id=933186304 is handled. Duration 647 ms by bot id=8350144188
+2026-03-30 22:53:47,282 - INFO - aiogram.event - Update id=933186305 is handled. Duration 1118 ms by bot id=8350144188
+2026-03-30 22:54:02,264 - INFO - aiogram.event - Update id=933186306 is handled. Duration 777 ms by bot id=8350144188
+2026-03-30 22:54:04,627 - INFO - aiogram.event - Update id=933186307 is handled. Duration 697 ms by bot id=8350144188
+2026-03-30 22:54:07,488 - INFO - aiogram.event - Update id=933186308 is handled. Duration 1014 ms by bot id=8350144188
+2026-03-30 22:54:13,384 - INFO - aiogram.event - Update id=933186309 is handled. Duration 624 ms by bot id=8350144188
+2026-03-30 22:54:17,317 - INFO - aiogram.event - Update id=933186310 is handled. Duration 1003 ms by bot id=8350144188
+2026-03-30 22:54:25,857 - INFO - aiogram.event - Update id=933186311 is handled. Duration 752 ms by bot id=8350144188
+2026-03-30 22:54:30,359 - INFO - aiogram.event - Update id=933186312 is handled. Duration 651 ms by bot id=8350144188
+2026-03-30 22:55:24,596 - INFO - aiogram.event - Update id=933186313 is handled. Duration 657 ms by bot id=8350144188
+2026-03-30 22:55:28,702 - INFO - aiogram.event - Update id=933186314 is handled. Duration 1255 ms by bot id=8350144188
+2026-03-30 23:03:34,705 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-30 23:03:34,705 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 23:03:34,705 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-30 23:14:33,956 - INFO - root - Бот AWEL Shop запускається...
+2026-03-30 23:14:34,128 - INFO - aiogram.dispatcher - Start polling
+2026-03-30 23:14:34,177 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-30 23:14:39,213 - INFO - aiogram.event - Update id=933186315 is handled. Duration 1714 ms by bot id=8350144188
+2026-03-30 23:14:43,754 - INFO - aiogram.event - Update id=933186316 is handled. Duration 1040 ms by bot id=8350144188
+2026-03-30 23:14:50,123 - INFO - aiogram.event - Update id=933186317 is handled. Duration 701 ms by bot id=8350144188
+2026-03-30 23:14:53,411 - INFO - aiogram.event - Update id=933186318 is handled. Duration 706 ms by bot id=8350144188
+2026-03-30 23:14:58,370 - INFO - aiogram.event - Update id=933186319 is handled. Duration 1084 ms by bot id=8350144188
+2026-03-30 23:15:04,462 - INFO - aiogram.event - Update id=933186320 is handled. Duration 789 ms by bot id=8350144188
+2026-03-30 23:15:08,204 - INFO - aiogram.event - Update id=933186321 is handled. Duration 915 ms by bot id=8350144188
+2026-03-30 23:15:12,949 - INFO - aiogram.event - Update id=933186322 is handled. Duration 658 ms by bot id=8350144188
+2026-03-30 23:15:16,468 - INFO - aiogram.event - Update id=933186323 is handled. Duration 1035 ms by bot id=8350144188
+2026-03-30 23:44:00,424 - INFO - aiogram.event - Update id=933186324 is handled. Duration 1689 ms by bot id=8350144188
+2026-03-30 23:44:21,771 - INFO - aiogram.event - Update id=933186325 is handled. Duration 515 ms by bot id=8350144188
+2026-03-30 23:44:23,665 - INFO - aiogram.event - Update id=933186326 is handled. Duration 482 ms by bot id=8350144188
+2026-03-30 23:44:33,871 - INFO - aiogram.event - Update id=933186327 is handled. Duration 1396 ms by bot id=8350144188
+2026-03-30 23:44:39,912 - INFO - aiogram.event - Update id=933186328 is handled. Duration 467 ms by bot id=8350144188
+2026-03-30 23:44:53,007 - INFO - aiogram.event - Update id=933186329 is handled. Duration 759 ms by bot id=8350144188
+2026-03-30 23:45:00,753 - INFO - aiogram.event - Update id=933186330 is handled. Duration 718 ms by bot id=8350144188
+2026-03-30 23:45:08,700 - INFO - aiogram.event - Update id=933186331 is handled. Duration 443 ms by bot id=8350144188
+2026-03-30 23:45:27,194 - INFO - aiogram.event - Update id=933186332 is handled. Duration 741 ms by bot id=8350144188
+2026-03-30 23:45:37,341 - INFO - aiogram.event - Update id=933186333 is handled. Duration 638 ms by bot id=8350144188
+2026-03-30 23:45:44,392 - INFO - aiogram.event - Update id=933186334 is handled. Duration 684 ms by bot id=8350144188
+2026-03-30 23:45:47,639 - INFO - aiogram.event - Update id=933186335 is handled. Duration 981 ms by bot id=8350144188
+2026-03-30 23:45:49,251 - INFO - aiogram.event - Update id=933186336 is handled. Duration 976 ms by bot id=8350144188
+2026-03-30 23:45:53,998 - INFO - aiogram.event - Update id=933186337 is handled. Duration 670 ms by bot id=8350144188
+2026-03-30 23:45:58,998 - INFO - aiogram.event - Update id=933186338 is handled. Duration 501 ms by bot id=8350144188
+2026-03-30 23:46:11,568 - INFO - aiogram.event - Update id=933186339 is handled. Duration 534 ms by bot id=8350144188
+2026-03-30 23:46:14,048 - INFO - aiogram.event - Update id=933186340 is handled. Duration 511 ms by bot id=8350144188
+2026-03-30 23:46:52,711 - INFO - aiogram.event - Update id=933186341 is handled. Duration 426 ms by bot id=8350144188
+2026-03-30 23:47:25,628 - INFO - aiogram.event - Update id=933186342 is handled. Duration 433 ms by bot id=8350144188
+2026-03-30 23:47:41,179 - INFO - aiogram.event - Update id=933186343 is handled. Duration 493 ms by bot id=8350144188
+2026-03-30 23:47:48,849 - INFO - aiogram.event - Update id=933186344 is handled. Duration 478 ms by bot id=8350144188
+2026-03-30 23:47:50,132 - INFO - aiogram.event - Update id=933186345 is handled. Duration 483 ms by bot id=8350144188
+2026-03-30 23:47:52,548 - INFO - aiogram.event - Update id=933186346 is handled. Duration 444 ms by bot id=8350144188
+2026-03-30 23:48:04,178 - INFO - aiogram.event - Update id=933186347 is handled. Duration 444 ms by bot id=8350144188
+2026-03-30 23:48:09,281 - INFO - aiogram.event - Update id=933186348 is handled. Duration 757 ms by bot id=8350144188
+2026-03-30 23:48:18,287 - INFO - aiogram.event - Update id=933186349 is handled. Duration 524 ms by bot id=8350144188
+2026-03-30 23:48:20,906 - INFO - aiogram.event - Update id=933186350 is handled. Duration 671 ms by bot id=8350144188
+2026-03-30 23:48:37,844 - INFO - aiogram.event - Update id=933186351 is handled. Duration 432 ms by bot id=8350144188
+2026-03-30 23:49:10,724 - INFO - aiogram.event - Update id=933186352 is handled. Duration 1180 ms by bot id=8350144188
+2026-03-30 23:49:13,535 - INFO - aiogram.event - Update id=933186353 is handled. Duration 901 ms by bot id=8350144188
+2026-03-30 23:49:21,958 - INFO - aiogram.event - Update id=933186354 is handled. Duration 621 ms by bot id=8350144188
+2026-03-30 23:49:23,872 - INFO - aiogram.event - Update id=933186355 is handled. Duration 870 ms by bot id=8350144188
+2026-03-30 23:49:40,025 - INFO - aiogram.event - Update id=933186356 is handled. Duration 515 ms by bot id=8350144188
+2026-03-30 23:49:41,798 - INFO - aiogram.event - Update id=933186357 is handled. Duration 574 ms by bot id=8350144188
+2026-03-30 23:49:48,770 - INFO - aiogram.event - Update id=933186358 is handled. Duration 860 ms by bot id=8350144188
+2026-03-30 23:49:51,979 - INFO - aiogram.event - Update id=933186359 is handled. Duration 1201 ms by bot id=8350144188
+2026-03-30 23:49:54,929 - INFO - aiogram.event - Update id=933186360 is handled. Duration 537 ms by bot id=8350144188
+2026-03-30 23:49:57,298 - INFO - aiogram.event - Update id=933186361 is handled. Duration 893 ms by bot id=8350144188
+2026-03-30 23:51:42,479 - INFO - aiogram.event - Update id=933186362 is handled. Duration 2352 ms by bot id=8350144188
+2026-03-30 23:51:52,309 - INFO - aiogram.event - Update id=933186363 is handled. Duration 488 ms by bot id=8350144188
+2026-03-30 23:51:54,482 - INFO - aiogram.event - Update id=933186364 is handled. Duration 987 ms by bot id=8350144188
+2026-03-30 23:51:56,789 - INFO - aiogram.event - Update id=933186365 is handled. Duration 1106 ms by bot id=8350144188
+2026-03-30 23:52:00,917 - INFO - aiogram.event - Update id=933186366 is handled. Duration 1045 ms by bot id=8350144188
+2026-03-30 23:52:06,535 - INFO - aiogram.event - Update id=933186367 is handled. Duration 701 ms by bot id=8350144188
+2026-03-30 23:52:08,870 - INFO - aiogram.event - Update id=933186368 is handled. Duration 584 ms by bot id=8350144188
+2026-03-30 23:52:18,161 - INFO - aiogram.event - Update id=933186369 is handled. Duration 985 ms by bot id=8350144188
+2026-03-30 23:52:23,322 - INFO - aiogram.event - Update id=933186370 is handled. Duration 1126 ms by bot id=8350144188
+2026-03-30 23:52:31,742 - INFO - aiogram.event - Update id=933186371 is handled. Duration 1195 ms by bot id=8350144188
+2026-03-30 23:52:49,750 - INFO - aiogram.event - Update id=933186372 is handled. Duration 1016 ms by bot id=8350144188
+2026-03-30 23:52:52,342 - INFO - aiogram.event - Update id=933186373 is handled. Duration 686 ms by bot id=8350144188
+2026-03-30 23:52:55,578 - INFO - aiogram.event - Update id=933186374 is handled. Duration 721 ms by bot id=8350144188
+2026-03-30 23:53:03,931 - INFO - aiogram.event - Update id=933186375 is handled. Duration 1027 ms by bot id=8350144188
+2026-03-30 23:54:53,376 - INFO - aiogram.event - Update id=933186376 is handled. Duration 1704 ms by bot id=8350144188
+2026-03-30 23:54:57,100 - INFO - aiogram.event - Update id=933186377 is handled. Duration 866 ms by bot id=8350144188
+2026-03-30 23:54:59,735 - INFO - aiogram.event - Update id=933186378 is handled. Duration 650 ms by bot id=8350144188
+2026-03-30 23:55:02,801 - INFO - aiogram.event - Update id=933186379 is handled. Duration 666 ms by bot id=8350144188
+2026-03-30 23:55:05,834 - INFO - aiogram.event - Update id=933186380 is handled. Duration 1214 ms by bot id=8350144188
+2026-03-30 23:56:49,468 - INFO - aiogram.event - Update id=933186381 is handled. Duration 610 ms by bot id=8350144188
+2026-03-30 23:57:01,942 - INFO - aiogram.event - Update id=933186382 is handled. Duration 4118 ms by bot id=8350144188
+2026-03-30 23:57:47,082 - INFO - aiogram.event - Update id=933186383 is handled. Duration 692 ms by bot id=8350144188
+2026-03-30 23:57:55,476 - INFO - aiogram.event - Update id=933186384 is handled. Duration 503 ms by bot id=8350144188
+2026-03-30 23:57:57,992 - INFO - aiogram.event - Update id=933186385 is handled. Duration 533 ms by bot id=8350144188
+2026-03-30 23:58:00,440 - INFO - aiogram.event - Update id=933186386 is handled. Duration 470 ms by bot id=8350144188
+2026-03-30 23:58:29,057 - INFO - aiogram.event - Update id=933186387 is handled. Duration 594 ms by bot id=8350144188
+2026-03-30 23:58:32,106 - INFO - aiogram.event - Update id=933186388 is handled. Duration 557 ms by bot id=8350144188
+2026-03-30 23:58:36,468 - INFO - aiogram.event - Update id=933186389 is handled. Duration 536 ms by bot id=8350144188
+2026-03-30 23:58:41,492 - INFO - aiogram.event - Update id=933186390 is handled. Duration 1328 ms by bot id=8350144188
+2026-03-30 23:58:44,197 - INFO - aiogram.event - Update id=933186391 is handled. Duration 818 ms by bot id=8350144188
+2026-03-30 23:58:48,132 - INFO - aiogram.event - Update id=933186392 is handled. Duration 847 ms by bot id=8350144188
+2026-03-30 23:58:57,078 - INFO - aiogram.event - Update id=933186393 is not handled. Duration 402 ms by bot id=8350144188
+2026-03-30 23:59:05,924 - INFO - aiogram.event - Update id=933186394 is handled. Duration 756 ms by bot id=8350144188
+2026-03-30 23:59:34,379 - INFO - aiogram.event - Update id=933186395 is handled. Duration 487 ms by bot id=8350144188
+2026-03-31 00:00:08,928 - INFO - aiogram.event - Update id=933186396 is handled. Duration 1018 ms by bot id=8350144188
+2026-03-31 00:00:25,145 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 281, in process_admin_input
+    await message.answer_photo(p.photos[0].tg_file_id, caption=cap, reply_markup=kb.as_markup())
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-31 00:00:25,666 - INFO - aiogram.event - Update id=933186397 is handled. Duration 1285 ms by bot id=8350144188
+2026-03-31 00:01:06,431 - INFO - aiogram.event - Update id=933186398 is handled. Duration 535 ms by bot id=8350144188
+2026-03-31 00:01:31,933 - INFO - aiogram.event - Update id=933186399 is handled. Duration 19534 ms by bot id=8350144188
+2026-03-31 00:01:49,475 - INFO - aiogram.event - Update id=933186400 is handled. Duration 8720 ms by bot id=8350144188
+2026-03-31 00:02:10,582 - INFO - aiogram.event - Update id=933186401 is handled. Duration 851 ms by bot id=8350144188
+2026-03-31 00:02:45,354 - INFO - aiogram.event - Update id=933186402 is handled. Duration 505 ms by bot id=8350144188
+2026-03-31 00:03:02,331 - INFO - aiogram.event - Update id=933186403 is handled. Duration 1169 ms by bot id=8350144188
+2026-03-31 00:11:56,142 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:11:56,144 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:11:56,145 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:11:56,397 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:11:56,586 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:11:56,587 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:12:09,432 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:12:09,588 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:12:09,639 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:12:13,198 - INFO - aiogram.event - Update id=933186404 is handled. Duration 784 ms by bot id=8350144188
+2026-03-31 00:12:32,795 - INFO - aiogram.event - Update id=933186405 is handled. Duration 1525 ms by bot id=8350144188
+2026-03-31 00:12:48,947 - ERROR - root - 🚨 Виникла помилка: 'InlineKeyboardButton' object has no attribute 'as_markup'
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 188, in handle_search_input
+    await show_catalog_page(message, message.text, 0, session, state)
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 205, in show_catalog_page
+    return await (event.answer if isinstance(event, Message) else event.message.answer)("❌ Нічого не знайдено.", reply_markup=nav.as_markup())
+                                                                                                                               ^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/pydantic/main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'InlineKeyboardButton' object has no attribute 'as_markup'
+2026-03-31 00:12:49,440 - INFO - aiogram.event - Update id=933186406 is handled. Duration 1106 ms by bot id=8350144188
+2026-03-31 00:15:09,976 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:15:09,976 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:15:09,977 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:15:10,228 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:15:10,381 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:15:10,381 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:15:19,096 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:15:19,241 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:15:19,290 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:15:24,781 - INFO - aiogram.event - Update id=933186407 is handled. Duration 683 ms by bot id=8350144188
+2026-03-31 00:15:35,785 - INFO - aiogram.event - Update id=933186408 is handled. Duration 654 ms by bot id=8350144188
+2026-03-31 00:15:38,381 - INFO - aiogram.event - Update id=933186409 is handled. Duration 494 ms by bot id=8350144188
+2026-03-31 00:15:47,402 - INFO - aiogram.event - Update id=933186410 is handled. Duration 1234 ms by bot id=8350144188
+2026-03-31 00:16:04,773 - INFO - aiogram.event - Update id=933186411 is handled. Duration 917 ms by bot id=8350144188
+2026-03-31 00:16:07,798 - INFO - aiogram.event - Update id=933186412 is handled. Duration 624 ms by bot id=8350144188
+2026-03-31 00:16:16,895 - INFO - aiogram.event - Update id=933186413 is handled. Duration 464 ms by bot id=8350144188
+2026-03-31 00:16:35,504 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 281, in process_admin_input
+    await message.answer_photo(p.photos[0].tg_file_id, caption=cap, reply_markup=kb.as_markup())
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-31 00:16:36,016 - INFO - aiogram.event - Update id=933186414 is handled. Duration 1197 ms by bot id=8350144188
+2026-03-31 00:16:44,916 - INFO - aiogram.event - Update id=933186415 is handled. Duration 940 ms by bot id=8350144188
+2026-03-31 00:16:47,050 - INFO - aiogram.event - Update id=933186416 is handled. Duration 479 ms by bot id=8350144188
+2026-03-31 00:16:50,527 - INFO - aiogram.event - Update id=933186417 is handled. Duration 435 ms by bot id=8350144188
+2026-03-31 00:16:54,778 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/news.py", line 281, in process_admin_input
+    await message.answer_photo(p.photos[0].tg_file_id, caption=cap, reply_markup=kb.as_markup())
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+2026-03-31 00:16:55,281 - INFO - aiogram.event - Update id=933186418 is handled. Duration 1117 ms by bot id=8350144188
+2026-03-31 00:20:03,549 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:20:03,549 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:20:03,549 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:28:43,783 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:28:43,985 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:28:44,047 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:28:50,108 - INFO - aiogram.event - Update id=933186419 is handled. Duration 1679 ms by bot id=8350144188
+2026-03-31 00:28:53,628 - INFO - aiogram.event - Update id=933186420 is handled. Duration 931 ms by bot id=8350144188
+2026-03-31 00:29:01,195 - INFO - aiogram.event - Update id=933186421 is handled. Duration 932 ms by bot id=8350144188
+2026-03-31 00:29:04,773 - INFO - aiogram.event - Update id=933186422 is handled. Duration 823 ms by bot id=8350144188
+2026-03-31 00:29:07,686 - INFO - aiogram.event - Update id=933186423 is handled. Duration 443 ms by bot id=8350144188
+2026-03-31 00:29:21,520 - INFO - aiogram.event - Update id=933186424 is handled. Duration 618 ms by bot id=8350144188
+2026-03-31 00:29:26,107 - INFO - aiogram.event - Update id=933186425 is handled. Duration 806 ms by bot id=8350144188
+2026-03-31 00:29:37,256 - INFO - aiogram.event - Update id=933186426 is handled. Duration 486 ms by bot id=8350144188
+2026-03-31 00:29:48,163 - INFO - aiogram.event - Update id=933186427 is handled. Duration 936 ms by bot id=8350144188
+2026-03-31 00:29:53,364 - INFO - aiogram.event - Update id=933186428 is handled. Duration 657 ms by bot id=8350144188
+2026-03-31 00:29:55,637 - INFO - aiogram.event - Update id=933186429 is handled. Duration 479 ms by bot id=8350144188
+2026-03-31 00:33:36,495 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:33:36,496 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:33:36,496 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:33:36,747 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:33:45,836 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:33:45,981 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:33:46,031 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:33:50,025 - INFO - aiogram.event - Update id=933186430 is handled. Duration 887 ms by bot id=8350144188
+2026-03-31 00:33:52,145 - INFO - aiogram.event - Update id=933186431 is handled. Duration 568 ms by bot id=8350144188
+2026-03-31 00:33:54,573 - INFO - aiogram.event - Update id=933186432 is handled. Duration 538 ms by bot id=8350144188
+2026-03-31 00:33:56,223 - INFO - aiogram.event - Update id=933186433 is handled. Duration 472 ms by bot id=8350144188
+2026-03-31 00:34:00,176 - INFO - aiogram.event - Update id=933186434 is handled. Duration 477 ms by bot id=8350144188
+2026-03-31 00:34:12,524 - INFO - aiogram.event - Update id=933186435 is handled. Duration 606 ms by bot id=8350144188
+2026-03-31 00:34:14,961 - INFO - aiogram.event - Update id=933186436 is handled. Duration 811 ms by bot id=8350144188
+2026-03-31 00:34:56,418 - INFO - aiogram.event - Update id=933186437 is handled. Duration 568 ms by bot id=8350144188
+2026-03-31 00:35:05,223 - INFO - aiogram.event - Update id=933186438 is handled. Duration 724 ms by bot id=8350144188
+2026-03-31 00:35:15,344 - INFO - aiogram.event - Update id=933186439 is handled. Duration 546 ms by bot id=8350144188
+2026-03-31 00:35:26,546 - INFO - aiogram.event - Update id=933186440 is handled. Duration 647 ms by bot id=8350144188
+2026-03-31 00:35:31,046 - INFO - aiogram.event - Update id=933186441 is handled. Duration 564 ms by bot id=8350144188
+2026-03-31 00:37:54,365 - INFO - aiogram.event - Update id=933186442 is handled. Duration 739 ms by bot id=8350144188
+2026-03-31 00:38:02,077 - INFO - aiogram.event - Update id=933186443 is handled. Duration 717 ms by bot id=8350144188
+2026-03-31 00:38:04,709 - INFO - aiogram.event - Update id=933186444 is handled. Duration 602 ms by bot id=8350144188
+2026-03-31 00:38:09,127 - INFO - aiogram.event - Update id=933186445 is handled. Duration 581 ms by bot id=8350144188
+2026-03-31 00:38:11,868 - INFO - aiogram.event - Update id=933186446 is handled. Duration 1022 ms by bot id=8350144188
+2026-03-31 00:38:32,552 - INFO - aiogram.event - Update id=933186447 is handled. Duration 1010 ms by bot id=8350144188
+2026-03-31 00:38:43,172 - INFO - aiogram.event - Update id=933186448 is handled. Duration 411 ms by bot id=8350144188
+2026-03-31 00:38:45,727 - INFO - aiogram.event - Update id=933186449 is handled. Duration 1518 ms by bot id=8350144188
+2026-03-31 00:39:33,407 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:39:33,408 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:39:33,408 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:39:33,660 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:39:42,946 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:39:43,096 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:39:43,140 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:39:46,964 - INFO - aiogram.event - Update id=933186450 is handled. Duration 1357 ms by bot id=8350144188
+2026-03-31 00:39:50,872 - INFO - aiogram.event - Update id=933186451 is handled. Duration 679 ms by bot id=8350144188
+2026-03-31 00:39:57,403 - INFO - aiogram.event - Update id=933186452 is handled. Duration 444 ms by bot id=8350144188
+2026-03-31 00:39:59,926 - INFO - aiogram.event - Update id=933186453 is handled. Duration 537 ms by bot id=8350144188
+2026-03-31 00:40:05,479 - INFO - aiogram.event - Update id=933186454 is handled. Duration 641 ms by bot id=8350144188
+2026-03-31 00:40:08,003 - INFO - aiogram.event - Update id=933186455 is handled. Duration 758 ms by bot id=8350144188
+2026-03-31 00:40:16,140 - INFO - aiogram.event - Update id=933186456 is handled. Duration 1287 ms by bot id=8350144188
+2026-03-31 00:40:18,403 - INFO - aiogram.event - Update id=933186457 is handled. Duration 1164 ms by bot id=8350144188
+2026-03-31 00:40:23,600 - INFO - aiogram.event - Update id=933186458 is handled. Duration 659 ms by bot id=8350144188
+2026-03-31 00:40:26,200 - INFO - aiogram.event - Update id=933186459 is handled. Duration 532 ms by bot id=8350144188
+2026-03-31 00:40:27,995 - INFO - aiogram.event - Update id=933186460 is handled. Duration 753 ms by bot id=8350144188
+2026-03-31 00:40:43,142 - INFO - aiogram.event - Update id=933186461 is handled. Duration 569 ms by bot id=8350144188
+2026-03-31 00:41:13,500 - INFO - aiogram.event - Update id=933186462 is handled. Duration 522 ms by bot id=8350144188
+2026-03-31 00:41:23,562 - INFO - aiogram.event - Update id=933186463 is handled. Duration 451 ms by bot id=8350144188
+2026-03-31 00:41:27,735 - INFO - aiogram.event - Update id=933186464 is handled. Duration 520 ms by bot id=8350144188
+2026-03-31 00:41:37,724 - INFO - aiogram.event - Update id=933186465 is handled. Duration 426 ms by bot id=8350144188
+2026-03-31 00:41:45,601 - INFO - aiogram.event - Update id=933186466 is handled. Duration 544 ms by bot id=8350144188
+2026-03-31 00:41:47,121 - INFO - aiogram.event - Update id=933186467 is handled. Duration 440 ms by bot id=8350144188
+2026-03-31 00:41:50,539 - INFO - aiogram.event - Update id=933186468 is handled. Duration 545 ms by bot id=8350144188
+2026-03-31 00:42:02,852 - INFO - aiogram.event - Update id=933186469 is handled. Duration 557 ms by bot id=8350144188
+2026-03-31 00:42:34,638 - INFO - aiogram.event - Update id=933186470 is handled. Duration 682 ms by bot id=8350144188
+2026-03-31 00:42:49,798 - INFO - aiogram.event - Update id=933186471 is handled. Duration 536 ms by bot id=8350144188
+2026-03-31 00:42:52,204 - INFO - aiogram.event - Update id=933186472 is handled. Duration 865 ms by bot id=8350144188
+2026-03-31 00:42:57,151 - INFO - aiogram.event - Update id=933186473 is handled. Duration 1240 ms by bot id=8350144188
+2026-03-31 00:43:11,647 - INFO - aiogram.event - Update id=933186474 is handled. Duration 625 ms by bot id=8350144188
+2026-03-31 00:43:13,529 - INFO - aiogram.event - Update id=933186475 is handled. Duration 693 ms by bot id=8350144188
+2026-03-31 00:43:15,974 - INFO - aiogram.event - Update id=933186476 is handled. Duration 1178 ms by bot id=8350144188
+2026-03-31 00:43:37,791 - INFO - aiogram.event - Update id=933186477 is handled. Duration 667 ms by bot id=8350144188
+2026-03-31 00:43:45,853 - INFO - aiogram.event - Update id=933186478 is handled. Duration 438 ms by bot id=8350144188
+2026-03-31 00:43:56,873 - INFO - aiogram.event - Update id=933186479 is handled. Duration 1616 ms by bot id=8350144188
+2026-03-31 00:43:59,431 - INFO - aiogram.event - Update id=933186480 is handled. Duration 1327 ms by bot id=8350144188
+2026-03-31 00:44:06,310 - INFO - aiogram.event - Update id=933186481 is handled. Duration 429 ms by bot id=8350144188
+2026-03-31 00:44:14,147 - INFO - aiogram.event - Update id=933186482 is handled. Duration 854 ms by bot id=8350144188
+2026-03-31 00:44:35,352 - INFO - aiogram.event - Update id=933186483 is handled. Duration 1195 ms by bot id=8350144188
+2026-03-31 00:44:47,534 - INFO - aiogram.event - Update id=933186484 is handled. Duration 983 ms by bot id=8350144188
+2026-03-31 00:44:51,343 - INFO - aiogram.event - Update id=933186485 is handled. Duration 1716 ms by bot id=8350144188
+2026-03-31 00:45:10,959 - INFO - aiogram.event - Update id=933186486 is handled. Duration 508 ms by bot id=8350144188
+2026-03-31 00:45:18,143 - INFO - aiogram.event - Update id=933186487 is handled. Duration 1531 ms by bot id=8350144188
+2026-03-31 00:45:22,048 - INFO - aiogram.event - Update id=933186488 is handled. Duration 1716 ms by bot id=8350144188
+2026-03-31 00:45:44,141 - INFO - aiogram.event - Update id=933186489 is handled. Duration 1646 ms by bot id=8350144188
+2026-03-31 00:46:25,961 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 00:46:25,961 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 00:46:25,962 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 00:46:26,213 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 00:46:26,390 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 00:46:26,390 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 08:06:11,304 - INFO - root - Бот AWEL Shop запускається...
+2026-03-31 08:06:11,473 - INFO - aiogram.dispatcher - Start polling
+2026-03-31 08:06:11,526 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 09:44:47,595 - INFO - aiogram.event - Update id=933186490 is handled. Duration 1848 ms by bot id=8350144188
+2026-03-31 09:44:49,301 - INFO - aiogram.event - Update id=933186491 is handled. Duration 452 ms by bot id=8350144188
+2026-03-31 09:45:04,097 - INFO - aiogram.event - Update id=933186492 is handled. Duration 4067 ms by bot id=8350144188
+2026-03-31 10:04:51,376 - INFO - aiogram.event - Update id=933186493 is handled. Duration 5723 ms by bot id=8350144188
+2026-03-31 12:12:36,723 - INFO - aiogram.event - Update id=933186494 is handled. Duration 2420 ms by bot id=8350144188
+2026-03-31 12:12:37,908 - INFO - aiogram.event - Update id=933186495 is handled. Duration 1181 ms by bot id=8350144188
+2026-03-31 12:12:42,577 - INFO - aiogram.event - Update id=933186496 is handled. Duration 527 ms by bot id=8350144188
+2026-03-31 12:12:51,817 - INFO - aiogram.event - Update id=933186497 is handled. Duration 517 ms by bot id=8350144188
+2026-03-31 12:12:57,222 - INFO - aiogram.event - Update id=933186498 is handled. Duration 601 ms by bot id=8350144188
+2026-03-31 12:13:00,025 - INFO - aiogram.event - Update id=933186499 is handled. Duration 1028 ms by bot id=8350144188
+2026-03-31 12:47:24,417 - INFO - aiogram.event - Update id=933186500 is handled. Duration 2693 ms by bot id=8350144188
+2026-03-31 13:17:00,643 - INFO - aiogram.event - Update id=933186502 is handled. Duration 1360 ms by bot id=8350144188
+2026-03-31 13:17:00,876 - INFO - aiogram.event - Update id=933186501 is handled. Duration 4171 ms by bot id=8350144188
+2026-03-31 13:17:34,841 - INFO - aiogram.event - Update id=933186503 is handled. Duration 620 ms by bot id=8350144188
+2026-03-31 13:17:48,725 - INFO - aiogram.event - Update id=933186504 is handled. Duration 648 ms by bot id=8350144188
+2026-03-31 13:17:52,423 - INFO - aiogram.event - Update id=933186505 is handled. Duration 589 ms by bot id=8350144188
+2026-03-31 13:18:00,190 - INFO - aiogram.event - Update id=933186506 is handled. Duration 613 ms by bot id=8350144188
+2026-03-31 13:18:10,831 - INFO - aiogram.event - Update id=933186507 is handled. Duration 481 ms by bot id=8350144188
+2026-03-31 13:18:10,959 - INFO - aiogram.event - Update id=933186508 is handled. Duration 533 ms by bot id=8350144188
+2026-03-31 13:18:13,249 - INFO - aiogram.event - Update id=933186509 is handled. Duration 973 ms by bot id=8350144188
+2026-03-31 13:18:16,009 - INFO - aiogram.event - Update id=933186510 is handled. Duration 1303 ms by bot id=8350144188
+2026-03-31 13:18:21,091 - INFO - aiogram.event - Update id=933186512 is handled. Duration 640 ms by bot id=8350144188
+2026-03-31 13:18:21,543 - INFO - aiogram.event - Update id=933186511 is handled. Duration 1620 ms by bot id=8350144188
+2026-03-31 13:18:27,529 - INFO - aiogram.event - Update id=933186513 is handled. Duration 1586 ms by bot id=8350144188
+2026-03-31 13:18:31,480 - INFO - aiogram.event - Update id=933186514 is handled. Duration 716 ms by bot id=8350144188
+2026-03-31 13:18:41,866 - INFO - aiogram.event - Update id=933186515 is handled. Duration 537 ms by bot id=8350144188
+2026-03-31 13:18:54,257 - INFO - aiogram.event - Update id=933186516 is handled. Duration 602 ms by bot id=8350144188
+2026-03-31 13:24:23,684 - INFO - aiogram.event - Update id=933186517 is handled. Duration 1486 ms by bot id=8350144188
+2026-03-31 13:24:26,409 - INFO - aiogram.event - Update id=933186518 is handled. Duration 1142 ms by bot id=8350144188
+2026-03-31 13:33:04,540 - INFO - aiogram.event - Update id=933186519 is handled. Duration 2253 ms by bot id=8350144188
+2026-03-31 13:33:10,646 - INFO - aiogram.event - Update id=933186520 is handled. Duration 1450 ms by bot id=8350144188
+2026-03-31 13:47:08,930 - INFO - aiogram.event - Update id=933186521 is handled. Duration 1847 ms by bot id=8350144188
+2026-03-31 13:47:22,320 - INFO - aiogram.event - Update id=933186522 is handled. Duration 1105 ms by bot id=8350144188
+2026-03-31 13:47:24,534 - INFO - aiogram.event - Update id=933186523 is handled. Duration 623 ms by bot id=8350144188
+2026-03-31 14:28:19,927 - INFO - aiogram.event - Update id=933186524 is handled. Duration 4535 ms by bot id=8350144188
+2026-03-31 14:28:32,153 - INFO - aiogram.event - Update id=933186525 is handled. Duration 691 ms by bot id=8350144188
+2026-03-31 14:29:13,805 - INFO - aiogram.event - Update id=933186526 is handled. Duration 1442 ms by bot id=8350144188
+2026-03-31 14:29:34,924 - INFO - aiogram.event - Update id=933186527 is handled. Duration 452 ms by bot id=8350144188
+2026-03-31 14:31:05,407 - INFO - aiogram.event - Update id=933186528 is handled. Duration 472 ms by bot id=8350144188
+2026-03-31 14:31:07,447 - INFO - aiogram.event - Update id=933186529 is handled. Duration 716 ms by bot id=8350144188
+2026-03-31 14:31:10,123 - INFO - aiogram.event - Update id=933186530 is handled. Duration 719 ms by bot id=8350144188
+2026-03-31 14:31:15,349 - INFO - aiogram.event - Update id=933186531 is handled. Duration 1532 ms by bot id=8350144188
+2026-03-31 14:31:20,653 - INFO - aiogram.event - Update id=933186532 is handled. Duration 1542 ms by bot id=8350144188
+2026-03-31 14:31:25,352 - INFO - aiogram.event - Update id=933186533 is handled. Duration 1488 ms by bot id=8350144188
+2026-03-31 14:31:34,088 - INFO - aiogram.event - Update id=933186534 is handled. Duration 910 ms by bot id=8350144188
+2026-03-31 14:31:36,879 - INFO - aiogram.event - Update id=933186535 is handled. Duration 611 ms by bot id=8350144188
+2026-03-31 17:09:11,762 - INFO - aiogram.event - Update id=933186536 is handled. Duration 3143 ms by bot id=8350144188
+2026-03-31 17:09:25,978 - INFO - aiogram.event - Update id=933186537 is handled. Duration 866 ms by bot id=8350144188
+2026-03-31 18:12:49,112 - INFO - aiogram.event - Update id=933186538 is handled. Duration 2806 ms by bot id=8350144188
+2026-03-31 22:36:31,537 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-03-31 22:36:31,631 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-03-31 22:36:31,636 - INFO - aiogram.dispatcher - Polling stopped
+2026-03-31 22:36:31,950 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 12:30:02,726 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 12:30:02,903 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 12:30:02,952 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 15:36:35,132 - INFO - aiogram.event - Update id=933186539 is handled. Duration 1741 ms by bot id=8350144188
+2026-04-01 15:37:03,591 - INFO - aiogram.event - Update id=933186540 is handled. Duration 4218 ms by bot id=8350144188
+2026-04-01 15:37:49,741 - INFO - aiogram.event - Update id=933186541 is handled. Duration 590 ms by bot id=8350144188
+2026-04-01 15:37:54,193 - INFO - aiogram.event - Update id=933186542 is handled. Duration 701 ms by bot id=8350144188
+2026-04-01 15:38:11,000 - INFO - aiogram.event - Update id=933186543 is handled. Duration 1452 ms by bot id=8350144188
+2026-04-01 21:49:45,133 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 21:49:45,211 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:49:45,214 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 21:49:45,517 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:49:45,784 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:49:45,787 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:49:59,506 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:49:59,682 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:49:59,744 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:50:06,345 - INFO - aiogram.event - Update id=933186544 is handled. Duration 925 ms by bot id=8350144188
+2026-04-01 21:50:09,414 - INFO - aiogram.event - Update id=933186545 is handled. Duration 581 ms by bot id=8350144188
+2026-04-01 21:50:13,733 - INFO - aiogram.event - Update id=933186546 is handled. Duration 1806 ms by bot id=8350144188
+2026-04-01 21:50:16,239 - INFO - aiogram.event - Update id=933186547 is handled. Duration 1429 ms by bot id=8350144188
+2026-04-01 21:50:18,703 - ERROR - handlers.product_package - Error sending kit part 1177000: cannot access local variable 'builder' where it is not associated with a value
+2026-04-01 21:50:18,801 - ERROR - handlers.product_package - Error sending kit part 932000: cannot access local variable 'builder' where it is not associated with a value
+2026-04-01 21:50:18,901 - ERROR - handlers.product_package - Error sending kit part 931000: cannot access local variable 'builder' where it is not associated with a value
+2026-04-01 21:50:19,002 - ERROR - handlers.product_package - Error sending kit part STK_2: cannot access local variable 'builder' where it is not associated with a value
+2026-04-01 21:50:19,505 - INFO - aiogram.event - Update id=933186548 is handled. Duration 1392 ms by bot id=8350144188
+2026-04-01 21:50:47,046 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 21:50:47,047 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:50:47,047 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 21:51:23,673 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:51:23,832 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:51:23,881 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:51:27,614 - INFO - aiogram.event - Update id=933186549 is handled. Duration 1748 ms by bot id=8350144188
+2026-04-01 21:52:03,760 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 21:52:03,760 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:52:03,761 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 21:53:09,875 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:53:10,061 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:53:10,117 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:53:18,853 - INFO - aiogram.event - Update id=933186550 is handled. Duration 2179 ms by bot id=8350144188
+2026-04-01 21:54:39,125 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 21:54:39,125 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:54:39,126 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 21:55:36,653 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:55:36,825 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:55:36,875 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:55:38,691 - INFO - aiogram.event - Update id=933186551 is handled. Duration 774 ms by bot id=8350144188
+2026-04-01 21:55:42,701 - INFO - aiogram.event - Update id=933186552 is handled. Duration 449 ms by bot id=8350144188
+2026-04-01 21:55:46,930 - INFO - aiogram.event - Update id=933186553 is handled. Duration 1647 ms by bot id=8350144188
+2026-04-01 21:55:49,768 - INFO - aiogram.event - Update id=933186554 is handled. Duration 1503 ms by bot id=8350144188
+2026-04-01 21:55:53,278 - INFO - aiogram.event - Update id=933186555 is handled. Duration 1643 ms by bot id=8350144188
+2026-04-01 21:56:21,319 - INFO - aiogram.event - Update id=933186556 is handled. Duration 1035 ms by bot id=8350144188
+2026-04-01 21:56:32,953 - INFO - aiogram.event - Update id=933186557 is handled. Duration 416 ms by bot id=8350144188
+2026-04-01 21:56:39,935 - INFO - aiogram.event - Update id=933186558 is handled. Duration 481 ms by bot id=8350144188
+2026-04-01 21:56:45,411 - INFO - aiogram.event - Update id=933186559 is handled. Duration 425 ms by bot id=8350144188
+2026-04-01 21:56:50,106 - INFO - aiogram.event - Update id=933186560 is handled. Duration 447 ms by bot id=8350144188
+2026-04-01 21:56:53,781 - INFO - aiogram.event - Update id=933186561 is handled. Duration 1256 ms by bot id=8350144188
+2026-04-01 21:56:58,376 - INFO - aiogram.event - Update id=933186562 is handled. Duration 1216 ms by bot id=8350144188
+2026-04-01 21:57:07,101 - INFO - aiogram.event - Update id=933186563 is handled. Duration 1700 ms by bot id=8350144188
+2026-04-01 21:57:10,029 - INFO - aiogram.event - Update id=933186564 is handled. Duration 1110 ms by bot id=8350144188
+2026-04-01 21:57:15,846 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 21:57:15,847 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 21:57:15,847 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 21:57:16,098 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 21:57:16,295 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 21:57:16,296 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 22:02:20,367 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 22:02:20,539 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 22:02:20,589 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 22:02:28,149 - INFO - aiogram.event - Update id=933186565 is handled. Duration 697 ms by bot id=8350144188
+2026-04-01 22:02:32,561 - INFO - aiogram.event - Update id=933186566 is handled. Duration 1687 ms by bot id=8350144188
+2026-04-01 22:02:35,048 - INFO - aiogram.event - Update id=933186567 is handled. Duration 1357 ms by bot id=8350144188
+2026-04-01 22:02:38,504 - INFO - aiogram.event - Update id=933186568 is handled. Duration 1808 ms by bot id=8350144188
+2026-04-01 22:02:41,227 - INFO - aiogram.event - Update id=933186569 is handled. Duration 1286 ms by bot id=8350144188
+2026-04-01 22:02:52,655 - INFO - aiogram.event - Update id=933186570 is handled. Duration 550 ms by bot id=8350144188
+2026-04-01 23:00:03,805 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-01 23:00:03,806 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-01 23:00:03,806 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-01 23:00:04,057 - INFO - root - Бот AWEL Shop запускається...
+2026-04-01 23:00:04,240 - INFO - aiogram.dispatcher - Start polling
+2026-04-01 23:00:04,240 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'

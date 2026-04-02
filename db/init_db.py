@@ -1,11 +1,25 @@
 import logging
-from sqlalchemy import select
+from sqlalchemy import select, text
 from db.models import Base, Role, Location
 from db.session import engine, AsyncSessionLocal
 
 async def init_db():
     async with engine.begin() as conn:
         # ОБЕРЕЖНО: drop_all видаляє всі дані при кожному запуску!
+        # async with engine.begin() as conn:
+        #     # 1. Примусово видаляємо всі таблиці через CASCADE
+        #     # Отримуємо імена всіх таблиць, що зараз є в метаданих
+        #     for table in reversed(Base.metadata.sorted_tables):
+        #         await conn.execute(text(f'DROP TABLE IF EXISTS "{table.name}" CASCADE;'))
+        #
+        #     # 2. Якщо в базі залишилися старі таблиці, яких немає в моделях (як package_stock)
+        #     # Можна додати їх видалення вручну:
+        #     await conn.execute(text('DROP TABLE IF EXISTS "package_stock" CASCADE;'))
+        #     await conn.execute(text('DROP TABLE IF EXISTS "packages" CASCADE;'))
+        #
+        #     # 3. Створюємо все заново
+        #     # await conn.run_sync(Base.metadata.drop_all) # Це можна тепер не викликати
+        #     await conn.run_sync(Base.metadata.create_all)
         # await conn.run_sync(Base.metadata.drop_all) #-- тільки для тестів
 
         await conn.run_sync(Base.metadata.create_all)

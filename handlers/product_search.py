@@ -7,9 +7,10 @@ from aiogram.fsm.context import FSMContext
 from aiogram.exceptions import TelegramBadRequest
 from sqlalchemy import select, exists, update, func
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload
+from sqlalchemy.orm import selectinload, joinedload
 
-from db.models import Product, User, ProductStock, ProductPhoto, Location
+from db.models import Product, User, ProductStock, ProductPhoto, Location, UserRole
+from handlers.product_package import delete_kit_messages
 from utils.product_helper import get_product_display_data
 from utils.states import CatalogState
 from utils.drive_utils import drive
@@ -72,17 +73,20 @@ async def safe_send_photo(event, p_code, photo_record, caption, reply_markup, se
 
 
 async def send_product_display(event, product, user, info, session, is_preview=True):
-    """
-    Універсальна функція виводу товару.
-    Додано: показ каталожного номера та залишків по всіх локаціях.
-    """
     new_ids = []
     photos = product.photos
     p_code = product.code
 
-    # Формування тексту
+    # 1. Перевірка ролі клієнта (Шукаємо будь-яку роль, де в назві є "client")
+    # Отримуємо назви всіх ролей користувача
+    user_role_names = [ur.role.name.lower() for ur in user.roles]
+    # Шукаємо будь-яку роль, що містить слово "client"
+    is_any_client = any("client" in role for role in user_role_names)
+
+    # 2. Формування тексту
     if is_preview:
-        caption = (f"{'🔥 ' if info['is_promo'] else ''}<b>{product.name_ua}</b>\n"
+        caption = (f"<b>{product.name_ua}</b>\n"
+                   f"📝 {product.info or 'Опис відсутній'}\n\n" # Додано опис
                    f"Код: <code>{p_code}</code>\n"
                    f"Кат. номер: <code>{product.catalog_number or '—'}</code>\n"
                    f"Ціна: <b>{info['final_price']} грн</b>")
@@ -92,31 +96,36 @@ async def send_product_display(event, product, user, info, session, is_preview=T
         # ПОВНА КАРТКА
         lines = [
             f"📦 <b>{product.name_ua}</b>",
+            f"📝 {product.info or 'Опис відсутній'}\n", # Додано опис
             f"Код: <code>{p_code}</code>",
             f"Кат. номер: <code>{product.catalog_number or '—'}</code>",
             f"Ціна: <b>{info['final_price']} грн</b>\n",
             "<b>📊 Наявність на складах:</b>"
         ]
 
-        # Отримуємо всі локації для повного звіту
         all_locations = (await session.execute(select(Location))).scalars().all()
-        # Створюємо мапу залишків: {location_id: stock_object}
         current_stocks = {s.location_id: s for s in product.stocks} if hasattr(product, 'stocks') else {}
 
         for loc in all_locations:
             stock_item = current_stocks.get(loc.id)
+            addr = f" (📍 {stock_item.storage_address if stock_item and stock_item.storage_address else '—'})"
             if stock_item and stock_item.balance > 0:
-                addr = f" (📍 {stock_item.storage_address})" if stock_item.storage_address else ""
                 lines.append(f"• {loc.name}: <b>{stock_item.balance} шт.</b>{addr}")
             else:
-                lines.append(f"• {loc.name}: <i>Товар відсутній</i>")
+                lines.append(f"• {loc.name}: <i>Товар відсутній</i>{addr}")
 
         caption = "\n".join(lines)
         builder = InlineKeyboardBuilder()
-        builder.row(InlineKeyboardButton(text="🔄 Аналоги", callback_data=f"anlg_{p_code}"),
-                    InlineKeyboardButton(text="🛠 Комплектація", callback_data=f"pack_{p_code}"))
-        if info["is_client"]:
-            builder.row(InlineKeyboardButton(text="📥 Додати в кошик", callback_data=f"add_cart_{product.id}"))
+        builder.row(
+            InlineKeyboardButton(text="🔄 Аналоги", callback_data=f"anlg_{p_code}"),
+            InlineKeyboardButton(text="🛠 Комплектація", callback_data=f"kit_{p_code}")
+        )
+        # Використовуємо нашу нову перевірку ролей
+        if is_any_client:
+            builder.row(
+                InlineKeyboardButton(text="📥 Додати в кошик", callback_data=f"add_cart_{product.id}")
+            )
+
 
     # Вивід контенту
     if not photos:
@@ -192,7 +201,11 @@ async def show_catalog_page(event, query: str, page: int, session: AsyncSession,
     total_count = (await session.execute(count_stmt)).scalar()
 
     if total_count == 0:
-        return await (event.answer if isinstance(event, Message) else event.message.answer)("❌ Нічого не знайдено.")
+        nav = InlineKeyboardBuilder()
+        nav.button(text="❌ Скасувати пошук", callback_data="cancel_search")
+
+        method = event.answer if isinstance(event, Message) else event.message.answer
+        return await method("❌ Нічого не знайдено.", reply_markup=nav.as_markup())
 
     total_pages = (total_count + limit - 1) // limit
     await clear_previous_results(event, state)
@@ -208,8 +221,11 @@ async def show_catalog_page(event, query: str, page: int, session: AsyncSession,
             .options(selectinload(Product.photos), selectinload(Product.stocks)).offset(offset).limit(limit))
     products = (await session.execute(stmt)).scalars().all()
 
-    user_stmt = select(User).where(User.user_id == event.from_user.id).options(selectinload(User.roles))
-    user = (await session.execute(user_stmt)).scalar_one()
+    user_stmt = select(User).where(User.user_id == event.from_user.id).options(
+        selectinload(User.roles).joinedload(UserRole.role)
+    )
+    result = await session.execute(user_stmt)
+    user = result.scalar_one()
 
     for p in products:
         info = await get_product_display_data(session, p, user)
@@ -240,6 +256,7 @@ async def process_pagination(callback: CallbackQuery, callback_data: CatalogPagi
 
 @router.callback_query(F.data.startswith("view_prod_"))
 async def show_product_card(callback: CallbackQuery, session: AsyncSession, state: FSMContext):
+    await delete_kit_messages(callback, state)
     await clear_previous_results(callback, state)
     await state.clear()
 
@@ -249,10 +266,12 @@ async def show_product_card(callback: CallbackQuery, session: AsyncSession, stat
         selectinload(Product.photos),
         selectinload(Product.stocks)
     ])
-    user_stmt = select(User).where(User.user_id == callback.from_user.id).options(selectinload(User.roles))
+    user_stmt = select(User).where(User.user_id == callback.from_user.id).options(
+        selectinload(User.roles).joinedload(UserRole.role)
+    )
     user = (await session.execute(user_stmt)).scalar_one()
+
     info = await get_product_display_data(session, product, user)
 
     await send_product_display(callback, product, user, info, session, is_preview=False)
     await callback.answer()
-

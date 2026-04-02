@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from aiogram.exceptions import TelegramBadRequest
 from contextlib import suppress
 
-from db.models import User, Role, UserRole, UserReview
+from db.models import User, Role, UserRole, Review
 from utils.states import AdminUserSearch, AdminUserAction, AdminUserEdit
 from keyboards.admin_kb import get_admin_panel_kb, get_user_list_kb
 from keyboards.reply import get_main_kb
@@ -19,14 +19,16 @@ router = Router()
 
 # --- ДОПОМІЖНІ ФУНКЦІЇ ---
 
-def calculate_rating(reviews: list[UserReview]) -> tuple[float, str]:
-    """Розрахунок середнього рейтингу та зірочок (безпечний для асинхронності)"""
-    if not reviews:
+# --- розрахунку рейтингу ---
+def calculate_rating(reviews: list[Review]) -> tuple[float, str]:
+    """Розрахунок середнього рейтингу (лише ті, що стосуються користувача)"""
+    # Відфільтровуємо відгуки, де тип 'user' (відгуки менеджерів про клієнта)
+    user_reviews = [r for r in reviews if r.review_type.value == "user"]
+
+    if not user_reviews:
         return 5.0, "⭐" * 5
 
-    # Працюємо зі списком, який вже завантажений через selectinload
-    rev_list = list(reviews)
-    avg = sum(r.rating for r in rev_list) / len(rev_list)
+    avg = sum(r.rating for r in user_reviews) / len(user_reviews)
     avg = round(avg, 1)
     stars = "⭐" * int(avg) + ("🌓" if (avg - int(avg)) >= 0.4 else "")
     return avg, stars
@@ -43,11 +45,11 @@ async def get_user_card_content(user: User):
     lock_emoji = "🔐" if user.is_locked else "🔓"
     active_emoji = "✅ Активний" if user.is_active else "🚫 Забанений"
 
-    rating_val, stars = calculate_rating(user.reviews)
+    rating_val, stars = calculate_rating(user.received_reviews)
 
     text = (
         f"👤 <b>Клієнт:</b> {user.user_name} {user.user_surname or ''}\n"
-        f"📊 <b>Рейтинг:</b> {rating_val} {stars} ({len(user.reviews) if user.reviews else 0} відгуків)\n"
+        f"📊 <b>Рейтинг:</b> {rating_val} {stars} ({len(user.received_reviews)} відгуків)\n"
         f"🔌 <b>1С ID:</b> <code>{user.one_c_id or '---'}</code>\n"
         f"----------------------------------\n"
         f"📞 <b>Тел:</b> <code>{user.phone or '---'}</code>\n"
@@ -87,16 +89,14 @@ async def get_user_card_content(user: User):
 
 
 async def get_user_with_relations(session: AsyncSession, user_db_id: int):
-    """Універсальна функція для отримання юзера з повним набором даних без помилок сесії"""
+    """Отримуємо юзера з ролями та отриманими відгуками"""
     stmt = select(User).where(User.id == user_db_id).options(
         selectinload(User.roles).joinedload(UserRole.role),
-        selectinload(User.reviews)
+        selectinload(User.received_reviews) # ЗМІНЕНО: завантажуємо отримані відгуки
     )
     result = await session.execute(stmt)
     user = result.unique().scalar_one_or_none()
-
     if user:
-        # Важливо для випадків, коли адмін редагує сам себе (merge об'єднує дані в сесії)
         user = await session.merge(user)
     return user
 
@@ -139,7 +139,10 @@ async def process_search(message: Message, session: AsyncSession, state: FSMCont
     stmt = select(User).where(or_(
         User.user_name.ilike(q), User.user_surname.ilike(q),
         User.username.ilike(q), User.phone.ilike(q)
-    )).limit(10).options(selectinload(User.roles).joinedload(UserRole.role), selectinload(User.reviews))
+    )).limit(10).options(
+        selectinload(User.roles).joinedload(UserRole.role),
+        selectinload(User.received_reviews)
+    )
 
     result = await session.execute(stmt)
     users = result.unique().scalars().all()
@@ -266,18 +269,30 @@ async def save_note(message: Message, state: FSMContext, session: AsyncSession):
 
 @router.callback_query(AdminUserAction.filter(F.action == "view_reviews"))
 async def view_reviews(callback: CallbackQuery, callback_data: AdminUserAction, session: AsyncSession):
-    stmt = select(UserReview).where(UserReview.user_id == callback_data.user_db_id).order_by(
-        UserReview.created_at.desc())
-    reviews = (await session.execute(stmt)).scalars().all()
-    if not reviews: return await callback.answer("Відгуків ще немає.", show_alert=True)
+    # ЗМІНЕНО: Шукаємо в таблиці Review відгуки, де target_user_id == id клієнта
+    stmt = select(Review).where(
+        Review.target_user_id == callback_data.user_db_id
+    ).order_by(Review.created_at.desc())
 
-    text = "💬 <b>Останні відгуки:</b>\n\n"
+    result = await session.execute(stmt)
+    reviews = result.scalars().all()
+
+    if not reviews:
+        return await callback.answer("Відгуків про цього клієнта ще немає.", show_alert=True)
+
+    text = "💬 <b>Останні відгуки про клієнта:</b>\n\n"
     for r in reviews[:5]:
+        # r.review_type покаже, хто залишив відгук (напр. менеджер)
         text += f"{'⭐' * r.rating} ({r.created_at.strftime('%d.%m.%y')})\n<i>{r.comment}</i>\n\n"
 
     builder = InlineKeyboardBuilder()
     builder.button(text="⬅️ Назад", callback_data=AdminUserAction(action="view", user_db_id=callback_data.user_db_id))
-    await callback.message.edit_caption(caption=text, reply_markup=builder.as_markup(), parse_mode="HTML")
+
+    await callback.message.edit_caption(
+        caption=text,
+        reply_markup=builder.as_markup(),
+        parse_mode="HTML"
+    )
 
 
 @router.callback_query(AdminUserAction.filter(F.action.in_({"toggle_active", "toggle_lock"})))
