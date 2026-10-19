@@ -1,6 +1,6 @@
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from db.models import User
+from shop.models import User
 
 # Константи для кнопок
 BTN_HOME = "🏠"
@@ -21,7 +21,7 @@ def get_main_kb(user: User) -> ReplyKeyboardMarkup:
 
     # Отримуємо назви ролей безпечно
     # Примітка: переконайтеся, що об'єкт user завантажений з options(selectinload(User.roles))
-    user_role_names = [r.role.name for r in user.roles] if user.roles else []
+    user_role_names = [role.name for role in user.roles.all()] if user and user.roles else []
 
     # 1. Верхній ряд: Головна, Акції та Новини
     builder.row(

@@ -3,11 +3,8 @@ from aiogram import Router, F, types
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, CallbackQuery, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from sqlalchemy import select
-from sqlalchemy.orm import selectinload
-from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.models import Promotion, Role
+from shop.models import Promotion, Role
 from utils.states import AdminPromoAdd
 
 router = Router()
@@ -17,18 +14,15 @@ router = Router()
 # ДОПОМІЖНІ ФУНКЦІЇ (HELPERS)
 # ==========================================
 
-async def get_roles_keyboard(selected_ids: list, session: AsyncSession, is_editing: bool = False, promo_id: int = None):
+async def get_roles_keyboard(selected_ids: list, is_editing: bool = False, promo_id: int = None):
     """Генерує клавіатуру вибору ролей для створення або редагування"""
-    roles = (await session.execute(select(Role))).scalars().all()
     builder = InlineKeyboardBuilder()
 
-    for r in roles:
+    async for r in Role.objects.all():
         mark = "✅ " if r.id in selected_ids else ""
-        # Визначаємо callback залежно від режиму (створення чи редагування БД)
         cb_data = f"edit_promo_role_{promo_id}_{r.id}" if is_editing else f"promo_role_toggle_{r.id}"
         builder.row(InlineKeyboardButton(text=f"{mark}{r.description or r.name}", callback_data=cb_data))
 
-    # Кнопка підтвердження повертає або в картку, або завершує крок створення
     confirm_cb = f"view_promo_{promo_id}" if is_editing else "promo_roles_confirm"
     builder.row(InlineKeyboardButton(text="📥 ПІДТВЕРДИТИ ТА ПОВЕРНУТИСЬ", callback_data=confirm_cb))
     return builder.as_markup()
@@ -48,37 +42,32 @@ async def admin_promos_selection(message: Message):
 
 
 @router.callback_query(F.data == "manage_promo_referral")
-async def manage_referral_promo(callback: CallbackQuery, session: AsyncSession):
+async def manage_referral_promo(callback: CallbackQuery):
     """Спеціальний обробник для рефералки (вона завжди одна)"""
-    stmt = select(Promotion).where(Promotion.promo_type == "referral")
-    promo = (await session.execute(stmt)).scalar_one_or_none()
+    promo = await Promotion.objects.filter(promo_type="referral").afirst()
 
     if not promo:
-        promo = Promotion(
+        promo = await Promotion.objects.acreate(
             title="Приведи друга",
             description="Отримуйте бонуси за запрошення друзів!",
             promo_type="referral",
             is_active=False,
             bonus_points=50
         )
-        session.add(promo)
-        await session.commit()
-        await session.refresh(promo)
 
-    await show_promo_card(callback, session, promo_id=promo.id)
+    await show_promo_card(callback, promo_id=promo.id)
 
 
 @router.callback_query(F.data.startswith("manage_promo_"))
-async def list_promos_by_type(callback: CallbackQuery, session: AsyncSession):
-    # Витягуємо тип (link, product, referral)
+async def list_promos_by_type(callback: CallbackQuery):
     p_type = callback.data.split("_")[2]
 
-    stmt = select(Promotion).where(Promotion.promo_type == p_type).order_by(Promotion.id.desc())
-    promos = (await session.execute(stmt)).scalars().all()
+    promos = []
+    async for p in Promotion.objects.filter(promo_type=p_type).order_by('-id'):
+        promos.append(p)
 
     builder = InlineKeyboardBuilder()
 
-    # Виводимо існуючі акції
     for p in promos:
         status = "✅" if p.is_active else "🚫"
         builder.row(
@@ -86,7 +75,6 @@ async def list_promos_by_type(callback: CallbackQuery, session: AsyncSession):
             InlineKeyboardButton(text="🗑", callback_data=f"del_promo_{p.id}")
         )
 
-    # Кнопка додавання нової (використовуємо p_type напряму)
     builder.row(InlineKeyboardButton(text="➕ Додати нову", callback_data=f"add_promo_{p_type}"))
     builder.row(InlineKeyboardButton(text="⬅️ Назад", callback_data="admin_promos_main"))
 
@@ -104,7 +92,6 @@ async def start_add_promo(callback: CallbackQuery, state: FSMContext):
     """Початок процесу створення нової акції через FSM"""
     p_type = callback.data.split("_")[2]
 
-    # Очищуємо попередні дані та встановлюємо тип
     await state.clear()
     await state.update_data(promo_type=p_type)
 
@@ -113,20 +100,19 @@ async def start_add_promo(callback: CallbackQuery, state: FSMContext):
     await callback.message.answer(f"🚀 Створення акції типу: <b>{p_type}</b>\n\nВведіть назву акції:", parse_mode="HTML")
     await callback.answer()
 
+
 # ==========================================
 # КАРТКА РЕДАГУВАННЯ ТА РОЛІ
 # ==========================================
 
 @router.callback_query(F.data.startswith("view_promo_"))
-async def show_promo_card(callback: CallbackQuery, session: AsyncSession, promo_id: int = None):
+async def show_promo_card(callback: CallbackQuery, promo_id: int = None):
     if not promo_id:
         promo_id = int(callback.data.split("_")[2])
 
-    # Завантажуємо акцію з її ролями (Many-to-Many)
-    stmt = select(Promotion).where(Promotion.id == promo_id).options(selectinload(Promotion.target_roles))
-    promo = (await session.execute(stmt)).scalar_one_or_none()
-
-    if not promo:
+    try:
+        promo = await Promotion.objects.prefetch_related('target_roles').aget(id=promo_id)
+    except Promotion.DoesNotExist:
         return await callback.answer("Акцію не знайдено.")
 
     builder = InlineKeyboardBuilder()
@@ -139,8 +125,7 @@ async def show_promo_card(callback: CallbackQuery, session: AsyncSession, promo_
     builder.row(
         InlineKeyboardButton(text=f"💰 Бали: {promo.bonus_points}", callback_data=f"edit_field_points_{promo.id}"))
 
-    # Керування ролями для існуючої акції
-    roles_count = len(promo.target_roles)
+    roles_count = len([r async for r in promo.target_roles.all()])
     builder.row(
         InlineKeyboardButton(text=f"🎯 Ролі: {roles_count} обрано", callback_data=f"edit_promo_roles_{promo.id}"))
 
@@ -164,12 +149,16 @@ async def show_promo_card(callback: CallbackQuery, session: AsyncSession, promo_
 
 
 @router.callback_query(F.data.startswith("edit_promo_roles_"))
-async def edit_promo_roles_view(callback: CallbackQuery, session: AsyncSession):
+async def edit_promo_roles_view(callback: CallbackQuery):
     promo_id = int(callback.data.split("_")[3])
-    promo = await session.get(Promotion, promo_id, options=[selectinload(Promotion.target_roles)])
-    selected_ids = [r.id for r in promo.target_roles]
+    try:
+        promo = await Promotion.objects.prefetch_related('target_roles').aget(id=promo_id)
+    except Promotion.DoesNotExist:
+        return await callback.answer("Акцію не знайдено.")
 
-    kb = await get_roles_keyboard(selected_ids, session, is_editing=True, promo_id=promo_id)
+    selected_ids = [r.id async for r in promo.target_roles.all()]
+
+    kb = await get_roles_keyboard(selected_ids, is_editing=True, promo_id=promo_id)
     text = "Оберіть ролі, які бачитимуть цю акцію:"
 
     if callback.message.photo:
@@ -179,21 +168,26 @@ async def edit_promo_roles_view(callback: CallbackQuery, session: AsyncSession):
 
 
 @router.callback_query(F.data.startswith("edit_promo_role_"))
-async def toggle_promo_role_db(callback: CallbackQuery, session: AsyncSession):
+async def toggle_promo_role_db(callback: CallbackQuery):
     parts = callback.data.split("_")
     promo_id, role_id = int(parts[3]), int(parts[4])
 
-    promo = await session.get(Promotion, promo_id, options=[selectinload(Promotion.target_roles)])
-    role = await session.get(Role, role_id)
+    try:
+        promo = await Promotion.objects.prefetch_related('target_roles').aget(id=promo_id)
+        role = await Role.objects.aget(id=role_id)
+    except (Promotion.DoesNotExist, Role.DoesNotExist):
+        return await callback.answer("Помилка отримання даних")
 
-    if role in promo.target_roles:
-        promo.target_roles.remove(role)
+    current_roles = [r.id async for r in promo.target_roles.all()]
+
+    if role.id in current_roles:
+        await promo.target_roles.aremove(role)
+        current_roles.remove(role.id)
     else:
-        promo.target_roles.append(role)
+        await promo.target_roles.aadd(role)
+        current_roles.append(role.id)
 
-    await session.commit()
-    selected_ids = [r.id for r in promo.target_roles]
-    kb = await get_roles_keyboard(selected_ids, session, is_editing=True, promo_id=promo_id)
+    kb = await get_roles_keyboard(current_roles, is_editing=True, promo_id=promo_id)
     await callback.message.edit_reply_markup(reply_markup=kb)
 
 
@@ -219,27 +213,32 @@ async def edit_field_start(callback: CallbackQuery, state: FSMContext):
 
 
 @router.message(AdminPromoAdd.waiting_for_title)
-async def process_text_input(message: Message, state: FSMContext, session: AsyncSession):
+async def process_text_input(message: Message, state: FSMContext):
     data = await state.get_data()
     promo_id = data.get("edit_promo_id")
     field = data.get("edit_field")
 
     # РЕЖИМ РЕДАГУВАННЯ
     if promo_id:
-        promo = await session.get(Promotion, promo_id)
-        if field == "title":
-            promo.title = message.text
-        elif field == "desc":
-            promo.description = message.text
-        elif field == "points":
-            if not message.text.isdigit(): return await message.answer("Будь ласка, введіть число!")
-            promo.bonus_points = int(message.text)
+        try:
+            promo = await Promotion.objects.aget(id=promo_id)
+            if field == "title":
+                promo.title = message.text
+            elif field == "desc":
+                promo.description = message.text
+            elif field == "points":
+                if not message.text.isdigit():
+                    return await message.answer("Будь ласка, введіть число!")
+                promo.bonus_points = int(message.text)
 
-        await session.commit()
-        await state.clear()
-        kb = InlineKeyboardBuilder().row(
-            InlineKeyboardButton(text="📝 Назад до акції", callback_data=f"view_promo_{promo_id}"))
-        return await message.answer("✅ Дані успішно оновлено!", reply_markup=kb.as_markup())
+            await promo.asave()
+            await state.clear()
+            kb = InlineKeyboardBuilder().row(
+                InlineKeyboardButton(text="📝 Назад до акції", callback_data=f"view_promo_{promo_id}"))
+            return await message.answer("✅ Дані успішно оновлено!", reply_markup=kb.as_markup())
+        except Promotion.DoesNotExist:
+            await state.clear()
+            return await message.answer("❌ Акцію не знайдено!")
 
     # РЕЖИМ СТВОРЕННЯ (Крок 1: Назва)
     await state.update_data(title=message.text)
@@ -248,25 +247,30 @@ async def process_text_input(message: Message, state: FSMContext, session: Async
 
 
 @router.message(AdminPromoAdd.waiting_for_image)
-async def process_image_input(message: Message, state: FSMContext, session: AsyncSession):
+async def process_image_input(message: Message, state: FSMContext):
     data = await state.get_data()
     promo_id = data.get("edit_promo_id")
     file_id = message.photo[-1].file_id if message.photo else None
 
     # РЕЖИМ РЕДАГУВАННЯ ФОТО
     if promo_id:
-        if not file_id: return await message.answer("Потрібно надіслати фото!")
-        promo = await session.get(Promotion, promo_id)
-        promo.image_id = file_id
-        await session.commit()
-        await state.clear()
-        kb = InlineKeyboardBuilder().row(
-            InlineKeyboardButton(text="📝 Назад до акції", callback_data=f"view_promo_{promo_id}"))
-        return await message.answer("✅ Фото акції оновлено!", reply_markup=kb.as_markup())
+        if not file_id:
+            return await message.answer("Потрібно надіслати фото!")
+        try:
+            promo = await Promotion.objects.aget(id=promo_id)
+            promo.image_id = file_id
+            await promo.asave()
+            await state.clear()
+            kb = InlineKeyboardBuilder().row(
+                InlineKeyboardButton(text="📝 Назад до акції", callback_data=f"view_promo_{promo_id}"))
+            return await message.answer("✅ Фото акції оновлено!", reply_markup=kb.as_markup())
+        except Promotion.DoesNotExist:
+            await state.clear()
+            return await message.answer("❌ Акцію не знайдено!")
 
     # РЕЖИМ СТВОРЕННЯ (Крок 3: Фото)
     await state.update_data(image_id=file_id)
-    kb = await get_roles_keyboard([], session)  # Починаємо з порожнього списку
+    kb = await get_roles_keyboard([])
     await message.answer("🎯 Оберіть ролі, які зможуть бачити цю акцію:", reply_markup=kb)
     await state.set_state(AdminPromoAdd.waiting_for_role)
 
@@ -276,28 +280,31 @@ async def process_image_input(message: Message, state: FSMContext, session: Asyn
 # ==========================================
 
 @router.callback_query(F.data.startswith("tog_promo_"))
-async def toggle_promo_status(callback: CallbackQuery, session: AsyncSession):
+async def toggle_promo_status(callback: CallbackQuery):
     promo_id = int(callback.data.split("_")[2])
-    promo = await session.get(Promotion, promo_id)
-    if promo:
+    try:
+        promo = await Promotion.objects.aget(id=promo_id)
         promo.is_active = not promo.is_active
-        await session.commit()
+        await promo.asave()
         await callback.answer("Статус змінено!")
-        await show_promo_card(callback, session, promo_id=promo.id)
+        await show_promo_card(callback, promo_id=promo.id)
+    except Promotion.DoesNotExist:
+        await callback.answer("Акцію не знайдено", show_alert=True)
 
 
 @router.callback_query(F.data.startswith("del_promo_"))
-async def delete_promo(callback: CallbackQuery, session: AsyncSession):
+async def delete_promo(callback: CallbackQuery):
     promo_id = int(callback.data.split("_")[2])
-    promo = await session.get(Promotion, promo_id)
-    if promo and promo.promo_type != "referral":
-        p_type = promo.promo_type
-        await session.delete(promo)
-        await session.commit()
-        await callback.answer("Акцію видалено")
-        await list_promos_by_type(callback, session)
-    else:
-        await callback.answer("Цю акцію не можна видалити!", show_alert=True)
+    try:
+        promo = await Promotion.objects.aget(id=promo_id)
+        if promo.promo_type != "referral":
+            await promo.adelete()
+            await callback.answer("Акцію видалено")
+            await list_promos_by_type(callback)
+        else:
+            await callback.answer("Цю акцію не можна видалити!", show_alert=True)
+    except Promotion.DoesNotExist:
+        await callback.answer("Акцію вже видалено", show_alert=True)
 
 
 @router.callback_query(F.data == "admin_promos_main")
@@ -319,7 +326,7 @@ async def process_desc(message: Message, state: FSMContext):
 
 
 @router.callback_query(F.data.startswith("promo_role_toggle_"))
-async def toggle_role_in_state(callback: CallbackQuery, state: FSMContext, session: AsyncSession):
+async def toggle_role_in_state(callback: CallbackQuery, state: FSMContext):
     """Вибір ролей під час створення нової акції (зберігаємо в state)"""
     role_id = int(callback.data.split("_")[3])
     data = await state.get_data()
@@ -332,8 +339,7 @@ async def toggle_role_in_state(callback: CallbackQuery, state: FSMContext, sessi
 
     await state.update_data(selected_roles=selected)
 
-    # Оновлюємо клавіатуру з галочками
-    kb = await get_roles_keyboard(selected, session, is_editing=False)
+    kb = await get_roles_keyboard(selected, is_editing=False)
     await callback.message.edit_reply_markup(reply_markup=kb)
 
 
@@ -343,7 +349,6 @@ async def confirm_roles_and_move_on(callback: CallbackQuery, state: FSMContext):
     data = await state.get_data()
 
     if data.get("promo_type") == "referral":
-        # Для рефералки посилання зазвичай не потрібне
         await callback.message.answer("💰 Введіть кількість балів за друга (число):")
         await state.set_state(AdminPromoAdd.waiting_for_points)
     else:
@@ -360,15 +365,14 @@ async def process_link(message: Message, state: FSMContext):
 
 
 @router.message(AdminPromoAdd.waiting_for_points)
-async def final_save_new_promo(message: Message, state: FSMContext, session: AsyncSession):
+async def final_save_new_promo(message: Message, state: FSMContext):
     """Фінальне збереження нової акції в БД"""
     if not message.text.isdigit():
         return await message.answer("Будь ласка, введіть числове значення!")
 
     data = await state.get_data()
 
-    # Створюємо об'єкт акції
-    new_p = Promotion(
+    new_p = await Promotion.objects.acreate(
         title=data['title'],
         description=data['description'],
         image_id=data.get('image_id'),
@@ -378,16 +382,11 @@ async def final_save_new_promo(message: Message, state: FSMContext, session: Asy
         is_active=True
     )
 
-    # Додаємо вибрані ролі (Many-to-Many)
     if data.get('selected_roles'):
-        role_stmt = select(Role).where(Role.id.in_(data['selected_roles']))
-        roles_obj = (await session.execute(role_stmt)).scalars().all()
-        new_p.target_roles.extend(roles_obj)
+        async for role in Role.objects.filter(id__in=data['selected_roles']):
+            await new_p.target_roles.aadd(role)
 
-    session.add(new_p)
-    await session.commit()
     await state.clear()
 
     await message.answer(f"✅ Акцію «{new_p.title}» успішно створено та активовано!")
-    # Повертаємо адміна до списку акцій цього типу
     await admin_promos_selection(message)

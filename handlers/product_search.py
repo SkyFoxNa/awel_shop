@@ -5,11 +5,9 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.filters.callback_data import CallbackData
 from aiogram.fsm.context import FSMContext
 from aiogram.exceptions import TelegramBadRequest
-from sqlalchemy import select, exists, update, func
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload, joinedload
+from django.db.models import Q
 
-from db.models import Product, User, ProductStock, ProductPhoto, Location, UserRole
+from shop.models import Product, User, Location, ProductPhoto
 from handlers.product_package import delete_kit_messages
 from utils.product_helper import get_product_display_data
 from utils.states import CatalogState
@@ -42,7 +40,7 @@ async def clear_previous_results(event, state: FSMContext):
     await state.update_data(search_msg_ids=[])
 
 
-async def safe_send_photo(event, p_code, photo_record, caption, reply_markup, session):
+async def safe_send_photo(event, p_code, photo_record, caption, reply_markup):
     """Безпечна відправка одного фото з відновленням з Google Drive"""
     if photo_record is None:
         return await (event.answer if isinstance(event, Message) else event.message.answer)(
@@ -55,38 +53,37 @@ async def safe_send_photo(event, p_code, photo_record, caption, reply_markup, se
         )
     except TelegramBadRequest as e:
         if "wrong file identifier" in str(e).lower() or "file_id" in str(e).lower():
-            clean_name = photo_record.photo_name.split('.')[0]
-            file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
-            if file_data:
-                f = BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
-                msg = await (event.answer_photo if isinstance(event, Message) else event.message.answer_photo)(
-                    photo=f, caption=caption, reply_markup=reply_markup, parse_mode="HTML"
-                )
-                new_id = msg.photo[-1].file_id
-                await session.execute(
-                    update(ProductPhoto).where(ProductPhoto.id == photo_record.id).values(tg_file_id=new_id))
-                await session.commit()
-                return msg
+            if photo_record.photo_name:
+                clean_name = photo_record.photo_name.split('.')[0]
+                file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
+                if file_data:
+                    f = BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
+                    msg = await (event.answer_photo if isinstance(event, Message) else event.message.answer_photo)(
+                        photo=f, caption=caption, reply_markup=reply_markup, parse_mode="HTML"
+                    )
+                    new_id = msg.photo[-1].file_id
+                    photo_record.tg_file_id = new_id
+                    await photo_record.asave()
+                    return msg
+
     return await (event.answer if isinstance(event, Message) else event.message.answer)(
         text=f"🖼 <i>(Помилка фото)</i>\n\n{caption}", reply_markup=reply_markup, parse_mode="HTML"
     )
 
 
-async def send_product_display(event, product, user, info, session, is_preview=True):
+async def send_product_display(event, product: Product, user: User, info: dict, is_preview=True):
     new_ids = []
-    photos = product.photos
+    photos = [ph async for ph in product.photos.all()]
     p_code = product.code
 
-    # 1. Перевірка ролі клієнта (Шукаємо будь-яку роль, де в назві є "client")
-    # Отримуємо назви всіх ролей користувача
-    user_role_names = [ur.role.name.lower() for ur in user.roles]
-    # Шукаємо будь-яку роль, що містить слово "client"
+    # 1. Перевірка ролі клієнта
+    user_role_names = [role.name.lower() async for role in user.roles.all()] if user and user.roles else []
     is_any_client = any("client" in role for role in user_role_names)
 
     # 2. Формування тексту
     if is_preview:
         caption = (f"<b>{product.name_ua}</b>\n"
-                   f"📝 {product.info or 'Опис відсутній'}\n\n" # Додано опис
+                   f"📝 {product.info or 'Опис відсутній'}\n\n"
                    f"Код: <code>{p_code}</code>\n"
                    f"Кат. номер: <code>{product.catalog_number or '—'}</code>\n"
                    f"Ціна: <b>{info['final_price']} грн</b>")
@@ -96,17 +93,16 @@ async def send_product_display(event, product, user, info, session, is_preview=T
         # ПОВНА КАРТКА
         lines = [
             f"📦 <b>{product.name_ua}</b>",
-            f"📝 {product.info or 'Опис відсутній'}\n", # Додано опис
+            f"📝 {product.info or 'Опис відсутній'}\n",
             f"Код: <code>{p_code}</code>",
             f"Кат. номер: <code>{product.catalog_number or '—'}</code>",
             f"Ціна: <b>{info['final_price']} грн</b>\n",
             "<b>📊 Наявність на складах:</b>"
         ]
 
-        all_locations = (await session.execute(select(Location))).scalars().all()
-        current_stocks = {s.location_id: s for s in product.stocks} if hasattr(product, 'stocks') else {}
+        current_stocks = {s.location_id: s async for s in product.stocks.all()}
 
-        for loc in all_locations:
+        async for loc in Location.objects.all():
             stock_item = current_stocks.get(loc.id)
             addr = f" (📍 {stock_item.storage_address if stock_item and stock_item.storage_address else '—'})"
             if stock_item and stock_item.balance > 0:
@@ -120,12 +116,10 @@ async def send_product_display(event, product, user, info, session, is_preview=T
             InlineKeyboardButton(text="🔄 Аналоги", callback_data=f"anlg_{p_code}"),
             InlineKeyboardButton(text="🛠 Комплектація", callback_data=f"kit_{p_code}")
         )
-        # Використовуємо нашу нову перевірку ролей
         if is_any_client:
             builder.row(
                 InlineKeyboardButton(text="📥 Додати в кошик", callback_data=f"add_cart_{product.id}")
             )
-
 
     # Вивід контенту
     if not photos:
@@ -134,11 +128,10 @@ async def send_product_display(event, product, user, info, session, is_preview=T
         )
         new_ids.append(msg.message_id)
     elif len(photos) == 1:
-        msg = await safe_send_photo(event, p_code, photos[0], caption, builder.as_markup(), session)
+        msg = await safe_send_photo(event, p_code, photos[0], caption, builder.as_markup())
         new_ids.append(msg.message_id)
     else:
-        # Альбом
-        media = [InputMediaPhoto(media=ph.tg_file_id) for ph in photos]
+        media = [InputMediaPhoto(media=ph.tg_file_id) for ph in photos if ph.tg_file_id]
         try:
             msgs = await (event.answer_media_group if isinstance(event, Message) else event.message.answer_media_group)(
                 media=media)
@@ -146,11 +139,12 @@ async def send_product_display(event, product, user, info, session, is_preview=T
         except TelegramBadRequest:
             restored = []
             for ph in photos:
-                clean_name = ph.photo_name.split('.')[0]
-                file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
-                if file_data:
-                    restored.append(
-                        InputMediaPhoto(media=BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")))
+                if ph.photo_name:
+                    clean_name = ph.photo_name.split('.')[0]
+                    file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
+                    if file_data:
+                        restored.append(
+                            InputMediaPhoto(media=BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")))
             if restored:
                 msgs = await (
                     event.answer_media_group if isinstance(event, Message) else event.message.answer_media_group)(
@@ -182,23 +176,24 @@ async def cancel_search_handler(callback: CallbackQuery, state: FSMContext):
 
 
 @router.message(CatalogState.waiting_for_search_query)
-async def handle_search_input(message: Message, state: FSMContext, session: AsyncSession):
+async def handle_search_input(message: Message, state: FSMContext):
     if len(message.text) < 2:
         return await message.answer("⚠️ Запит занадто короткий.")
     await clear_previous_results(message, state)
-    await show_catalog_page(message, message.text, 0, session, state)
+    await show_catalog_page(message, message.text, 0, state)
 
 
-async def show_catalog_page(event, query: str, page: int, session: AsyncSession, state: FSMContext):
+async def show_catalog_page(event, query: str, page: int, state: FSMContext):
     limit = 6
     offset = page * limit
-    pattern = f"%{query}%"
 
-    active_exists = exists().where(ProductStock.product_code == Product.code, ProductStock.is_active == True)
-    count_stmt = select(func.count(Product.id)).where(active_exists).where(
-        (Product.code.ilike(pattern)) | (Product.name_ua.ilike(pattern)) | (Product.catalog_number.ilike(pattern))
-    )
-    total_count = (await session.execute(count_stmt)).scalar()
+    qs = Product.objects.filter(
+        stocks__is_active=True
+    ).filter(
+        Q(code__icontains=query) | Q(name_ua__icontains=query) | Q(catalog_number__icontains=query)
+    ).distinct()
+
+    total_count = await qs.acount()
 
     if total_count == 0:
         nav = InlineKeyboardBuilder()
@@ -215,22 +210,19 @@ async def show_catalog_page(event, query: str, page: int, session: AsyncSession,
     )
     new_msg_ids = [h_msg.message_id]
 
-    stmt = (select(Product).where(active_exists)
-            .where(
-        (Product.code.ilike(pattern)) | (Product.name_ua.ilike(pattern)) | (Product.catalog_number.ilike(pattern)))
-            .options(selectinload(Product.photos), selectinload(Product.stocks)).offset(offset).limit(limit))
-    products = (await session.execute(stmt)).scalars().all()
+    products = []
+    async for p in qs.prefetch_related('photos', 'stocks')[offset:offset + limit]:
+        products.append(p)
 
-    user_stmt = select(User).where(User.user_id == event.from_user.id).options(
-        selectinload(User.roles).joinedload(UserRole.role)
-    )
-    result = await session.execute(user_stmt)
-    user = result.scalar_one()
+    try:
+        user = await User.objects.prefetch_related('roles').aget(user_id=event.from_user.id)
+    except User.DoesNotExist:
+        user = None
 
     for p in products:
-        info = await get_product_display_data(session, p, user)
+        info = await get_product_display_data(p, user)
         if info:
-            ids = await send_product_display(event, p, user, info, session, is_preview=True)
+            ids = await send_product_display(event, p, user, info, is_preview=True)
             new_msg_ids.extend(ids)
 
     nav = InlineKeyboardBuilder()
@@ -248,30 +240,30 @@ async def show_catalog_page(event, query: str, page: int, session: AsyncSession,
 
 
 @router.callback_query(CatalogPagination.filter(F.action == "list"))
-async def process_pagination(callback: CallbackQuery, callback_data: CatalogPagination, session: AsyncSession,
-                             state: FSMContext):
-    await show_catalog_page(callback, callback_data.query, callback_data.page, session, state)
+async def process_pagination(callback: CallbackQuery, callback_data: CatalogPagination, state: FSMContext):
+    await show_catalog_page(callback, callback_data.query, callback_data.page, state)
     await callback.answer()
 
 
 @router.callback_query(F.data.startswith("view_prod_"))
-async def show_product_card(callback: CallbackQuery, session: AsyncSession, state: FSMContext):
+async def show_product_card(callback: CallbackQuery, state: FSMContext):
     await delete_kit_messages(callback, state)
     await clear_previous_results(callback, state)
     await state.clear()
 
     p_id = int(callback.data.split("_")[2])
-    # Довантажуємо фото, залишки та локації для повного звіту
-    product = await session.get(Product, p_id, options=[
-        selectinload(Product.photos),
-        selectinload(Product.stocks)
-    ])
-    user_stmt = select(User).where(User.user_id == callback.from_user.id).options(
-        selectinload(User.roles).joinedload(UserRole.role)
-    )
-    user = (await session.execute(user_stmt)).scalar_one()
 
-    info = await get_product_display_data(session, product, user)
+    try:
+        product = await Product.objects.prefetch_related('photos', 'stocks').aget(id=p_id)
+    except Product.DoesNotExist:
+        return await callback.answer("Товар не знайдено!", show_alert=True)
 
-    await send_product_display(callback, product, user, info, session, is_preview=False)
+    try:
+        user = await User.objects.prefetch_related('roles').aget(user_id=callback.from_user.id)
+    except User.DoesNotExist:
+        user = None
+
+    info = await get_product_display_data(product, user)
+
+    await send_product_display(callback, product, user, info, is_preview=False)
     await callback.answer()

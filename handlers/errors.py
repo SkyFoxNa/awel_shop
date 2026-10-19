@@ -2,37 +2,29 @@ import logging
 import traceback
 from aiogram import Router, Bot, html
 from aiogram.types import ErrorEvent
-from sqlalchemy import select
 
-from db.models import User, Role, UserRole
+from shop.models import User
 
 router = Router()
 
 
-async def get_admins_ids(session_pool):
-    """Шукає в базі всіх користувачів з ролями admin або owner."""
-    async with session_pool() as session:
-        stmt = (
-            select(User.user_id)
-            .join(User.roles)
-            .join(UserRole.role)
-            .where(Role.name.in_(["admin", "owner"]))
-        )
-        result = await session.execute(stmt)
+async def get_admins_ids():
+    """Шукає в базі через Django ORM усіх користувачів з ролями admin або owner."""
+    admin_ids = []
+    async for user_id in User.objects.filter(
+        roles__name__in=["admin", "owner"]
+    ).values_list('user_id', flat=True).distinct():
+        admin_ids.append(user_id)
 
-        # Отримуємо список один раз!
-        admin_ids = list(result.scalars().all())
-
-        # print(f"DEBUG: Знайдені адміни: {admin_ids}")
-        return admin_ids
+    return admin_ids
 
 
 @router.errors()
-async def global_error_handler(event: ErrorEvent, bot: Bot, session_pool):
+async def global_error_handler(event: ErrorEvent, bot: Bot):
     logging.error(f"🚨 Виникла помилка: {event.exception}", exc_info=True)
 
     # 1. Отримуємо ID адмінів
-    admin_ids = await get_admins_ids(session_pool)
+    admin_ids = await get_admins_ids()
 
     # 2. Отримуємо повний Traceback
     tb_list = traceback.format_exception(
@@ -52,14 +44,14 @@ async def global_error_handler(event: ErrorEvent, bot: Bot, session_pool):
         f"📜 <b>Traceback:</b>\n<code>{safe_tb}</code>"
     )
 
-    # 4. Розсилка
+    # 4. Розсилка сповіщень адмінам
     for admin_id in admin_ids:
         try:
             await bot.send_message(chat_id=admin_id, text=admin_message)
         except Exception as e:
             logging.error(f"Не вдалося надіслати повідомлення адміну {admin_id}: {e}")
 
-    # 5. Повідомлення користувачу (ваша стара логіка)
+    # 5. Відповідь користувачу
     try:
         if event.update.callback_query:
             await event.update.callback_query.answer(

@@ -4,16 +4,9 @@ from aiogram import Router, F, types
 from aiogram.types import BufferedInputFile, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.context import FSMContext
-from aiogram.exceptions import TelegramBadRequest
-from sqlalchemy import select
-from sqlalchemy.orm import selectinload
-from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.models import Product, ProductComponent, User
+from shop.models import Product, ProductComponent
 from utils.drive_utils import drive
-
-# Припускаємо, що ці функції доступні для імпорту
-# Якщо виникає помилка імпорту, переконайтеся, що вони в __init__.py ваших папок
 from utils.product_helper import get_product_display_data
 
 router = Router()
@@ -39,21 +32,22 @@ async def delete_kit_messages(callback: types.CallbackQuery, state: FSMContext):
 
 
 async def get_safe_photo_for_kit(product: Product):
-    """Отримує фото для компонента (TG id або Google Drive)"""
-    if not product.photos:
+    """Отримує фото для компонента (TG file_id або Google Drive)"""
+    photo_record = await product.photos.afirst()
+    if not photo_record:
         return None
 
-    photo_record = product.photos[0]
     if photo_record.tg_file_id:
         return photo_record.tg_file_id
 
-    try:
-        clean_name = photo_record.photo_name.split('.')[0]
-        file_data = await asyncio.to_thread(drive.download_file_by_name, product.code, clean_name)
-        if file_data:
-            return BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
-    except Exception as e:
-        logger.error(f"Drive error for kit item {product.code}: {e}")
+    if photo_record.photo_name:
+        try:
+            clean_name = photo_record.photo_name.split('.')[0]
+            file_data = await asyncio.to_thread(drive.download_file_by_name, product.code, clean_name)
+            if file_data:
+                return BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
+        except Exception as e:
+            logger.error(f"Drive error for kit item {product.code}: {e}")
 
     return None
 
@@ -63,7 +57,7 @@ async def get_safe_photo_for_kit(product: Product):
 # ==============================================================================
 
 @router.callback_query(F.data.startswith("kit_"))
-async def show_product_kit(callback: types.CallbackQuery, session: AsyncSession, state: FSMContext):
+async def show_product_kit(callback: types.CallbackQuery, state: FSMContext):
     """
     Виводить склад комплекту окремими повідомленнями:
     1. Товари (деталі)
@@ -72,39 +66,32 @@ async def show_product_kit(callback: types.CallbackQuery, session: AsyncSession,
     """
     parent_code = callback.data.replace("kit_", "")
 
-    # Отримуємо компоненти, сортуємо їх логічно (спочатку деталі, потім тара, потім наліпки)
-    stmt = (
-        select(ProductComponent)
-        .where(ProductComponent.parent_code == parent_code)
-        .order_by(ProductComponent.is_boxing.asc(), ProductComponent.is_sticker.asc())
-    )
-    components = (await session.execute(stmt)).scalars().all()
+    # Отримуємо компоненти через Django ORM
+    components = []
+    qs = ProductComponent.objects.filter(
+        parent_code=parent_code
+    ).order_by('is_boxing', 'is_sticker')
+
+    async for comp in qs:
+        components.append(comp)
 
     if not components:
         return await callback.answer("Комплектація не знайдена.", show_alert=True)
 
     kit_msg_ids = []
 
-    # Проходимо по компонентах
     for comp in components:
-        # Завантажуємо дані продукту-компонента
-        stmt_prod = (
-            select(Product)
-            .where(Product.code == comp.component_code)
-            .options(selectinload(Product.photos))
-        )
-        product = (await session.execute(stmt_prod)).scalar()
-
-        if not product:
+        try:
+            product = await Product.objects.prefetch_related('photos').aget(code=comp.component_code)
+        except Product.DoesNotExist:
             continue
 
-        # Визначаємо заголовок та іконку залежно від типу
         if comp.is_boxing:
-            label, icon = "📦 ТАРА", "📦"
+            label = "📦 ТАРА"
         elif comp.is_sticker:
-            label, icon = "🏷 НАЛІПКА", "🏷"
+            label = "🏷 НАЛІПКА"
         else:
-            label, icon = "⚙️ ТОВАР КОМПЛЕКТУ", "⚙️"
+            label = "⚙️ ТОВАР КОМПЛЕКТУ"
 
         caption = (
             f"<b>{label}</b>\n\n"
@@ -114,7 +101,6 @@ async def show_product_kit(callback: types.CallbackQuery, session: AsyncSession,
             f"🆔 Код: <code>{product.code}</code>"
         )
 
-        # Кнопка "ОБРАТИ" (view_prod_ID) для переходу до повної картки як окремого товару
         builder = InlineKeyboardBuilder()
         if not comp.is_boxing and not comp.is_sticker:
             builder.row(InlineKeyboardButton(text="✅ ОБРАТИ", callback_data=f"view_prod_{product.id}"))
@@ -136,14 +122,12 @@ async def show_product_kit(callback: types.CallbackQuery, session: AsyncSession,
         except Exception as e:
             logger.error(f"Error sending kit part {product.code}: {e}")
 
-    # Кнопка закриття рулону
     back_builder = InlineKeyboardBuilder()
     back_builder.row(InlineKeyboardButton(text="❌ Закрити комплектацію", callback_data="close_kit"))
 
     last_msg = await callback.message.answer("Кінець списку комплектації.", reply_markup=back_builder.as_markup())
     kit_msg_ids.append(last_msg.message_id)
 
-    # Зберігаємо ID для видалення
     await state.update_data(current_kit_msg_ids=kit_msg_ids)
     await callback.answer()
 
@@ -154,6 +138,6 @@ async def show_product_kit(callback: types.CallbackQuery, session: AsyncSession,
 
 @router.callback_query(F.data == "close_kit")
 async def handle_close_kit(callback: types.CallbackQuery, state: FSMContext):
-    """Просто видаляє 'рулон' повідомлень комплектації"""
+    """Видаляє повідомлення комплектації"""
     await delete_kit_messages(callback, state)
     await callback.answer("Комплектацію приховано.")

@@ -1,15 +1,23 @@
+import os
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher
-from config import BOT_TOKEN
-from aiogram.client.default import DefaultBotProperties
-from db.session import AsyncSessionLocal, engine
-from db.middleware import DbSessionMiddleware
-from middlewares.error_middleware import ErrorMiddleware
-from db.init_db import init_db
-from handlers import routers
-from middlewares.user_middleware import UserMiddleware
+from dotenv import load_dotenv
 
+# 1. Завантажуємо .env змінні
+load_dotenv()
+
+# 2. Ініціалізація Django ПЕРЕД імпортом aiogram та моделей
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+import django
+django.setup()
+
+# 3. Тепер імпортуємо aiogram, роутери та мідлварі
+from aiogram import Bot, Dispatcher
+from aiogram.client.default import DefaultBotProperties
+from config import BOT_TOKEN
+from handlers import routers
+from middlewares.error_middleware import ErrorMiddleware
+from middlewares.user_middleware import UserMiddleware
 # from utils.scheduler import setup_scheduler
 
 # Налаштування логування
@@ -19,11 +27,9 @@ logging.basicConfig(
     handlers=[logging.FileHandler("bot.log"), logging.StreamHandler()]
 )
 
-async def main():
-    # 1. Створюємо/оновлюємо структуру бази даних
-    await init_db()
 
-    # 2. Ініціалізуємо бота
+async def main():
+    # 1. Ініціалізуємо бота
     bot = Bot(
         token=BOT_TOKEN,
         default=DefaultBotProperties(parse_mode="HTML")
@@ -31,35 +37,32 @@ async def main():
 
     dp = Dispatcher()
 
-    dp["session_pool"] = AsyncSessionLocal
+    # 2. Реєструємо Middleware
+    # dp.update.middleware(ErrorMiddleware())  # Ловить помилки
+    dp.update.middleware(UserMiddleware())     # Створення/перевірка юзера у Django ORM
 
-    # 3. Реєструємо Middleware (важливий порядок!)
-    # dp.update.middleware(ErrorMiddleware())            # Ловить помилки
-    dp.update.middleware(DbSessionMiddleware(AsyncSessionLocal)) # Дає сесію БД
-    dp.update.middleware(UserMiddleware())
-
-    # 4. Підключаємо роутери
+    # 3. Підключаємо роутери
     for r in routers:
         dp.include_router(r)
 
-    # 5. Шедулер (залишаємо на майбутнє)
-    # setup_scheduler(bot, AsyncSessionLocal)
+    # 4. Шедулер (залишаємо на майбутнє)
+    # setup_scheduler(bot)
 
-    # 6. Цикл стабільності 24/7
+    # 5. Цикл стабільності 24/7
     while True:
         try:
-            logging.info("Бот AWEL Shop запускається...")
+            logging.info("🚀 Бот AWEL Shop успішно запущений (Django ORM)...")
             await bot.delete_webhook(drop_pending_updates=True)
             await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
         except Exception as e:
             logging.critical(f"Критична помилка, рестарт через 10 сек: {e}")
             await bot.session.close()
             await asyncio.sleep(10)
-            # bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
             bot = Bot(
                 token=BOT_TOKEN,
                 default=DefaultBotProperties(parse_mode="HTML")
             )
+
 
 if __name__ == "__main__":
     try:

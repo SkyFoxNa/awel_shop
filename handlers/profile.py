@@ -1,3 +1,4 @@
+from contextlib import suppress
 from aiogram import Router, F, types
 from aiogram.fsm.context import FSMContext
 from aiogram.types import (
@@ -5,26 +6,24 @@ from aiogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     ReplyKeyboardMarkup,
-    KeyboardButton
+    KeyboardButton,
+    BufferedInputFile
 )
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload
 
-from db.models import User, Review
+from shop.models import User
 from states.user_states import ProfileEdit
 from keyboards.reply import get_main_kb
 from utils.validators import validate_ua_phone
+from utils.barcode_gen import generate_user_barcode
 
 router = Router()
 
 
 # --- ДОПОМІЖНІ ФУНКЦІЇ ---
 
-# --- розрахунку рейтингу ---
-def calculate_user_rating(reviews: list[Review]) -> tuple[float, str]:
+def calculate_user_rating(reviews_list: list) -> tuple[float, str]:
     """Розрахунок рейтингу для профілю"""
-    # Відфільтровуємо лише відгуки типу 'user' (від менеджерів про клієнта)
-    user_reviews = [r for r in reviews if r.review_type.value == "user"]
+    user_reviews = [r for r in reviews_list if getattr(r, 'review_type', '') == "user"]
 
     if not user_reviews:
         return 5.0, "⭐" * 5
@@ -44,18 +43,15 @@ def get_cancel_kb():
 async def send_profile_info(message: types.Message, user: User):
     """Вивід розширеної картки профілю з новими даними."""
 
-    # ПІБ або нікнейм
     display_name = f"{user.user_surname or ''} {user.user_name or ''}".strip() or user.username or "Не вказано"
     phone = user.phone or "❌ Не додано"
 
-    # Розрахунок рейтингу (reviews мають бути підвантажені через selectinload)
-    rating_val, stars = calculate_user_rating(user.received_reviews)
+    received_reviews = [r async for r in user.received_reviews.all()]
+    rating_val, stars = calculate_user_rating(received_reviews)
 
-    # Ролі (красивий список)
-    roles_list = [r.role.description for r in user.roles if r.role.description]
+    roles_list = [role.description for role in user.roles.all() if role.description]
     roles_str = ", ".join(roles_list) if roles_list else "Клієнт"
 
-    # Статус активності
     status_str = "✅ Активний" if user.is_active else "🚫 Заблокований"
 
     text = (
@@ -82,7 +78,6 @@ async def send_profile_info(message: types.Message, user: User):
         [InlineKeyboardButton(text="🔄 Оновити дані", callback_data="refresh_profile")]
     ])
 
-    # Якщо повідомлення вже з фото (штрихкодом), міняємо caption, інакше answer
     if message.photo:
         await message.edit_caption(caption=text, reply_markup=kb, parse_mode="HTML")
     else:
@@ -92,61 +87,39 @@ async def send_profile_info(message: types.Message, user: User):
 # --- ЗАГАЛЬНІ ХЕНДЛЕРИ ---
 
 @router.message(F.text == "👤 Профіль")
-async def show_profile_cmd(message: types.Message, user: User, session: AsyncSession):
-    from sqlalchemy import select
-    from db.models import UserRole, Role
-
-    # Оновлюємо завантаження: тепер завантажуємо 'received_reviews'
-    # (це ті відгуки, які отримав цей користувач від інших)
-    stmt = select(User).where(User.id == user.id).options(
-        selectinload(User.roles).joinedload(UserRole.role),
-        selectinload(User.received_reviews)  # Змінено з reviews на received_reviews
-    )
-    result = await session.execute(stmt)
-    user_updated = result.scalar_one()
-
-    # ВАЖЛИВО: Передаємо в функцію рейтингу саме отримані відгуки
-    rating_val, stars = calculate_user_rating(user_updated.received_reviews)
-
-    # Далі ваш код генерації штрихкоду...
-    from utils.barcode_gen import generate_user_barcode
-    from aiogram.types import BufferedInputFile
+async def show_profile_cmd(message: types.Message, user: User = None):
+    user_id = message.from_user.id
+    try:
+        user_updated = await User.objects.prefetch_related('roles', 'received_reviews').aget(user_id=user_id)
+    except User.DoesNotExist:
+        return await message.answer("❌ Помилка: профайла користувача не знайдено.")
 
     barcode_img = generate_user_barcode(user_updated.barcode)
     photo = BufferedInputFile(barcode_img.getvalue(), filename=f"profile_{user_updated.id}.png")
 
-    # Видаляємо старе повідомлення (команду) і відправляємо нове
-    try:
+    with suppress(Exception):
         await message.delete()
-    except:
-        pass
 
     await message.answer_photo(photo=photo, caption="Ваш штрихкод клієнта")
-    # Передаємо оновленого юзера в send_profile_info
     await send_profile_info(message, user_updated)
 
 
 @router.callback_query(F.data == "refresh_profile")
-async def refresh_profile(callback: CallbackQuery, user: User, session: AsyncSession):
-    from sqlalchemy import select
-    from db.models import UserRole
-
-    stmt = select(User).where(User.id == user.id).options(
-        selectinload(User.roles).joinedload(UserRole.role),
-        selectinload(User.reviews)
-    )
-    user_updated = (await session.execute(stmt)).scalar_one()
+async def refresh_profile(callback: CallbackQuery):
+    try:
+        user_updated = await User.objects.prefetch_related('roles', 'received_reviews').aget(user_id=callback.from_user.id)
+    except User.DoesNotExist:
+        return await callback.answer("❌ Користувача не знайдено", show_alert=True)
 
     await send_profile_info(callback.message, user_updated)
     await callback.answer("Дані оновлено")
 
 
 @router.callback_query(F.data == "cancel_edit_profile")
-async def cancel_edit(callback: CallbackQuery, state: FSMContext, user: User, session: AsyncSession):
+async def cancel_edit(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     await callback.answer("Скасовано")
-    # Повертаємось до профілю (передаємо session для підвантаження даних)
-    await show_profile_cmd(callback.message, user, session)
+    await show_profile_cmd(callback.message)
 
 
 # --- ЛОГІКА: РЕДАГУВАННЯ ПІБ ---
@@ -168,21 +141,29 @@ async def process_surname(message: types.Message, state: FSMContext):
 
 
 @router.message(ProfileEdit.waiting_for_name)
-async def process_name_finish(message: types.Message, state: FSMContext, session: AsyncSession, user: User):
+async def process_name_finish(message: types.Message, state: FSMContext, user: User = None):
     if not message.text or len(message.text) < 2:
         return await message.answer("Ім'я занадто коротке. Спробуйте ще раз:", reply_markup=get_cancel_kb())
 
     data = await state.get_data()
+
+    if not user:
+        try:
+            user = await User.objects.aget(user_id=message.from_user.id)
+        except User.DoesNotExist:
+            return await message.answer("❌ Помилка користувача.")
+
     user.user_surname = data['surname']
     user.user_name = message.text.strip()
-
-    # Оновлюємо повне ім'я для документів
     user.full_name_1c = f"{user.user_surname} {user.user_name}".strip()
 
-    await session.commit()
+    await user.asave()
     await state.clear()
-    await message.answer("✅ Дані оновлено!", reply_markup=get_main_kb(user))
-    await show_profile_cmd(message, user, session)
+
+    user_updated = await User.objects.prefetch_related('roles', 'received_reviews').aget(id=user.id)
+
+    await message.answer("✅ Дані оновлено!", reply_markup=get_main_kb(user_updated))
+    await show_profile_cmd(message, user_updated)
 
 
 # --- ЛОГІКА: ТЕЛЕФОН ---
@@ -199,16 +180,24 @@ async def edit_phone_start(callback: CallbackQuery, state: FSMContext):
 
 
 @router.message(ProfileEdit.waiting_for_phone)
-async def process_phone_finish(message: types.Message, state: FSMContext, session: AsyncSession, user: User):
+async def process_phone_finish(message: types.Message, state: FSMContext, user: User = None):
     raw_phone = message.contact.phone_number if message.contact else message.text
     valid_phone = validate_ua_phone(raw_phone)
 
     if not valid_phone:
         return await message.answer("❌ Невірний формат. Спробуйте ще раз (0XXXXXXXXX):", reply_markup=get_cancel_kb())
 
+    if not user:
+        try:
+            user = await User.objects.aget(user_id=message.from_user.id)
+        except User.DoesNotExist:
+            return await message.answer("❌ Помилка користувача.")
+
     user.phone = valid_phone
-    await session.commit()
+    await user.asave()
     await state.clear()
 
-    await message.answer(f"✅ Номер збережено!", reply_markup=get_main_kb(user))
-    await show_profile_cmd(message, user, session)
+    user_updated = await User.objects.prefetch_related('roles', 'received_reviews').aget(id=user.id)
+
+    await message.answer("✅ Номер збережено!", reply_markup=get_main_kb(user_updated))
+    await show_profile_cmd(message, user_updated)

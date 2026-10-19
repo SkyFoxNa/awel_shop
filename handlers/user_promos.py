@@ -1,31 +1,35 @@
 from aiogram import Router, F, types
 from aiogram.types import CallbackQuery, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from sqlalchemy import select
-from sqlalchemy.orm import selectinload
-from sqlalchemy.ext.asyncio import AsyncSession
-from db.models import Promotion, User, UserPromoLog
+
+from shop.models import Promotion, User, UserPromoLog
 
 router = Router()
 
 
 @router.message(F.text == "🔥 Акції")
-async def list_promos(message: types.Message, session: AsyncSession, user: User):
-    user_role_ids = [r.role_id for r in user.roles]
+async def list_promos(message: types.Message, user: User = None):
+    if not user:
+        try:
+            user = await User.objects.prefetch_related('roles').aget(user_id=message.from_user.id)
+        except User.DoesNotExist:
+            return await message.answer("❌ Помилка завантаження даних користувача.")
 
-    stmt = select(Promotion).options(
-        selectinload(Promotion.target_roles),
-        selectinload(Promotion.user_logs)
-    ).where(Promotion.is_active == True)
+    user_role_ids = [r.id async for r in user.roles.all()]
 
-    result = await session.execute(stmt)
-    all_promos = result.scalars().all()
+    # Завантажуємо активні акції з ролями та логами
+    all_promos = []
+    qs = Promotion.objects.prefetch_related('target_roles', 'user_logs').filter(is_active=True)
+
+    async for p in qs:
+        all_promos.append(p)
 
     # Фільтрація за ролями
-    promos = [
-        p for p in all_promos
-        if any(r.id in user_role_ids for r in p.target_roles) or not p.target_roles
-    ]
+    promos = []
+    for p in all_promos:
+        target_roles_ids = [r.id async for r in p.target_roles.all()]
+        if not target_roles_ids or any(r_id in user_role_ids for r_id in target_roles_ids):
+            promos.append(p)
 
     if not promos:
         return await message.answer("🎁 Зараз немає доступних акцій.")
@@ -49,7 +53,9 @@ async def list_promos(message: types.Message, session: AsyncSession, user: User)
 
         # ЛОГІКА АКЦІЙ ЗА ПОСИЛАННЯМ
         else:
-            is_claimed = any(log.user_id == user.id for log in promo.user_logs)
+            # Виправлено promo_id -> promotion_id
+            is_claimed = await UserPromoLog.objects.filter(user_id=user.id, promotion_id=promo.id).aexists()
+
             if promo.promo_type == "link" and not is_claimed:
                 builder.row(InlineKeyboardButton(
                     text=f"🔗 Перейти та отримати {promo.bonus_points} балів",
@@ -70,23 +76,33 @@ async def list_promos(message: types.Message, session: AsyncSession, user: User)
 
 
 @router.callback_query(F.data.startswith("claim_link_reward_"))
-async def claim_link_reward(callback: CallbackQuery, session: AsyncSession, user: User):
+async def claim_link_reward(callback: CallbackQuery, user: User = None):
     promo_id = int(callback.data.split("_")[3])
-    promo = await session.get(Promotion, promo_id)
 
-    if not promo:
-        return await callback.answer()
+    try:
+        promo = await Promotion.objects.aget(id=promo_id)
+    except Promotion.DoesNotExist:
+        return await callback.answer("❌ Акцію не знайдено.")
 
-    stmt = select(UserPromoLog).where(UserPromoLog.user_id == user.id, UserPromoLog.promo_id == promo_id)
-    exists = (await session.execute(stmt)).scalar_one_or_none()
+    if not user:
+        try:
+            user = await User.objects.aget(user_id=callback.from_user.id)
+        except User.DoesNotExist:
+            return await callback.answer("❌ Помилка користувача.")
 
-    if not exists:
-        user.balance_points += promo.bonus_points
-        session.add(UserPromoLog(user_id=user.id, promo_id=promo_id))
-        await session.commit()
+    # Виправлено promo_id -> promotion_id
+    is_claimed = await UserPromoLog.objects.filter(user_id=user.id, promotion_id=promo.id).aexists()
 
-    await callback.answer()
+    if not is_claimed:
+        user.balance_points = float(user.balance_points or 0.0) + float(promo.bonus_points)
+        await user.asave()
+        # Виправлено promo_id -> promotion_id
+        await UserPromoLog.objects.acreate(user_id=user.id, promotion_id=promo.id)
+
+    await callback.answer("🎉 Бонус успішно нараховано!")
 
     kb = InlineKeyboardBuilder()
-    kb.row(InlineKeyboardButton(text=f"🔗 Перейти до сайту", url=promo.link_url))
+    if promo.link_url:
+        kb.row(InlineKeyboardButton(text="🔗 Перейти до сайту", url=promo.link_url))
+
     await callback.message.edit_reply_markup(reply_markup=kb.as_markup())

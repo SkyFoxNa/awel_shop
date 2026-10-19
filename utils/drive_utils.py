@@ -1,13 +1,16 @@
 import os
 import io
+import logging
 from dotenv import load_dotenv
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
+from googleapiclient.http import MediaIoBaseDownload
 
 load_dotenv()
+
+logger = logging.getLogger(__name__)
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 CREDENTIALS_FILE = 'credentials.json'
@@ -26,12 +29,19 @@ class GoogleDriveHandler:
                 try:
                     self.creds.refresh(Request())
                 except Exception as e:
-                    print(f"🔄 Помилка оновлення токена: {e}. Видаляємо старий токен...")
+                    logger.error(f"🔄 Помилка оновлення токена Google Drive: {e}")
                     if os.path.exists(TOKEN_FILE):
                         os.remove(TOKEN_FILE)
-                    # Запускаємо авторизацію заново
-                    flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-                    self.creds = flow.run_local_server(port=0)
+
+                    if os.path.exists(CREDENTIALS_FILE):
+                        flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
+                        self.creds = flow.run_local_server(port=0)
+            elif os.path.exists(CREDENTIALS_FILE):
+                flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
+                self.creds = flow.run_local_server(port=0)
+
+        if not self.creds:
+            raise ValueError("Не вдалося ініціалізувати Google Drive: відсутній токен або credentials.json")
 
         self.service = build('drive', 'v3', credentials=self.creds)
         self.photo_folder_id = self._get_or_create_folder("Photo", PARENT_FOLDER_ID)
@@ -49,31 +59,27 @@ class GoogleDriveHandler:
 
     def download_file_by_name(self, folder_name, file_name):
         """
-        Шукає файл у папці товару, який починається на file_name.
-        Це дозволяє знайти '12345.jpg' або '12345.png', шукаючи просто '12345'.
+        Шукає файл у папці товару, який містить file_name.
+        Дозволяє знайти зображення без обов'язкового розширення в запиті.
         """
         try:
-            # 1. Отримуємо ID папки товару (наприклад, "1339000")
             subfolder_id = self._get_or_create_folder(folder_name, self.photo_folder_id)
 
-            # 2. Шукаємо файли, назва яких починається з нашого імені
-            # Використовуємо 'contains', бо Google Drive API не завжди стабільно перетравлює розширення
             query = f"name contains '{file_name}' and '{subfolder_id}' in parents and trashed=false"
             results = self.service.files().list(
                 q=query,
                 fields="files(id, name, mimeType)",
-                pageSize=1  # Нам потрібен лише один, перший ліпший варіант
+                pageSize=1
             ).execute()
 
             files = results.get('files', [])
 
             if not files:
-                print(f"📭 Файл {file_name} не знайдено в папці {folder_name} на Диску.")
+                logger.info(f"📭 Файл {file_name} не знайдено в папці {folder_name} на Диску.")
                 return None
 
-            # 3. Беремо ID знайденого файлу
             target_file = files[0]
-            print(f"✅ Знайдено файл на Диску: {target_file['name']} (ID: {target_file['id']})")
+            logger.info(f"✅ Знайдено файл на Диску: {target_file['name']} (ID: {target_file['id']})")
 
             request = self.service.files().get_media(fileId=target_file['id'])
             fh = io.BytesIO()
@@ -86,7 +92,7 @@ class GoogleDriveHandler:
             fh.seek(0)
             return fh
         except Exception as e:
-            print(f"❌ Помилка завантаження з Диска: {e}")
+            logger.error(f"❌ Помилка завантаження з Диска: {e}")
             return None
 
 
@@ -95,4 +101,4 @@ drive = None
 try:
     drive = GoogleDriveHandler()
 except Exception as e:
-    print(f"⚠️ Google Drive не ініціалізовано: {e}")
+    logger.warning(f"⚠️ Google Drive не ініціалізовано: {e}")

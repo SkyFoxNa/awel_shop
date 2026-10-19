@@ -9697,3 +9697,1343 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong
 2026-04-01 23:00:04,057 - INFO - root - Бот AWEL Shop запускається...
 2026-04-01 23:00:04,240 - INFO - aiogram.dispatcher - Start polling
 2026-04-01 23:00:04,240 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-02 12:18:44,170 - INFO - root - Бот AWEL Shop запускається...
+2026-04-02 12:18:44,373 - INFO - aiogram.dispatcher - Start polling
+2026-04-02 12:18:44,433 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-02 12:35:05,732 - INFO - aiogram.event - Update id=933186571 is handled. Duration 2125 ms by bot id=8350144188
+2026-04-02 12:35:06,713 - INFO - aiogram.event - Update id=933186572 is handled. Duration 1342 ms by bot id=8350144188
+2026-04-02 14:30:22,587 - INFO - aiogram.event - Update id=933186573 is handled. Duration 1793 ms by bot id=8350144188
+2026-04-02 14:30:39,377 - INFO - aiogram.event - Update id=933186574 is handled. Duration 2065 ms by bot id=8350144188
+2026-04-02 23:50:57,133 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-02 23:50:57,223 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-02 23:50:57,230 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-02 23:50:57,526 - INFO - root - Бот AWEL Shop запускається...
+2026-04-02 23:50:58,003 - INFO - aiogram.dispatcher - Start polling
+2026-04-02 23:50:58,005 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-03 12:51:40,546 - INFO - root - Бот AWEL Shop запускається...
+2026-04-03 12:51:40,726 - INFO - aiogram.dispatcher - Start polling
+2026-04-03 12:51:40,779 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-03 14:00:37,279 - INFO - aiogram.event - Update id=933186575 is handled. Duration 2326 ms by bot id=8350144188
+2026-04-03 14:00:47,225 - INFO - aiogram.event - Update id=933186576 is handled. Duration 1775 ms by bot id=8350144188
+2026-04-03 16:58:06,355 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramServerError: Telegram server says - Bad Gateway
+2026-04-03 16:58:06,356 - WARNING - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8350144188)
+2026-04-03 16:58:07,423 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramServerError: Telegram server says - Bad Gateway
+2026-04-03 16:58:07,423 - WARNING - aiogram.dispatcher - Sleep for 1.181418 seconds and try again... (tryings = 1, bot id = 8350144188)
+2026-04-03 16:58:08,669 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramServerError: Telegram server says - Bad Gateway
+2026-04-03 16:58:08,670 - WARNING - aiogram.dispatcher - Sleep for 1.378800 seconds and try again... (tryings = 2, bot id = 8350144188)
+2026-04-03 16:59:21,035 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-04-03 16:59:21,035 - WARNING - aiogram.dispatcher - Sleep for 2.004763 seconds and try again... (tryings = 3, bot id = 8350144188)
+2026-04-03 16:59:33,184 - INFO - aiogram.dispatcher - Connection established (tryings = 4, bot id = 8350144188)
+2026-04-03 23:59:31,385 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-03 23:59:31,419 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-03 23:59:31,423 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-03 23:59:31,714 - INFO - root - Бот AWEL Shop запускається...
+2026-04-03 23:59:32,118 - INFO - aiogram.dispatcher - Start polling
+2026-04-03 23:59:32,119 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-05 11:56:25,082 - INFO - root - Бот AWEL Shop запускається...
+2026-04-05 11:56:25,385 - INFO - aiogram.dispatcher - Start polling
+2026-04-05 11:56:25,445 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-05 11:57:05,638 - INFO - aiogram.event - Update id=933186577 is handled. Duration 943 ms by bot id=8350144188
+2026-04-05 11:57:10,054 - INFO - aiogram.event - Update id=933186578 is handled. Duration 1030 ms by bot id=8350144188
+2026-04-05 13:04:52,073 - INFO - aiogram.event - Update id=933186579 is handled. Duration 3624 ms by bot id=8350144188
+2026-04-05 13:05:12,195 - INFO - aiogram.event - Update id=933186580 is handled. Duration 803 ms by bot id=8350144188
+2026-04-05 13:05:27,072 - INFO - aiogram.event - Update id=933186581 is handled. Duration 515 ms by bot id=8350144188
+2026-04-05 13:05:38,335 - INFO - aiogram.event - Update id=933186582 is handled. Duration 611 ms by bot id=8350144188
+2026-04-05 13:05:57,487 - INFO - aiogram.event - Update id=933186583 is handled. Duration 14658 ms by bot id=8350144188
+2026-04-05 13:06:17,744 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 254, in process_pagination
+    await callback.answer()
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-04-05 13:06:18,338 - ERROR - root - Не вдалося відповісти користувачу: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-04-05 13:06:18,338 - INFO - aiogram.event - Update id=933186584 is handled. Duration 17454 ms by bot id=8350144188
+2026-04-05 13:06:28,458 - INFO - aiogram.event - Update id=933186585 is handled. Duration 470 ms by bot id=8350144188
+2026-04-05 13:06:45,734 - INFO - aiogram.event - Update id=933186586 is handled. Duration 1089 ms by bot id=8350144188
+2026-04-05 13:07:23,517 - INFO - aiogram.event - Update id=933186587 is handled. Duration 560 ms by bot id=8350144188
+2026-04-05 13:10:49,124 - INFO - aiogram.event - Update id=933186588 is handled. Duration 16722 ms by bot id=8350144188
+2026-04-05 13:11:13,596 - INFO - aiogram.event - Update id=933186589 is handled. Duration 14208 ms by bot id=8350144188
+2026-04-05 13:11:31,406 - INFO - aiogram.event - Update id=933186590 is handled. Duration 7484 ms by bot id=8350144188
+2026-04-05 13:12:25,604 - INFO - aiogram.event - Update id=933186591 is handled. Duration 15657 ms by bot id=8350144188
+2026-04-05 13:12:50,211 - INFO - aiogram.event - Update id=933186592 is handled. Duration 14791 ms by bot id=8350144188
+2026-04-05 13:13:04,175 - INFO - aiogram.event - Update id=933186593 is handled. Duration 9526 ms by bot id=8350144188
+2026-04-05 13:13:31,263 - INFO - aiogram.event - Update id=933186594 is handled. Duration 13854 ms by bot id=8350144188
+2026-04-05 13:13:57,698 - INFO - aiogram.event - Update id=933186595 is handled. Duration 12173 ms by bot id=8350144188
+2026-04-05 13:14:13,956 - INFO - aiogram.event - Update id=933186596 is handled. Duration 8756 ms by bot id=8350144188
+2026-04-05 13:14:38,432 - INFO - aiogram.event - Update id=933186597 is handled. Duration 7746 ms by bot id=8350144188
+2026-04-05 13:15:01,837 - INFO - aiogram.event - Update id=933186598 is handled. Duration 10554 ms by bot id=8350144188
+2026-04-05 13:15:28,391 - INFO - aiogram.event - Update id=933186599 is handled. Duration 10322 ms by bot id=8350144188
+2026-04-05 13:15:58,453 - INFO - aiogram.event - Update id=933186600 is handled. Duration 8396 ms by bot id=8350144188
+2026-04-05 15:20:24,574 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-05 15:20:24,582 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-05 15:20:24,582 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-05 15:20:24,839 - INFO - root - Бот AWEL Shop запускається...
+2026-04-05 15:20:25,039 - INFO - aiogram.dispatcher - Start polling
+2026-04-05 15:20:25,040 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-15 12:27:23,730 - INFO - root - Бот AWEL Shop запускається...
+2026-04-15 12:27:23,926 - INFO - aiogram.dispatcher - Start polling
+2026-04-15 12:27:23,983 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-15 12:44:52,826 - INFO - aiogram.event - Update id=933186601 is handled. Duration 2268 ms by bot id=8350144188
+2026-04-15 13:19:00,245 - INFO - aiogram.event - Update id=933186602 is handled. Duration 2115 ms by bot id=8350144188
+2026-04-15 13:19:11,303 - INFO - aiogram.event - Update id=933186603 is handled. Duration 3917 ms by bot id=8350144188
+2026-04-15 13:19:39,556 - INFO - aiogram.event - Update id=933186604 is handled. Duration 3373 ms by bot id=8350144188
+2026-04-15 13:21:25,817 - INFO - aiogram.event - Update id=933186605 is handled. Duration 719 ms by bot id=8350144188
+2026-04-15 13:21:36,572 - INFO - aiogram.event - Update id=933186606 is handled. Duration 1158 ms by bot id=8350144188
+2026-04-15 13:23:19,973 - INFO - aiogram.event - Update id=933186607 is handled. Duration 1217 ms by bot id=8350144188
+2026-04-15 13:31:07,334 - INFO - aiogram.event - Update id=933186608 is handled. Duration 10034 ms by bot id=8350144188
+2026-04-15 13:31:36,876 - INFO - aiogram.event - Update id=933186609 is handled. Duration 1292 ms by bot id=8350144188
+2026-04-15 13:33:23,360 - INFO - aiogram.event - Update id=933186610 is handled. Duration 423 ms by bot id=8350144188
+2026-04-15 13:33:54,536 - INFO - aiogram.event - Update id=933186611 is handled. Duration 15370 ms by bot id=8350144188
+2026-04-15 13:34:08,265 - INFO - aiogram.event - Update id=933186612 is handled. Duration 7812 ms by bot id=8350144188
+2026-04-15 13:34:31,653 - INFO - aiogram.event - Update id=933186613 is handled. Duration 2279 ms by bot id=8350144188
+2026-04-15 13:35:41,837 - INFO - aiogram.event - Update id=933186614 is handled. Duration 2773 ms by bot id=8350144188
+2026-04-15 15:49:32,853 - INFO - aiogram.event - Update id=933186615 is handled. Duration 2304 ms by bot id=8350144188
+2026-04-15 15:50:04,171 - INFO - aiogram.event - Update id=933186616 is handled. Duration 1037 ms by bot id=8350144188
+2026-04-15 15:50:21,107 - INFO - aiogram.event - Update id=933186617 is handled. Duration 546 ms by bot id=8350144188
+2026-04-15 15:50:47,623 - INFO - aiogram.event - Update id=933186618 is handled. Duration 18717 ms by bot id=8350144188
+2026-04-15 15:51:15,985 - INFO - aiogram.event - Update id=933186619 is handled. Duration 1122 ms by bot id=8350144188
+2026-04-15 15:51:47,876 - INFO - aiogram.event - Update id=933186620 is handled. Duration 596 ms by bot id=8350144188
+2026-04-15 15:51:58,162 - INFO - aiogram.event - Update id=933186621 is handled. Duration 1398 ms by bot id=8350144188
+2026-04-15 15:52:33,022 - INFO - aiogram.event - Update id=933186622 is handled. Duration 847 ms by bot id=8350144188
+2026-04-15 15:53:36,937 - INFO - aiogram.event - Update id=933186623 is handled. Duration 489 ms by bot id=8350144188
+2026-04-15 15:53:50,402 - INFO - aiogram.event - Update id=933186624 is handled. Duration 3966 ms by bot id=8350144188
+2026-04-15 18:49:40,658 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-15 18:49:40,748 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-15 18:49:40,753 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-15 18:49:41,059 - INFO - root - Бот AWEL Shop запускається...
+2026-04-15 18:49:41,470 - INFO - aiogram.dispatcher - Start polling
+2026-04-15 18:49:41,472 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-28 12:34:27,708 - INFO - root - Бот AWEL Shop запускається...
+2026-04-28 12:34:27,904 - INFO - aiogram.dispatcher - Start polling
+2026-04-28 12:34:27,955 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-28 12:34:49,884 - INFO - aiogram.event - Update id=933186625 is handled. Duration 850 ms by bot id=8350144188
+2026-04-28 12:34:52,144 - INFO - aiogram.event - Update id=933186626 is handled. Duration 418 ms by bot id=8350144188
+2026-04-28 12:34:57,780 - INFO - aiogram.event - Update id=933186627 is handled. Duration 1632 ms by bot id=8350144188
+2026-04-28 12:35:05,585 - INFO - aiogram.event - Update id=933186628 is handled. Duration 1280 ms by bot id=8350144188
+2026-04-28 12:35:11,684 - INFO - aiogram.event - Update id=933186629 is handled. Duration 640 ms by bot id=8350144188
+2026-04-28 12:36:29,334 - INFO - aiogram.event - Update id=933186630 is handled. Duration 515 ms by bot id=8350144188
+2026-04-28 12:36:37,919 - INFO - aiogram.event - Update id=933186631 is handled. Duration 3415 ms by bot id=8350144188
+2026-04-28 12:36:47,919 - INFO - aiogram.event - Update id=933186632 is handled. Duration 518 ms by bot id=8350144188
+2026-04-28 12:36:50,484 - INFO - aiogram.event - Update id=933186633 is handled. Duration 882 ms by bot id=8350144188
+2026-04-28 12:37:03,616 - INFO - aiogram.event - Update id=933186634 is handled. Duration 619 ms by bot id=8350144188
+2026-04-28 12:37:10,036 - INFO - aiogram.event - Update id=933186635 is handled. Duration 497 ms by bot id=8350144188
+2026-04-28 12:37:15,928 - INFO - aiogram.event - Update id=933186636 is handled. Duration 487 ms by bot id=8350144188
+2026-04-28 12:37:17,829 - INFO - aiogram.event - Update id=933186637 is handled. Duration 1026 ms by bot id=8350144188
+2026-04-28 12:37:40,304 - INFO - aiogram.event - Update id=933186638 is handled. Duration 2490 ms by bot id=8350144188
+2026-04-28 12:37:42,582 - INFO - aiogram.event - Update id=933186639 is handled. Duration 860 ms by bot id=8350144188
+2026-04-28 12:37:46,097 - INFO - aiogram.event - Update id=933186640 is handled. Duration 531 ms by bot id=8350144188
+2026-04-28 12:37:46,799 - INFO - aiogram.event - Update id=933186641 is handled. Duration 1093 ms by bot id=8350144188
+2026-04-28 12:37:54,661 - INFO - aiogram.event - Update id=933186642 is handled. Duration 598 ms by bot id=8350144188
+2026-04-28 12:37:56,621 - INFO - aiogram.event - Update id=933186643 is handled. Duration 793 ms by bot id=8350144188
+2026-04-28 12:38:00,840 - INFO - aiogram.event - Update id=933186644 is handled. Duration 1113 ms by bot id=8350144188
+2026-04-28 12:38:01,095 - INFO - aiogram.event - Update id=933186645 is handled. Duration 1301 ms by bot id=8350144188
+2026-04-28 12:38:04,129 - INFO - aiogram.event - Update id=933186646 is handled. Duration 1579 ms by bot id=8350144188
+2026-04-28 12:38:09,973 - INFO - aiogram.event - Update id=933186647 is handled. Duration 799 ms by bot id=8350144188
+2026-04-28 12:38:12,983 - INFO - aiogram.event - Update id=933186648 is handled. Duration 1852 ms by bot id=8350144188
+2026-04-28 12:38:18,468 - INFO - aiogram.event - Update id=933186649 is handled. Duration 528 ms by bot id=8350144188
+2026-04-28 12:39:02,582 - INFO - aiogram.event - Update id=933186650 is handled. Duration 486 ms by bot id=8350144188
+2026-04-28 12:39:14,439 - INFO - aiogram.event - Update id=933186651 is handled. Duration 3561 ms by bot id=8350144188
+2026-04-28 12:51:07,917 - INFO - aiogram.event - Update id=933186652 is handled. Duration 1923 ms by bot id=8350144188
+2026-04-28 12:51:13,886 - INFO - aiogram.event - Update id=933186653 is handled. Duration 1937 ms by bot id=8350144188
+2026-04-28 12:54:07,965 - INFO - aiogram.event - Update id=933186654 is handled. Duration 1034 ms by bot id=8350144188
+2026-04-28 12:54:15,076 - INFO - aiogram.event - Update id=933186655 is handled. Duration 553 ms by bot id=8350144188
+2026-04-28 12:54:18,486 - INFO - aiogram.event - Update id=933186656 is handled. Duration 616 ms by bot id=8350144188
+2026-04-28 13:17:11,051 - INFO - aiogram.event - Update id=933186657 is handled. Duration 1834 ms by bot id=8350144188
+2026-04-28 13:17:20,344 - INFO - aiogram.event - Update id=933186658 is handled. Duration 1941 ms by bot id=8350144188
+2026-04-28 13:17:24,816 - INFO - aiogram.event - Update id=933186659 is handled. Duration 1500 ms by bot id=8350144188
+2026-04-28 14:32:06,257 - INFO - aiogram.event - Update id=933186660 is handled. Duration 2086 ms by bot id=8350144188
+2026-04-28 14:32:20,807 - INFO - aiogram.event - Update id=933186661 is handled. Duration 4861 ms by bot id=8350144188
+2026-04-28 14:32:38,296 - INFO - aiogram.event - Update id=933186662 is handled. Duration 1524 ms by bot id=8350144188
+2026-04-28 14:32:42,665 - INFO - aiogram.event - Update id=933186663 is handled. Duration 677 ms by bot id=8350144188
+2026-04-28 18:43:08,826 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-04-28 18:43:09,340 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-04-28 18:43:09,504 - INFO - aiogram.dispatcher - Polling stopped
+2026-04-28 18:43:11,136 - INFO - root - Бот AWEL Shop запускається...
+2026-09-17 13:18:36,649 - INFO - root - Бот AWEL Shop запускається...
+2026-09-17 13:18:39,866 - INFO - aiogram.dispatcher - Start polling
+2026-09-17 13:18:39,924 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-17 13:19:21,810 - INFO - aiogram.event - Update id=933186664 is handled. Duration 1028 ms by bot id=8350144188
+2026-09-17 13:19:25,409 - INFO - aiogram.event - Update id=933186665 is handled. Duration 433 ms by bot id=8350144188
+2026-09-17 13:19:33,542 - INFO - aiogram.event - Update id=933186666 is handled. Duration 1888 ms by bot id=8350144188
+2026-09-17 13:19:44,156 - INFO - aiogram.event - Update id=933186667 is handled. Duration 1344 ms by bot id=8350144188
+2026-09-17 13:19:54,881 - INFO - aiogram.event - Update id=933186668 is handled. Duration 1695 ms by bot id=8350144188
+2026-09-17 18:07:06,081 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-17 18:07:06,701 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-17 18:07:06,712 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-17 18:07:07,053 - INFO - root - Бот AWEL Shop запускається...
+2026-09-17 18:07:07,416 - INFO - aiogram.dispatcher - Start polling
+2026-09-17 18:07:07,427 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-18 12:15:55,889 - INFO - root - Бот AWEL Shop запускається...
+2026-09-18 12:15:56,040 - INFO - aiogram.dispatcher - Start polling
+2026-09-18 12:15:56,084 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-18 14:55:15,097 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-18 14:55:15,147 - WARNING - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8350144188)
+2026-09-18 14:55:26,327 - INFO - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8350144188)
+2026-09-18 15:02:59,619 - INFO - aiogram.event - Update id=933186669 is handled. Duration 3960 ms by bot id=8350144188
+2026-09-18 15:03:19,032 - INFO - aiogram.event - Update id=933186670 is handled. Duration 5712 ms by bot id=8350144188
+2026-09-18 15:03:49,457 - INFO - aiogram.event - Update id=933186671 is handled. Duration 1645 ms by bot id=8350144188
+2026-09-18 15:04:17,386 - INFO - aiogram.event - Update id=933186672 is handled. Duration 22259 ms by bot id=8350144188
+2026-09-18 15:04:33,099 - INFO - aiogram.event - Update id=933186673 is handled. Duration 4739 ms by bot id=8350144188
+2026-09-18 15:06:17,585 - INFO - aiogram.event - Update id=933186674 is handled. Duration 784 ms by bot id=8350144188
+2026-09-18 15:06:53,963 - INFO - aiogram.event - Update id=933186675 is handled. Duration 22743 ms by bot id=8350144188
+2026-09-18 15:07:32,931 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 254, in process_pagination
+    await callback.answer()
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-18 15:07:33,612 - ERROR - root - Не вдалося відповісти користувачу: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-18 15:07:33,612 - INFO - aiogram.event - Update id=933186676 is handled. Duration 17183 ms by bot id=8350144188
+2026-09-18 15:07:56,872 - INFO - aiogram.event - Update id=933186677 is handled. Duration 2119 ms by bot id=8350144188
+2026-09-18 15:38:00,358 - INFO - aiogram.event - Update id=933186678 is handled. Duration 2127 ms by bot id=8350144188
+2026-09-18 15:38:15,330 - INFO - aiogram.event - Update id=933186679 is handled. Duration 825 ms by bot id=8350144188
+2026-09-18 18:13:22,235 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-18 18:13:22,238 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-18 18:13:22,239 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-18 18:13:22,493 - INFO - root - Бот AWEL Shop запускається...
+2026-09-18 18:13:22,703 - INFO - aiogram.dispatcher - Start polling
+2026-09-18 18:13:22,705 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-25 21:44:03,657 - INFO - root - Бот AWEL Shop запускається...
+2026-09-25 21:44:03,817 - INFO - aiogram.dispatcher - Start polling
+2026-09-25 21:44:03,871 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-25 21:46:51,068 - INFO - aiogram.event - Update id=933186680 is handled. Duration 46923 ms by bot id=8350144188
+2026-09-25 21:46:51,709 - INFO - aiogram.event - Update id=933186681 is handled. Duration 37223 ms by bot id=8350144188
+2026-09-25 21:47:01,187 - INFO - aiogram.event - Update id=933186682 is handled. Duration 445 ms by bot id=8350144188
+2026-09-25 21:49:31,715 - INFO - aiogram.event - Update id=933186683 is handled. Duration 23332 ms by bot id=8350144188
+2026-09-25 21:50:39,775 - INFO - aiogram.event - Update id=933186684 is handled. Duration 31978 ms by bot id=8350144188
+2026-09-25 21:51:56,341 - INFO - aiogram.event - Update id=933186685 is handled. Duration 3578 ms by bot id=8350144188
+2026-09-25 21:52:17,591 - INFO - aiogram.event - Update id=933186686 is handled. Duration 1238 ms by bot id=8350144188
+2026-09-25 21:52:30,419 - INFO - aiogram.event - Update id=933186687 is handled. Duration 654 ms by bot id=8350144188
+2026-09-25 21:53:06,039 - INFO - aiogram.event - Update id=933186688 is handled. Duration 693 ms by bot id=8350144188
+2026-09-25 21:53:48,912 - INFO - aiogram.event - Update id=933186689 is handled. Duration 34053 ms by bot id=8350144188
+2026-09-25 21:55:54,229 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 254, in process_pagination
+    await callback.answer()
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-25 21:55:57,345 - ERROR - root - Не вдалося відповісти користувачу: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-25 21:55:57,345 - INFO - aiogram.event - Update id=933186690 is handled. Duration 52467 ms by bot id=8350144188
+2026-09-25 22:02:36,913 - INFO - aiogram.event - Update id=933186691 is handled. Duration 3217 ms by bot id=8350144188
+2026-09-25 22:03:01,655 - INFO - aiogram.event - Update id=933186692 is handled. Duration 15820 ms by bot id=8350144188
+2026-09-25 22:03:07,844 - INFO - aiogram.event - Update id=933186693 is handled. Duration 1024 ms by bot id=8350144188
+2026-09-25 22:03:13,548 - INFO - aiogram.event - Update id=933186694 is handled. Duration 419 ms by bot id=8350144188
+2026-09-25 22:03:30,520 - INFO - aiogram.event - Update id=933186695 is handled. Duration 485 ms by bot id=8350144188
+2026-09-25 22:03:52,814 - INFO - aiogram.event - Update id=933186696 is handled. Duration 14735 ms by bot id=8350144188
+2026-09-25 22:04:04,063 - INFO - aiogram.event - Update id=933186697 is handled. Duration 7336 ms by bot id=8350144188
+2026-09-25 22:04:56,299 - INFO - aiogram.event - Update id=933186698 is handled. Duration 21822 ms by bot id=8350144188
+2026-09-25 22:05:14,587 - INFO - aiogram.event - Update id=933186699 is handled. Duration 13747 ms by bot id=8350144188
+2026-09-25 22:05:49,510 - INFO - aiogram.event - Update id=933186700 is handled. Duration 962 ms by bot id=8350144188
+2026-09-25 22:06:20,961 - INFO - aiogram.event - Update id=933186701 is handled. Duration 17036 ms by bot id=8350144188
+2026-09-25 22:06:37,714 - INFO - aiogram.event - Update id=933186702 is handled. Duration 1059 ms by bot id=8350144188
+2026-09-25 22:06:57,643 - INFO - aiogram.event - Update id=933186703 is handled. Duration 451 ms by bot id=8350144188
+2026-09-25 22:07:09,115 - INFO - aiogram.event - Update id=933186704 is handled. Duration 5198 ms by bot id=8350144188
+2026-09-25 22:07:23,213 - INFO - aiogram.event - Update id=933186705 is handled. Duration 10673 ms by bot id=8350144188
+2026-09-25 22:07:48,016 - ERROR - root - 🚨 Виникла помилка: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/db/middleware.py", line 19, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 254, in process_pagination
+    await callback.answer()
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-25 22:07:48,652 - ERROR - root - Не вдалося відповісти користувачу: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-09-25 22:07:48,658 - INFO - aiogram.event - Update id=933186706 is handled. Duration 17620 ms by bot id=8350144188
+2026-09-25 22:08:12,623 - INFO - aiogram.event - Update id=933186707 is handled. Duration 7210 ms by bot id=8350144188
+2026-09-25 22:08:35,701 - INFO - aiogram.event - Update id=933186708 is handled. Duration 11702 ms by bot id=8350144188
+2026-09-25 22:08:52,948 - INFO - aiogram.event - Update id=933186709 is handled. Duration 14506 ms by bot id=8350144188
+2026-09-25 22:09:29,919 - INFO - aiogram.event - Update id=933186710 is handled. Duration 6339 ms by bot id=8350144188
+2026-09-25 22:09:52,417 - INFO - aiogram.event - Update id=933186711 is handled. Duration 1453 ms by bot id=8350144188
+2026-09-25 22:24:17,255 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-25 22:24:17,271 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-25 22:24:17,273 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-26 07:51:09,394 - INFO - root - Бот AWEL Shop запускається...
+2026-09-26 07:51:09,541 - INFO - aiogram.dispatcher - Start polling
+2026-09-26 07:51:09,589 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-26 08:54:48,258 - INFO - aiogram.event - Update id=933186712 is handled. Duration 3722 ms by bot id=8350144188
+2026-09-26 08:55:04,426 - INFO - aiogram.event - Update id=933186713 is handled. Duration 5610 ms by bot id=8350144188
+2026-09-26 08:55:09,783 - INFO - aiogram.event - Update id=933186714 is handled. Duration 1506 ms by bot id=8350144188
+2026-09-26 08:58:35,910 - INFO - aiogram.event - Update id=933186715 is handled. Duration 400 ms by bot id=8350144188
+2026-09-26 08:58:51,491 - INFO - aiogram.event - Update id=933186716 is handled. Duration 491 ms by bot id=8350144188
+2026-09-26 08:59:08,279 - INFO - aiogram.event - Update id=933186717 is handled. Duration 570 ms by bot id=8350144188
+2026-09-26 09:11:36,173 - INFO - aiogram.event - Update id=933186718 is handled. Duration 1902 ms by bot id=8350144188
+2026-09-26 09:11:57,333 - INFO - aiogram.event - Update id=933186719 is handled. Duration 3676 ms by bot id=8350144188
+2026-09-26 11:07:19,106 - INFO - aiogram.event - Update id=933186720 is handled. Duration 2452 ms by bot id=8350144188
+2026-09-26 11:07:24,869 - INFO - aiogram.event - Update id=933186721 is handled. Duration 440 ms by bot id=8350144188
+2026-09-26 11:07:39,241 - INFO - aiogram.event - Update id=933186722 is handled. Duration 1869 ms by bot id=8350144188
+2026-09-26 11:07:46,913 - INFO - aiogram.event - Update id=933186723 is handled. Duration 3066 ms by bot id=8350144188
+2026-09-26 11:25:24,898 - INFO - aiogram.event - Update id=933186724 is handled. Duration 2680 ms by bot id=8350144188
+2026-09-26 11:25:33,259 - INFO - aiogram.event - Update id=933186725 is handled. Duration 1605 ms by bot id=8350144188
+2026-09-26 11:25:39,940 - INFO - aiogram.event - Update id=933186726 is handled. Duration 1860 ms by bot id=8350144188
+2026-09-26 11:27:50,794 - INFO - aiogram.event - Update id=933186727 is handled. Duration 451 ms by bot id=8350144188
+2026-09-26 11:28:07,239 - INFO - aiogram.event - Update id=933186728 is handled. Duration 496 ms by bot id=8350144188
+2026-09-26 11:28:24,740 - INFO - aiogram.event - Update id=933186729 is handled. Duration 1180 ms by bot id=8350144188
+2026-09-26 11:28:26,964 - INFO - aiogram.event - Update id=933186730 is handled. Duration 1063 ms by bot id=8350144188
+2026-09-26 11:28:42,985 - INFO - aiogram.event - Update id=933186731 is handled. Duration 429 ms by bot id=8350144188
+2026-09-26 11:29:32,296 - INFO - aiogram.event - Update id=933186732 is handled. Duration 3502 ms by bot id=8350144188
+2026-09-26 11:29:36,872 - INFO - aiogram.event - Update id=933186733 is handled. Duration 1222 ms by bot id=8350144188
+2026-09-26 11:30:06,452 - INFO - aiogram.event - Update id=933186734 is handled. Duration 399 ms by bot id=8350144188
+2026-09-26 11:30:44,689 - INFO - aiogram.event - Update id=933186735 is handled. Duration 3812 ms by bot id=8350144188
+2026-09-26 11:31:02,843 - INFO - aiogram.event - Update id=933186736 is handled. Duration 1155 ms by bot id=8350144188
+2026-09-26 11:31:22,374 - INFO - aiogram.event - Update id=933186737 is handled. Duration 3236 ms by bot id=8350144188
+2026-09-26 11:31:39,578 - INFO - aiogram.event - Update id=933186738 is handled. Duration 1145 ms by bot id=8350144188
+2026-09-26 11:34:29,598 - INFO - aiogram.event - Update id=933186739 is handled. Duration 395 ms by bot id=8350144188
+2026-09-26 11:34:41,531 - INFO - aiogram.event - Update id=933186740 is handled. Duration 2846 ms by bot id=8350144188
+2026-09-26 11:34:44,129 - INFO - aiogram.event - Update id=933186741 is handled. Duration 1017 ms by bot id=8350144188
+2026-09-26 14:40:33,027 - INFO - aiogram.event - Update id=933186742 is handled. Duration 3263 ms by bot id=8350144188
+2026-09-26 14:40:51,364 - INFO - aiogram.event - Update id=933186743 is handled. Duration 4507 ms by bot id=8350144188
+2026-09-26 14:41:39,861 - INFO - aiogram.event - Update id=933186744 is handled. Duration 1123 ms by bot id=8350144188
+2026-09-26 19:13:02,872 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-26 19:13:02,987 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-26 19:13:02,994 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-26 19:13:03,310 - INFO - root - Бот AWEL Shop запускається...
+2026-09-26 19:13:03,652 - INFO - aiogram.dispatcher - Start polling
+2026-09-26 19:13:03,657 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-27 07:57:06,496 - INFO - root - Бот AWEL Shop запускається...
+2026-09-27 07:57:06,897 - INFO - aiogram.dispatcher - Start polling
+2026-09-27 07:57:06,944 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-27 12:02:59,711 - INFO - aiogram.event - Update id=933186745 is handled. Duration 2635 ms by bot id=8350144188
+2026-09-27 12:03:16,499 - INFO - aiogram.event - Update id=933186746 is handled. Duration 1528 ms by bot id=8350144188
+2026-09-27 12:03:19,529 - INFO - aiogram.event - Update id=933186747 is handled. Duration 1134 ms by bot id=8350144188
+2026-09-27 14:09:16,000 - INFO - aiogram.event - Update id=933186748 is handled. Duration 2184 ms by bot id=8350144188
+2026-09-27 14:09:29,364 - INFO - aiogram.event - Update id=933186749 is handled. Duration 1465 ms by bot id=8350144188
+2026-09-27 14:09:32,914 - INFO - aiogram.event - Update id=933186750 is handled. Duration 1070 ms by bot id=8350144188
+2026-09-27 15:17:13,090 - INFO - aiogram.event - Update id=933186751 is handled. Duration 2224 ms by bot id=8350144188
+2026-09-27 15:17:27,890 - INFO - aiogram.event - Update id=933186752 is handled. Duration 4562 ms by bot id=8350144188
+2026-09-27 15:17:35,810 - INFO - aiogram.event - Update id=933186753 is handled. Duration 1150 ms by bot id=8350144188
+2026-09-27 15:17:39,119 - INFO - aiogram.event - Update id=933186754 is handled. Duration 559 ms by bot id=8350144188
+2026-09-27 15:17:43,368 - INFO - aiogram.event - Update id=933186755 is handled. Duration 421 ms by bot id=8350144188
+2026-09-27 15:17:56,511 - INFO - aiogram.event - Update id=933186756 is handled. Duration 3011 ms by bot id=8350144188
+2026-09-27 15:18:18,289 - INFO - aiogram.event - Update id=933186757 is handled. Duration 2965 ms by bot id=8350144188
+2026-09-27 15:51:01,942 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-27 15:51:01,947 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-27 15:51:01,948 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-27 15:51:02,204 - INFO - root - Бот AWEL Shop запускається...
+2026-09-27 15:51:02,368 - INFO - aiogram.dispatcher - Start polling
+2026-09-27 15:51:02,369 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 07:19:21,391 - INFO - root - Бот AWEL Shop запускається...
+2026-09-28 07:19:21,536 - INFO - aiogram.dispatcher - Start polling
+2026-09-28 07:19:21,585 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 12:18:25,921 - INFO - aiogram.event - Update id=933186758 is handled. Duration 3675 ms by bot id=8350144188
+2026-09-28 12:18:41,028 - INFO - aiogram.event - Update id=933186759 is handled. Duration 4878 ms by bot id=8350144188
+2026-09-28 12:18:44,157 - INFO - aiogram.event - Update id=933186760 is handled. Duration 1362 ms by bot id=8350144188
+2026-09-28 14:59:24,222 - INFO - aiogram.event - Update id=933186761 is handled. Duration 2129 ms by bot id=8350144188
+2026-09-28 14:59:38,190 - INFO - aiogram.event - Update id=933186762 is handled. Duration 4092 ms by bot id=8350144188
+2026-09-28 15:01:05,056 - INFO - aiogram.event - Update id=933186763 is handled. Duration 6149 ms by bot id=8350144188
+2026-09-28 18:16:02,546 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-28 18:16:02,552 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 18:16:02,553 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-28 18:16:02,808 - INFO - root - Бот AWEL Shop запускається...
+2026-09-28 18:16:02,977 - INFO - aiogram.dispatcher - Start polling
+2026-09-28 18:16:02,978 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 19:36:26,608 - INFO - root - Бот AWEL Shop запускається...
+2026-09-28 19:36:26,758 - INFO - aiogram.dispatcher - Start polling
+2026-09-28 19:36:26,806 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 20:02:30,613 - INFO - aiogram.event - Update id=933186764 is handled. Duration 4253 ms by bot id=8350144188
+2026-09-28 20:02:55,227 - INFO - aiogram.event - Update id=933186765 is handled. Duration 20131 ms by bot id=8350144188
+2026-09-28 20:03:04,713 - INFO - aiogram.event - Update id=933186766 is handled. Duration 1507 ms by bot id=8350144188
+2026-09-28 20:03:11,716 - INFO - aiogram.event - Update id=933186767 is handled. Duration 1188 ms by bot id=8350144188
+2026-09-28 20:03:15,913 - INFO - aiogram.event - Update id=933186768 is handled. Duration 535 ms by bot id=8350144188
+2026-09-28 20:03:34,660 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-28 20:03:34,666 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-28 20:03:34,667 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-28 20:03:34,932 - INFO - root - Бот AWEL Shop запускається...
+2026-09-28 20:03:35,093 - INFO - aiogram.dispatcher - Start polling
+2026-09-28 20:03:35,095 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-29 07:40:54,970 - INFO - root - Бот AWEL Shop запускається...
+2026-09-29 07:40:55,121 - INFO - aiogram.dispatcher - Start polling
+2026-09-29 07:40:55,174 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-29 08:23:31,432 - INFO - aiogram.event - Update id=933186769 is handled. Duration 2180 ms by bot id=8350144188
+2026-09-29 08:23:50,376 - INFO - aiogram.event - Update id=933186770 is handled. Duration 3852 ms by bot id=8350144188
+2026-09-29 08:23:53,669 - INFO - aiogram.event - Update id=933186771 is handled. Duration 1147 ms by bot id=8350144188
+2026-09-29 08:37:38,442 - INFO - aiogram.event - Update id=933186772 is handled. Duration 2012 ms by bot id=8350144188
+2026-09-29 08:37:52,537 - INFO - aiogram.event - Update id=933186773 is handled. Duration 4161 ms by bot id=8350144188
+2026-09-29 12:17:57,212 - INFO - aiogram.event - Update id=933186774 is handled. Duration 2046 ms by bot id=8350144188
+2026-09-29 12:18:17,365 - INFO - aiogram.event - Update id=933186775 is handled. Duration 3995 ms by bot id=8350144188
+2026-09-29 12:18:25,694 - INFO - aiogram.event - Update id=933186776 is handled. Duration 1120 ms by bot id=8350144188
+2026-09-29 13:13:30,064 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-29 13:13:30,064 - WARNING - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8350144188)
+2026-09-29 13:13:41,208 - INFO - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8350144188)
+2026-09-29 13:36:38,055 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-29 13:36:38,055 - WARNING - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8350144188)
+2026-09-29 13:36:49,203 - INFO - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8350144188)
+2026-09-29 14:02:17,047 - ERROR - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-09-29 14:02:17,048 - WARNING - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8350144188)
+2026-09-29 14:02:28,205 - INFO - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8350144188)
+2026-09-29 14:46:13,097 - INFO - aiogram.event - Update id=933186777 is handled. Duration 2161 ms by bot id=8350144188
+2026-09-29 14:46:38,722 - INFO - aiogram.event - Update id=933186778 is handled. Duration 6087 ms by bot id=8350144188
+2026-09-29 14:48:24,598 - INFO - aiogram.event - Update id=933186779 is handled. Duration 1239 ms by bot id=8350144188
+2026-09-29 14:55:41,403 - INFO - aiogram.event - Update id=933186780 is handled. Duration 3099 ms by bot id=8350144188
+2026-09-29 16:07:51,083 - INFO - aiogram.event - Update id=933186781 is handled. Duration 2083 ms by bot id=8350144188
+2026-09-29 16:08:20,098 - INFO - aiogram.event - Update id=933186782 is handled. Duration 965 ms by bot id=8350144188
+2026-09-29 16:08:45,047 - INFO - aiogram.event - Update id=933186783 is handled. Duration 16070 ms by bot id=8350144188
+2026-09-29 16:10:45,284 - INFO - aiogram.event - Update id=933186784 is handled. Duration 408 ms by bot id=8350144188
+2026-09-29 16:11:01,510 - INFO - aiogram.event - Update id=933186785 is handled. Duration 3918 ms by bot id=8350144188
+2026-09-29 16:30:09,546 - INFO - aiogram.event - Update id=933186786 is handled. Duration 1977 ms by bot id=8350144188
+2026-09-29 16:30:24,241 - INFO - aiogram.event - Update id=933186787 is handled. Duration 8588 ms by bot id=8350144188
+2026-09-29 17:57:40,255 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-09-29 17:57:40,255 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-09-29 17:57:40,256 - INFO - aiogram.dispatcher - Polling stopped
+2026-09-29 17:57:40,506 - INFO - root - Бот AWEL Shop запускається...
+2026-09-29 17:57:40,649 - INFO - aiogram.dispatcher - Start polling
+2026-09-29 17:57:40,649 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-01 07:20:38,393 - INFO - root - Бот AWEL Shop запускається...
+2026-10-01 07:20:38,536 - INFO - aiogram.dispatcher - Start polling
+2026-10-01 07:20:38,588 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-01 11:32:41,261 - INFO - aiogram.event - Update id=933186788 is handled. Duration 4045 ms by bot id=8350144188
+2026-10-01 11:32:46,279 - INFO - aiogram.event - Update id=933186789 is handled. Duration 480 ms by bot id=8350144188
+2026-10-01 11:33:03,284 - INFO - aiogram.event - Update id=933186790 is handled. Duration 2010 ms by bot id=8350144188
+2026-10-01 18:44:51,703 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-01 18:44:51,709 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-01 18:44:51,710 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-01 18:44:51,972 - INFO - root - Бот AWEL Shop запускається...
+2026-10-02 07:19:27,237 - INFO - root - Бот AWEL Shop запускається...
+2026-10-02 07:19:27,395 - INFO - aiogram.dispatcher - Start polling
+2026-10-02 07:19:27,457 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-04 19:09:14,573 - INFO - root - Бот AWEL Shop запускається...
+2026-10-04 19:09:14,713 - INFO - aiogram.dispatcher - Start polling
+2026-10-04 19:09:14,759 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-04 19:09:31,430 - INFO - aiogram.event - Update id=933186793 is handled. Duration 850 ms by bot id=8350144188
+2026-10-04 19:09:38,908 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-04 19:09:38,909 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-04 19:09:38,909 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-04 19:33:56,676 - INFO - root - Бот AWEL Shop запускається...
+2026-10-04 19:33:56,826 - INFO - aiogram.dispatcher - Start polling
+2026-10-04 19:33:56,874 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-04 19:34:00,483 - INFO - aiogram.event - Update id=933186794 is handled. Duration 699 ms by bot id=8350144188
+2026-10-04 19:34:09,506 - INFO - aiogram.event - Update id=933186795 is handled. Duration 1517 ms by bot id=8350144188
+2026-10-04 19:34:13,096 - INFO - aiogram.event - Update id=933186796 is handled. Duration 1342 ms by bot id=8350144188
+2026-10-04 19:34:19,674 - INFO - aiogram.event - Update id=933186797 is handled. Duration 1722 ms by bot id=8350144188
+2026-10-04 19:54:12,711 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-04 19:54:12,836 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-04 19:54:12,847 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-17 08:08:42,658 - INFO - root - Бот AWEL Shop запускається...
+2026-10-17 08:08:43,030 - INFO - aiogram.dispatcher - Start polling
+2026-10-17 08:08:43,084 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-17 09:04:46,346 - INFO - aiogram.event - Update id=933186802 is handled. Duration 3447 ms by bot id=8350144188
+2026-10-17 09:05:06,653 - INFO - aiogram.event - Update id=933186803 is handled. Duration 5181 ms by bot id=8350144188
+2026-10-17 09:05:16,392 - INFO - aiogram.event - Update id=933186804 is handled. Duration 1155 ms by bot id=8350144188
+2026-10-17 10:22:53,558 - INFO - aiogram.event - Update id=933186805 is handled. Duration 1648 ms by bot id=8350144188
+2026-10-17 10:23:10,702 - INFO - aiogram.event - Update id=933186806 is handled. Duration 3991 ms by bot id=8350144188
+2026-10-17 10:23:16,207 - INFO - aiogram.event - Update id=933186807 is handled. Duration 1033 ms by bot id=8350144188
+2026-10-17 10:23:27,760 - INFO - aiogram.event - Update id=933186808 is handled. Duration 410 ms by bot id=8350144188
+2026-10-17 10:23:41,237 - INFO - aiogram.event - Update id=933186809 is handled. Duration 3048 ms by bot id=8350144188
+2026-10-17 10:23:46,320 - INFO - aiogram.event - Update id=933186810 is handled. Duration 1273 ms by bot id=8350144188
+2026-10-17 11:02:50,444 - INFO - aiogram.event - Update id=933186811 is handled. Duration 1659 ms by bot id=8350144188
+2026-10-17 11:03:04,396 - INFO - aiogram.event - Update id=933186812 is handled. Duration 597 ms by bot id=8350144188
+2026-10-17 11:12:52,929 - INFO - aiogram.event - Update id=933186813 is handled. Duration 1576 ms by bot id=8350144188
+2026-10-17 11:13:05,872 - INFO - aiogram.event - Update id=933186814 is handled. Duration 3853 ms by bot id=8350144188
+2026-10-19 22:46:52,320 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 22:46:52,470 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 22:46:52,517 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 22:47:34,720 - INFO - aiogram.event - Update id=933186816 is not handled. Duration 1577 ms by bot id=8350144188
+2026-10-19 22:47:34,720 - ERROR - aiogram.event - Cause exception while process update id=933186816 by bot id=8350144188
+TypeError: global_error_handler() missing 1 required positional argument: 'session_pool'
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/start.py", line 127, in start_handler
+    await message.answer("Оберіть розділ меню:", reply_markup=get_main_kb(user))
+                                                              ~~~~~~~~~~~^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/keyboards/reply.py", line 24, in get_main_kb
+    user_role_names = [r.role.name for r in user.roles] if user.roles else []
+                                            ^^^^^^^^^^
+TypeError: 'ManyRelatedManager' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 31, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: global_error_handler() missing 1 required positional argument: 'session_pool'
+2026-10-19 22:50:01,790 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 22:50:01,791 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 22:50:01,791 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 22:53:42,306 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 22:53:42,446 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 22:53:42,497 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 22:53:47,974 - INFO - aiogram.event - Update id=933186817 is handled. Duration 1567 ms by bot id=8350144188
+2026-10-19 22:55:42,029 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 22:55:42,030 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 22:55:42,030 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 22:56:31,639 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 22:56:31,779 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 22:56:31,830 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 22:56:39,305 - ERROR - root - 🚨 Виникла помилка: cmd_home() missing 1 required positional argument: 'session'
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 ~~~~~~~^^
+TypeError: cmd_home() missing 1 required positional argument: 'session'
+2026-10-19 22:56:39,814 - INFO - aiogram.event - Update id=933186818 is handled. Duration 925 ms by bot id=8350144188
+2026-10-19 23:01:29,017 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:01:29,017 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:01:29,018 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:33:46,233 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:33:46,373 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:33:46,420 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:33:57,863 - INFO - aiogram.event - Update id=933186819 is handled. Duration 1612 ms by bot id=8350144188
+2026-10-19 23:34:00,168 - INFO - aiogram.event - Update id=933186820 is handled. Duration 294 ms by bot id=8350144188
+2026-10-19 23:34:08,301 - INFO - aiogram.event - Update id=933186821 is handled. Duration 698 ms by bot id=8350144188
+2026-10-19 23:34:14,165 - INFO - aiogram.event - Update id=933186822 is handled. Duration 152 ms by bot id=8350144188
+2026-10-19 23:34:23,262 - ERROR - root - 🚨 Виникла помилка: Cannot resolve keyword 'product_code' into field. Choices are: balance, id, is_active, location, location_id, price, product, product_id, storage_address
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 183, in handle_search_input
+    await show_catalog_page(message, message.text, 0, state)
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 223, in show_catalog_page
+    info = await get_product_display_data(p, user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/utils/product_helper.py", line 31, in get_product_display_data
+    async for stock in ProductStock.objects.filter(product_code=product.code):
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1701, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1719, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1729, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1680, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1712, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1550, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1357, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1846, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_code' into field. Choices are: balance, id, is_active, location, location_id, price, product, product_id, storage_address
+2026-10-19 23:34:23,601 - INFO - aiogram.event - Update id=933186823 is handled. Duration 827 ms by bot id=8350144188
+2026-10-19 23:43:22,815 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:43:22,816 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:43:22,816 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:43:30,383 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:43:30,523 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:43:30,572 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:43:39,080 - INFO - aiogram.event - Update id=933186824 is handled. Duration 1320 ms by bot id=8350144188
+2026-10-19 23:43:46,407 - ERROR - root - 🚨 Виникла помилка: Cannot resolve keyword 'product_code' into field. Choices are: balance, id, is_active, location, location_id, price, product, product_id, storage_address
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 183, in handle_search_input
+    await show_catalog_page(message, message.text, 0, state)
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 223, in show_catalog_page
+    info = await get_product_display_data(p, user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/utils/product_helper.py", line 31, in get_product_display_data
+    async for stock in ProductStock.objects.filter(product_code=product.code):
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1701, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1719, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1729, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1680, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1712, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1550, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1357, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1846, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_code' into field. Choices are: balance, id, is_active, location, location_id, price, product, product_id, storage_address
+2026-10-19 23:43:46,832 - INFO - aiogram.event - Update id=933186825 is handled. Duration 969 ms by bot id=8350144188
+2026-10-19 23:44:10,493 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:44:10,494 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:44:10,494 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:47:08,918 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:47:09,060 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:47:09,112 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:47:12,675 - INFO - aiogram.event - Update id=933186826 is handled. Duration 753 ms by bot id=8350144188
+2026-10-19 23:47:18,958 - ERROR - root - 🚨 Виникла помилка: Cannot resolve keyword 'product_code' into field. Choices are: discount_price, id, min_quantity, priority, product, product_id, promotion, promotion_id
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 183, in handle_search_input
+    await show_catalog_page(message, message.text, 0, state)
+  File "/all/progi/Python/Awel/awel_shop/handlers/product_search.py", line 223, in show_catalog_page
+    info = await get_product_display_data(p, user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/utils/product_helper.py", line 42, in get_product_display_data
+    promo_item = await PromotionItem.objects.filter(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        product_code=product.code,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        promotion__is_active=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ).filter(
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1701, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1719, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1729, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1680, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1712, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1550, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1357, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1846, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_code' into field. Choices are: discount_price, id, min_quantity, priority, product, product_id, promotion, promotion_id
+2026-10-19 23:47:19,379 - INFO - aiogram.event - Update id=933186827 is handled. Duration 901 ms by bot id=8350144188
+2026-10-19 23:48:49,971 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:48:49,973 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:48:49,973 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:49:11,027 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:49:11,184 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:49:11,238 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:49:14,525 - INFO - aiogram.event - Update id=933186828 is handled. Duration 604 ms by bot id=8350144188
+2026-10-19 23:49:20,581 - INFO - aiogram.event - Update id=933186829 is handled. Duration 981 ms by bot id=8350144188
+2026-10-19 23:49:27,890 - INFO - aiogram.event - Update id=933186830 is handled. Duration 863 ms by bot id=8350144188
+2026-10-19 23:49:40,905 - INFO - aiogram.event - Update id=933186831 is handled. Duration 1632 ms by bot id=8350144188
+2026-10-19 23:49:45,314 - ERROR - root - 🚨 Виникла помилка: Cannot resolve keyword 'promo_id' into field. Choices are: id, promotion, promotion_id, received_at, user, user_id
+Traceback (most recent call last):
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/middlewares/user_middleware.py", line 24, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/handlers/user_promos.py", line 56, in list_promos
+    is_claimed = await UserPromoLog.objects.filter(user_id=user.id, promo_id=promo.id).aexists()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1701, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1719, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1729, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1680, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1712, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1550, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1357, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/all/progi/Python/Awel/awel_shop/.venv/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1846, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'promo_id' into field. Choices are: id, promotion, promotion_id, received_at, user, user_id
+2026-10-19 23:49:45,708 - INFO - aiogram.event - Update id=933186832 is handled. Duration 786 ms by bot id=8350144188
+2026-10-19 23:50:28,143 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:50:28,143 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:50:28,143 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:52:11,815 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:52:11,958 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:52:12,006 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:52:16,244 - INFO - aiogram.event - Update id=933186833 is handled. Duration 1005 ms by bot id=8350144188
+2026-10-19 23:52:20,045 - INFO - aiogram.event - Update id=933186834 is handled. Duration 489 ms by bot id=8350144188
+2026-10-19 23:52:28,279 - INFO - aiogram.event - Update id=933186835 is handled. Duration 600 ms by bot id=8350144188
+2026-10-19 23:52:33,992 - INFO - aiogram.event - Update id=933186836 is handled. Duration 667 ms by bot id=8350144188
+2026-10-19 23:52:36,512 - INFO - aiogram.event - Update id=933186837 is handled. Duration 188 ms by bot id=8350144188
+2026-10-19 23:52:38,710 - INFO - aiogram.event - Update id=933186838 is handled. Duration 275 ms by bot id=8350144188
+2026-10-19 23:53:00,216 - INFO - aiogram.event - Update id=933186839 is handled. Duration 219 ms by bot id=8350144188
+2026-10-19 23:53:11,280 - INFO - aiogram.event - Update id=933186840 is handled. Duration 303 ms by bot id=8350144188
+2026-10-19 23:53:13,993 - INFO - aiogram.event - Update id=933186841 is handled. Duration 160 ms by bot id=8350144188
+2026-10-19 23:53:19,535 - INFO - aiogram.event - Update id=933186842 is handled. Duration 259 ms by bot id=8350144188
+2026-10-19 23:53:23,799 - INFO - aiogram.event - Update id=933186843 is handled. Duration 487 ms by bot id=8350144188
+2026-10-19 23:53:30,439 - INFO - aiogram.event - Update id=933186844 is handled. Duration 451 ms by bot id=8350144188
+2026-10-19 23:53:52,659 - INFO - aiogram.event - Update id=933186845 is handled. Duration 928 ms by bot id=8350144188
+2026-10-19 23:54:07,701 - INFO - aiogram.event - Update id=933186846 is handled. Duration 262 ms by bot id=8350144188
+2026-10-19 23:54:18,289 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-19 23:54:18,289 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-19 23:54:18,290 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-19 23:54:18,541 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-19 23:54:18,684 - INFO - aiogram.dispatcher - Start polling
+2026-10-19 23:54:18,684 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
