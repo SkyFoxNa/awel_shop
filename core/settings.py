@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Безпека
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-change-me-in-production')
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() in ("true", "1", "t")
 
-ALLOWED_HOSTS = ['*']  # На Koyeb можна буде звузити до вашого домену
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*.koyeb.app 127.0.0.1 localhost").split()
 
 # Список додатків
 INSTALLED_APPS = [
