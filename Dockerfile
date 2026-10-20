@@ -19,4 +19,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 # Команда за замовчуванням (Koyeb може її перевизначити через Run Command)
-CMD ["sh", "-c", "gunicorn config.wsgi:application --workers 1 --bind 0.0.0.0:${PORT:-8000}"]
+CMD ["sh", "-c", "gunicorn core.wsgi:application --workers 1 --bind 0.0.0.0:${PORT:-8000}"]
