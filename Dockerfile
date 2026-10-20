@@ -18,5 +18,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Копіюємо увесь код проєкту
 COPY . .
 
+# Збір статики під час збірки
+RUN python manage.py collectstatic --noinput
+
 # Команда за замовчуванням (Koyeb може її перевизначити через Run Command)
 CMD ["sh", "-c", "gunicorn core.wsgi:application --workers 1 --bind 0.0.0.0:${PORT:-8000}"]
