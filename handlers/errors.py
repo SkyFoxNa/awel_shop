@@ -2,6 +2,7 @@ import logging
 import traceback
 from aiogram import Router, Bot, html
 from aiogram.types import ErrorEvent
+from django.db import connection  # <-- 1. Імпортуємо connection
 
 from shop.models import User
 
@@ -22,6 +23,12 @@ async def get_admins_ids():
 @router.errors()
 async def global_error_handler(event: ErrorEvent, bot: Bot):
     logging.error(f"🚨 Виникла помилка: {event.exception}", exc_info=True)
+
+    # 2. Закриваємо потенційно закрите з'єднання перед новими запитами до БД
+    try:
+        connection.close()
+    except Exception as db_err:
+        logging.error(f"Помилка при закритті з'єднання з БД: {db_err}")
 
     # 1. Отримуємо ID адмінів
     admin_ids = await get_admins_ids()
