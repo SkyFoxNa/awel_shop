@@ -1,10 +1,9 @@
 import os
 import io
+import json
 import logging
 from dotenv import load_dotenv
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 
@@ -13,35 +12,37 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-CREDENTIALS_FILE = 'credentials.json'
-TOKEN_FILE = 'token.json'
 PARENT_FOLDER_ID = os.getenv("PARENT_FOLDER_ID")
 
 
 class GoogleDriveHandler:
     def __init__(self):
         self.creds = None
-        if os.path.exists(TOKEN_FILE):
-            self.creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
 
-        if not self.creds or not self.creds.valid:
-            if self.creds and self.creds.expired and self.creds.refresh_token:
-                try:
-                    self.creds.refresh(Request())
-                except Exception as e:
-                    logger.error(f"🔄 Помилка оновлення токена Google Drive: {e}")
-                    if os.path.exists(TOKEN_FILE):
-                        os.remove(TOKEN_FILE)
+        # 1. Шукаємо JSON у змінній середовища (для Koyeb / продакшену)
+        google_creds_json = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
 
-                    if os.path.exists(CREDENTIALS_FILE):
-                        flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-                        self.creds = flow.run_local_server(port=0)
-            elif os.path.exists(CREDENTIALS_FILE):
-                flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-                self.creds = flow.run_local_server(port=0)
+        if google_creds_json:
+            try:
+                creds_dict = json.loads(google_creds_json)
+                self.creds = service_account.Credentials.from_service_account_info(
+                    creds_dict, scopes=SCOPES
+                )
+            except Exception as e:
+                logger.error(f"❌ Помилка парсингу GOOGLE_SERVICE_ACCOUNT_JSON: {e}")
+
+        # 2. Якщо змінної немає, перевіряємо локальний файл service_account.json (для розробки на ПК)
+        elif os.path.exists("service_account.json"):
+            try:
+                self.creds = service_account.Credentials.from_service_account_file(
+                    "service_account.json", scopes=SCOPES
+                )
+            except Exception as e:
+                logger.error(f"❌ Помилка завантаження service_account.json: {e}")
 
         if not self.creds:
-            raise ValueError("Не вдалося ініціалізувати Google Drive: відсутній токен або credentials.json")
+            raise ValueError(
+                "Не вдалося ініціалізувати Google Drive: відсутні дані сервісного акаунта (GOOGLE_SERVICE_ACCOUNT_JSON або service_account.json)")
 
         self.service = build('drive', 'v3', credentials=self.creds)
         self.photo_folder_id = self._get_or_create_folder("Photo", PARENT_FOLDER_ID)
