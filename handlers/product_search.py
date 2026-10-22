@@ -54,17 +54,27 @@ async def safe_send_photo(event, p_code, photo_record, caption, reply_markup):
     except TelegramBadRequest as e:
         if "wrong file identifier" in str(e).lower() or "file_id" in str(e).lower():
             if photo_record.photo_name:
-                clean_name = photo_record.photo_name.split('.')[0]
-                file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
-                if file_data:
-                    f = BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
-                    msg = await (event.answer_photo if isinstance(event, Message) else event.message.answer_photo)(
-                        photo=f, caption=caption, reply_markup=reply_markup, parse_mode="HTML"
-                    )
-                    new_id = msg.photo[-1].file_id
-                    photo_record.tg_file_id = new_id
-                    await photo_record.asave()
-                    return msg
+                # Перевіряємо, чи ініціалізований Google Drive
+                global drive
+                if drive is None:
+                    try:
+                        from utils.drive_utils import GoogleDriveHandler
+                        drive = GoogleDriveHandler()
+                    except Exception:
+                        pass
+
+                if drive is not None:
+                    clean_name = photo_record.photo_name.split('.')[0]
+                    file_data = await asyncio.to_thread(drive.download_file_by_name, p_code, clean_name)
+                    if file_data:
+                        f = BufferedInputFile(file_data.read(), filename=f"{clean_name}.png")
+                        msg = await (event.answer_photo if isinstance(event, Message) else event.message.answer_photo)(
+                            photo=f, caption=caption, reply_markup=reply_markup, parse_mode="HTML"
+                        )
+                        new_id = msg.photo[-1].file_id
+                        photo_record.tg_file_id = new_id
+                        await photo_record.asave()
+                        return msg
 
     return await (event.answer if isinstance(event, Message) else event.message.answer)(
         text=f"🖼 <i>(Помилка фото)</i>\n\n{caption}", reply_markup=reply_markup, parse_mode="HTML"

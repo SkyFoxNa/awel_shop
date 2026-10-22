@@ -2,7 +2,8 @@ import logging
 import traceback
 from aiogram import Router, Bot, html
 from aiogram.types import ErrorEvent
-from django.db import connection  # <-- 1. Імпортуємо connection
+from asgiref.sync import sync_to_async  # <-- Додати імпорт
+from django.db import connection
 
 from shop.models import User
 
@@ -24,9 +25,9 @@ async def get_admins_ids():
 async def global_error_handler(event: ErrorEvent, bot: Bot):
     logging.error(f"🚨 Виникла помилка: {event.exception}", exc_info=True)
 
-    # 2. Закриваємо потенційно закрите з'єднання перед новими запитами до БД
+    # 2. Безпечно закриваємо з'єднання в асинхронному контексті
     try:
-        connection.close()
+        await sync_to_async(connection.close)()
     except Exception as db_err:
         logging.error(f"Помилка при закритті з'єднання з БД: {db_err}")
 
