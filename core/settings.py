@@ -79,6 +79,7 @@ if DATABASE_URL:
         'default': dj_database_url.parse(
             DATABASE_URL,
             conn_max_age=0,
+            conn_health_checks=True,
             # ssl_require НЕ передаємо окремим параметром,
             # оскільки sslmode вже є в самому URL
         )
@@ -88,6 +89,7 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
+            'CONN_HEALTH_CHECKS': True,
         }
     }
 

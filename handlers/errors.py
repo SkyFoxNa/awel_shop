@@ -2,8 +2,6 @@ import logging
 import traceback
 from aiogram import Router, Bot, html
 from aiogram.types import ErrorEvent
-from asgiref.sync import sync_to_async  # <-- Додати імпорт
-from django.db import connection
 
 from shop.models import User
 
@@ -25,11 +23,8 @@ async def get_admins_ids():
 async def global_error_handler(event: ErrorEvent, bot: Bot):
     logging.error(f"🚨 Виникла помилка: {event.exception}", exc_info=True)
 
-    # 2. Безпечно закриваємо з'єднання в асинхронному контексті
-    try:
-        await sync_to_async(connection.close)()
-    except Exception as db_err:
-        logging.error(f"Помилка при закритті з'єднання з БД: {db_err}")
+    # Django з conn_health_checks сам перепідключиться до БД при наступному запиті,
+    # тому ручне закриття connection.close() більше не потрібне і не викликатиме конфліктів потоків.
 
     # 1. Отримуємо ID адмінів
     admin_ids = await get_admins_ids()
