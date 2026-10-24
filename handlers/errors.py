@@ -2,6 +2,8 @@ import logging
 import traceback
 from aiogram import Router, Bot, html
 from aiogram.types import ErrorEvent
+from asgiref.sync import sync_to_async
+from django.db import close_old_connections
 
 from shop.models import User
 
@@ -10,9 +12,12 @@ router = Router()
 
 async def get_admins_ids():
     """Шукає в базі через Django ORM усіх користувачів з ролями admin або owner."""
+    # Гарантовано закриваємо старе з'єднання перед запитом у глобальному обробнику
+    await sync_to_async(close_old_connections)()
+
     admin_ids = []
     async for user_id in User.objects.filter(
-        roles__name__in=["admin", "owner"]
+            roles__name__in=["admin", "owner"]
     ).values_list('user_id', flat=True).distinct():
         admin_ids.append(user_id)
 

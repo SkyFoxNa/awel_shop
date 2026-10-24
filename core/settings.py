@@ -80,6 +80,7 @@ if DATABASE_URL:
             DATABASE_URL,
             conn_max_age=0,
             conn_health_checks=True,
+            options='-c statement_timeout=30000',
             # ssl_require НЕ передаємо окремим параметром,
             # оскільки sslmode вже є в самому URL
         )

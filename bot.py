@@ -3,6 +3,9 @@ import asyncio
 import logging
 from dotenv import load_dotenv
 
+from middlewares.db_middleware import DatabaseMiddleware
+
+
 # 1. Завантажуємо .env змінні
 load_dotenv()
 
@@ -40,6 +43,9 @@ async def main():
     # 2. Реєструємо Middleware
     # dp.update.middleware(ErrorMiddleware())  # Ловить помилки
     dp.update.middleware(UserMiddleware())     # Створення/перевірка юзера у Django ORM
+
+    # Приклад реєстрації в dp (dispatcher):
+    dp.update.middleware(DatabaseMiddleware())
 
     # 3. Підключаємо роутери
     for r in routers:
