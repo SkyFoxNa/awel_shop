@@ -11946,3 +11946,15 @@ django.db.utils.DatabaseError: DatabaseWrapper objects created in a thread can o
 2026-10-25 16:09:18,898 - WARNING - aiogram.dispatcher - Received SIGINT signal
 2026-10-25 16:09:18,899 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
 2026-10-25 16:09:18,899 - INFO - aiogram.dispatcher - Polling stopped
+2026-10-25 16:10:14,146 - INFO - root - 🚀 Бот AWEL Shop успішно запущений (Django ORM)...
+2026-10-25 16:10:14,286 - INFO - aiogram.dispatcher - Start polling
+2026-10-25 16:10:14,340 - INFO - aiogram.dispatcher - Run polling for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-25 16:18:01,148 - INFO - aiogram.event - Update id=933187004 is handled. Duration 1141 ms by bot id=8350144188
+2026-10-25 16:28:14,178 - INFO - aiogram.event - Update id=933187005 is handled. Duration 2550 ms by bot id=8350144188
+2026-10-25 17:00:13,491 - INFO - aiogram.event - Update id=933187006 is handled. Duration 2774 ms by bot id=8350144188
+2026-10-25 17:00:17,494 - INFO - aiogram.event - Update id=933187007 is handled. Duration 875 ms by bot id=8350144188
+2026-10-25 17:00:19,066 - INFO - aiogram.event - Update id=933187008 is handled. Duration 487 ms by bot id=8350144188
+2026-10-25 17:00:28,545 - INFO - aiogram.event - Update id=933187009 is handled. Duration 1897 ms by bot id=8350144188
+2026-10-25 17:00:35,591 - WARNING - aiogram.dispatcher - Received SIGINT signal
+2026-10-25 17:00:35,627 - INFO - aiogram.dispatcher - Polling stopped for bot @awel_shop_bot id=8350144188 - 'Автокрамниця'
+2026-10-25 17:00:35,630 - INFO - aiogram.dispatcher - Polling stopped

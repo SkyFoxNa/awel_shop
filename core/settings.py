@@ -62,8 +62,6 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # dj_database_url автоматично перетворить postgresql+asyncpg:// в потрібний формат для Django
 # core/settings.py
 
-# core/settings.py
-
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
