@@ -67,23 +67,26 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
-    # 1. Замінюємо асинхронний драйвер на стандартний для Django
     if "postgresql+asyncpg://" in DATABASE_URL:
         DATABASE_URL = DATABASE_URL.replace("postgresql+asyncpg://", "postgresql://")
 
-    # 2. Замінюємо ?ssl=require на ?sslmode=require для psycopg2
     if "?ssl=require" in DATABASE_URL:
         DATABASE_URL = DATABASE_URL.replace("?ssl=require", "?sslmode=require")
 
+    # 1. Парсимо URL без зайвих параметрів у parse()
+    db_config = dj_database_url.parse(
+        DATABASE_URL,
+        conn_max_age=0,
+        conn_health_checks=True,
+    )
+
+    # 2. Додаємо OPTIONS для PostgreSQL окремо
+    db_config['OPTIONS'] = {
+        'options': '-c statement_timeout=30000'
+    }
+
     DATABASES = {
-        'default': dj_database_url.parse(
-            DATABASE_URL,
-            conn_max_age=0,
-            conn_health_checks=True,
-            options='-c statement_timeout=30000',
-            # ssl_require НЕ передаємо окремим параметром,
-            # оскільки sslmode вже є в самому URL
-        )
+        'default': db_config
     }
 else:
     DATABASES = {
