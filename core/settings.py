@@ -73,20 +73,12 @@ if DATABASE_URL:
     if "?ssl=require" in DATABASE_URL:
         DATABASE_URL = DATABASE_URL.replace("?ssl=require", "?sslmode=require")
 
-    # 1. Парсимо URL без зайвих параметрів у parse()
-    db_config = dj_database_url.parse(
-        DATABASE_URL,
-        conn_max_age=0,
-        conn_health_checks=True,
-    )
-
-    # 2. Додаємо OPTIONS для PostgreSQL окремо
-    db_config['OPTIONS'] = {
-        'options': '-c statement_timeout=30000'
-    }
-
     DATABASES = {
-        'default': db_config
+        'default': dj_database_url.parse(
+            DATABASE_URL,
+            conn_max_age=0,
+            conn_health_checks=True,
+        )
     }
 else:
     DATABASES = {
