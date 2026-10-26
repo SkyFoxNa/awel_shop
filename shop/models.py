@@ -175,6 +175,9 @@ class ProductPhoto(models.Model):
         verbose_name = _("Фото товару")
         verbose_name_plural = _("Фото товарів")
 
+    def __str__(self):
+        return f"{self.photo_name} (Товар: {self.product_id})"
+
 
 class ProductStock(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, to_field="code", db_column="product_code",

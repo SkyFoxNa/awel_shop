@@ -60,6 +60,7 @@ async def main():
             logging.info("🚀 Бот AWEL Shop успішно запущений (Django ORM)...")
             await bot.delete_webhook(drop_pending_updates=True)
             await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
+            # await dp.start_polling(bot, drop_pending_updates=True)
         except Exception as e:
             logging.critical(f"Критична помилка, рестарт через 10 сек: {e}")
             await bot.session.close()
