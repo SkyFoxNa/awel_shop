@@ -148,6 +148,7 @@ class Product(models.Model):
     category = models.TextField(_("Категорія"), blank=True, null=True)
     is_package = models.BooleanField(_("Це фасування"), default=False)
     is_sticker = models.BooleanField(_("Це наклейка"), default=False)
+    is_boxing = models.BooleanField(_("Це тара"), default=False)  # <-- Додали нове поле
     info = models.TextField(_("Інформація/Опис"), blank=True, null=True)
     url = models.TextField(_("Посилання на сайт"), blank=True, null=True)
     tiktok_url = models.CharField(_("TikTok URL"), max_length=500, blank=True, null=True)
@@ -199,7 +200,17 @@ class ProductStock(models.Model):
 class ProductComponent(models.Model):
     parent_code = models.ForeignKey(Product, on_delete=models.CASCADE, to_field="code", db_column="parent_code",
                                     related_name="components", verbose_name=_("Основний товар"))
-    component_code = models.CharField(_("Код компонента"), max_length=30)
+
+    # Робимо ForeignKey на Product
+    component_code = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        to_field="code",
+        db_column="component_code",
+        related_name="used_as_components",
+        verbose_name=_("Компонент")
+    )
+
     quantity = models.DecimalField(_("Кількість"), max_digits=10, decimal_places=2, default=1.0)
     is_boxing = models.BooleanField(_("Упаковка"), default=False)
     is_sticker = models.BooleanField(_("Наклейка"), default=False)
@@ -208,6 +219,9 @@ class ProductComponent(models.Model):
         db_table = "product_components"
         verbose_name = _("Компонент комплекту")
         verbose_name_plural = _("Комплектуючі")
+
+    def __str__(self):
+        return f"Компонент {self.component_code_id} (Кількість: {self.quantity})"
 
 
 class ProductAnalogue(models.Model):
