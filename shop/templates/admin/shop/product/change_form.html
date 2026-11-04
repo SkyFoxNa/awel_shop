@@ -1,0 +1,54 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_modify %}
+
+{% block content %}
+    {{ block.super }}
+
+    <script type="text/javascript">
+        (function() {
+            document.addEventListener("DOMContentLoaded", function() {
+                var form = document.getElementById('product_form');
+                if (!form) return;
+
+                // 1. Автоматичне переставлення блоків у вашому порядку
+                var targetOrderClasses = [
+                    '.product-photos-inline',
+                    '.product-main-info',
+                    '.product-stocks-inline',
+                    '.product-components-inline',
+                    '.product-boxing-inline',
+                    '.product-sticker-inline',
+                    '.product-type-properties',
+                    '.product-external-links',
+                    '.product-analogues-inline'
+                ];
+
+                targetOrderClasses.forEach(function(selector) {
+                    var el = document.querySelector(selector);
+                    if (el) {
+                        var containerBlock = el.closest('fieldset') || el.closest('.inline-group') || el;
+                        form.appendChild(containerBlock);
+                    }
+                });
+
+                // 2. Примусове збереження режиму "Зберегти та продовжити редагування" для всіх кнопках збереження
+                var saveButtons = form.querySelectorAll('input[type="submit"]');
+                saveButtons.forEach(function(button) {
+                    button.addEventListener('click', function(e) {
+                        // Якщо це звичайна кнопка "Зберегти" (не _saveasnew і не _addanother),
+                        // додаємо приховане поле _continue, щоб Django завжди залишав нас на цій же сторінці
+                        if (this.name === '_save') {
+                            e.preventDefault();
+                            var continueInput = document.createElement('input');
+                            continueInput.type = 'hidden';
+                            continueInput.name = '_continue';
+                            continueInput.value = '1';
+                            form.appendChild(continueInput);
+                            form.submit();
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+{% endblock %}

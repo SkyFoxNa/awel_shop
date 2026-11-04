@@ -1,32 +1,31 @@
-/* static/admin/css/custom_order.css */
+/*
+ * static/admin/css/custom_order.css
+ *
+ * Стилі сторінки редагування товару в Django Admin.
+ * Порядок секцій задається файлом product_order.js.
+ */
+
 #product_form {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
-/* Перше місце — Фото товарів (ProductPhotoInline) */
-#productphoto_set-group {
-    order: 1;
+/* Основні секції форми та inline-блоки */
+#product_form > fieldset.module,
+#product_form > .inline-group {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-/* Друге місце — Основна інформація (fieldset) */
-#product_form > fieldset:nth-of-type(1) {
-    order: 2;
+/* Таблиці комплектуючих не повинні виходити за межі секції */
+#product_form .inline-group table {
+    width: 100%;
 }
 
-/* Третє місце — Залишки та ціни */
-#productstock_set-group {
-    order: 3;
+/* Дозволяємо довгим назвам і кодам переноситися */
+#product_form .inline-group td,
+#product_form .inline-group th {
+    overflow-wrap: anywhere;
 }
-
-/* Четверте, п'яте, шосте — Комплектуючі */
-#productcomponent_set-group { order: 4; }
-#productboxinginline_set-group, div[id*="productboxing"] { order: 5; }
-#productstickerinline_set-group, div[id*="productsticker"] { order: 6; }
-
-/* Сьоме та восьме місце — Тип та Посилання */
-#product_form > fieldset:nth-of-type(2) { order: 7; }
-#product_form > fieldset:nth-of-type(3) { order: 8; }
-
-/* Дев'яте місце — Аналоги */
-#productanalogue_set-group { order: 9; }
