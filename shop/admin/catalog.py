@@ -1,9 +1,9 @@
 # shop/admin/catalog.py
 
 from django import forms
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.urls import reverse
-from django.utils.html import format_html, format_html_join
+from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 
@@ -45,17 +45,41 @@ class ProductPhotoInline(admin.TabularInline):
 
 
 # ==============================================================================
-# ЗАЛИШКИ ТА ЦІНИ
+# ЗАЛИШКИ ТА ЦІНИ (ЗІ СПАКОВАНИМ ТОВАРОМ)
 # ==============================================================================
+
+class ProductStockForm(forms.ModelForm):
+    class Meta:
+        model = ProductStock
+        fields = "__all__"
+
+    def clean(self):
+        cleaned_data = super().clean()
+        balance = cleaned_data.get("balance") or 0
+        packaged_balance = cleaned_data.get("packaged_balance") or 0
+
+        if balance < packaged_balance:
+            cleaned_data["balance"] = packaged_balance
+            self.data = self.data.copy()
+            prefix = self.prefix
+            self.data[f"{prefix}-balance"] = packaged_balance
+            self.auto_adjusted = True
+            self.old_balance = balance
+            self.new_balance = packaged_balance
+
+        return cleaned_data
+
 
 class ProductStockInline(admin.TabularInline):
     model = ProductStock
+    form = ProductStockForm
     extra = 1
     classes = ("product-stocks-inline",)
     fields = (
         "location",
         "price",
         "balance",
+        "packaged_balance",
         "storage_address",
         "is_active",
     )
@@ -63,14 +87,42 @@ class ProductStockInline(admin.TabularInline):
     verbose_name = _("Залишок та ціну")
     verbose_name_plural = _("📊 ЗАЛИШКИ ТА ЦІНИ ПО СКЛАДАХ")
 
+    def save_formset(self, request, form, formset, change):
+        instances = formset.save(commit=False)
+        for form_inline in formset.forms:
+            if not form_inline.cleaned_data or form_inline.cleaned_data.get("DELETE"):
+                continue
+
+            instance = form_inline.instance
+            balance = form_inline.cleaned_data.get("balance", 0)
+            packaged_balance = form_inline.cleaned_data.get("packaged_balance", 0)
+
+            if balance < packaged_balance or getattr(form_inline, "auto_adjusted", False):
+                instance.balance = packaged_balance
+                location_name = instance.location.name if instance.location else "Склад"
+
+                messages.warning(
+                    request,
+                    f"⚠️ Увага ({location_name}): Загальний залишок не може бути меншим за спакований! "
+                    f"Загальну кількість було автоматично збільшено з {getattr(form_inline, 'old_balance', balance)} шт. "
+                    f"до {packaged_balance} шт."
+                )
+
+            instance.save()
+
+        for obj in formset.deleted_objects:
+            obj.delete()
+
+        formset.save_m2m()
+
 
 # ==============================================================================
-# БАЗОВИЙ INLINE ДЛЯ КОМПЛЕКТУЮЧИХ
+# БАЗОВИЙ INLINE ДЛЯ КОМПЛЕКТУЮЧИХ (ПОВЕРНУТО АВТОДОПОВНЕННЯ)
 # ==============================================================================
 
 class BaseComponentInline(admin.TabularInline):
     extra = 1
-    autocomplete_fields = ("component_code",)
+    autocomplete_fields = ("component_code",)  # <-- ПОВЕРНУТО ШВИДКИЙ ПОШУК SELECT2
 
     readonly_fields = (
         "component_thumbnail",
@@ -199,7 +251,7 @@ class ProductStickerInline(BaseComponentInline):
     classes = ("product-sticker-inline",)
 
     verbose_name = _("Наліпку")
-    verbose_name_plural = _("🏷 НАЛІПКА КОМПЛЕКТУ")
+    verbose_name_plural = _("🏷 НАЛІПКА КОМПЛЕКТУ (Враховує вже надруковані)")
 
     def get_queryset(self, request):
         return super().get_queryset(request).filter(is_sticker=True)
@@ -234,6 +286,7 @@ class ProductAdmin(admin.ModelAdmin):
         "catalog_number",
         "category",
         "get_stocks_summary",
+        "printed_stickers_count",
         "is_package",
         "is_sticker",
         "is_boxing",
@@ -275,11 +328,12 @@ class ProductAdmin(admin.ModelAdmin):
             ),
             "classes": ("product-main-info",),
         }),
-        (_("7. Тип та властивості"), {
+        (_("7. Тип та властивості (Включно з наліпками)"), {
             "fields": (
                 "is_package",
                 "is_sticker",
                 "is_boxing",
+                "printed_stickers_count",
             ),
             "classes": ("product-type-properties",),
         }),
@@ -304,7 +358,7 @@ class ProductAdmin(admin.ModelAdmin):
             }
         )
 
-    @admin.display(description=_("Наявність на складах"))
+    @admin.display(description=_("Наявність на складах (Загальний / Спакований)"))
     def get_stocks_summary(self, obj):
         stocks = list(obj.stocks.all())
         if not stocks:
@@ -313,10 +367,15 @@ class ProductAdmin(admin.ModelAdmin):
         result = []
         for stock in stocks:
             address = stock.storage_address or "—"
-            if stock.balance > 0:
-                result.append(format_html("<b>{}</b>: {} шт. (📍 {})", stock.location.name, stock.balance, address))
-            else:
-                result.append(format_html("{}: відсутній (📍 {})", stock.location.name, address))
+            result.append(
+                format_html(
+                    "<b>{}</b>: заг. <b>{} шт.</b> (спак. <b>{} шт.</b>) | 📍 {}",
+                    stock.location.name,
+                    stock.balance,
+                    stock.packaged_balance,
+                    address
+                )
+            )
 
         return mark_safe("<br>".join(result))
 

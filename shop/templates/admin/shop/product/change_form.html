@@ -2,6 +2,11 @@
 {% load i18n admin_modify %}
 
 {% block content %}
+    <!-- Баннер для сповіщення про коригування залишків -->
+    <div id="stock-warning-banner" style="display: none; background: #fff3cd; color: #856404; padding: 12px; margin-bottom: 15px; border: 1px solid #ffeeba; border-radius: 4px; font-weight: bold;">
+        ⚠️ <span id="stock-warning-text"></span>
+    </div>
+
     {{ block.super }}
 
     <script type="text/javascript">
@@ -10,7 +15,7 @@
                 var form = document.getElementById('product_form');
                 if (!form) return;
 
-                // 1. Автоматичне переставлення блоків у вашому порядку
+                // 1. Упорядкування блоків у strict-порядку
                 var targetOrderClasses = [
                     '.product-photos-inline',
                     '.product-main-info',
@@ -31,12 +36,55 @@
                     }
                 });
 
-                // 2. Примусове збереження режиму "Зберегти та продовжити редагування" для всіх кнопках збереження
+                // 2. Перевірка, підсвічування та коригування залишків при збереженні (Submit)
+                form.addEventListener('submit', function(e) {
+                    var stockRows = document.querySelectorAll('.product-stocks-inline tr.form-row');
+                    var adjustedMessages = [];
+
+                    stockRows.forEach(function(row) {
+                        var balanceInput = row.querySelector('input[name$="-balance"]');
+                        var packagedInput = row.querySelector('input[name$="-packaged_balance"]');
+                        var locationSelect = row.querySelector('select[name$="-location"]');
+
+                        if (balanceInput && packagedInput) {
+                            var balance = parseFloat(balanceInput.value.replace(',', '.')) || 0;
+                            var packaged = parseFloat(packagedInput.value.replace(',', '.')) || 0;
+
+                            if (balance < packaged) {
+                                // Автоматично вирівнюємо значення
+                                balanceInput.value = packaged;
+
+                                // ДИНАМІЧНЕ ПІДСВІЧУВАННЯ ПОЛЯ (жовто-оранжевий відтінок)
+                                balanceInput.style.backgroundColor = "#fff3cd";
+                                balanceInput.style.borderColor = "#ffeeba";
+                                balanceInput.style.transition = "background-color 0.5s ease";
+
+                                var locName = "Склад";
+                                if (locationSelect && locationSelect.selectedIndex >= 0) {
+                                    locName = locationSelect.options[locationSelect.selectedIndex].text || "Склад";
+                                }
+
+                                adjustedMessages.push(locName + ": Загальний залишок збільшено до " + packaged + " шт. (через спакований)");
+                            }
+                        }
+                    });
+
+                    // Якщо є зміни — показуємо глобальний баннер угорі
+                    if (adjustedMessages.length > 0) {
+                        var banner = document.getElementById('stock-warning-banner');
+                        var bannerText = document.getElementById('stock-warning-text');
+                        if (banner && bannerText) {
+                            bannerText.innerText = "Увага! " + adjustedMessages.join(' | ');
+                            banner.style.display = 'block';
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }
+                });
+
+                // 3. Збереження режиму продовження редагування
                 var saveButtons = form.querySelectorAll('input[type="submit"]');
                 saveButtons.forEach(function(button) {
                     button.addEventListener('click', function(e) {
-                        // Якщо це звичайна кнопка "Зберегти" (не _saveasnew і не _addanother),
-                        // додаємо приховане поле _continue, щоб Django завжди залишав нас на цій же сторінці
                         if (this.name === '_save') {
                             e.preventDefault();
                             var continueInput = document.createElement('input');
@@ -44,6 +92,8 @@
                             continueInput.name = '_continue';
                             continueInput.value = '1';
                             form.appendChild(continueInput);
+
+                            form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
                             form.submit();
                         }
                     });

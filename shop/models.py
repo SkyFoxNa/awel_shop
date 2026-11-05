@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
 # ==============================================================================
@@ -148,6 +149,7 @@ class Product(models.Model):
     category = models.TextField(_("Категорія"), blank=True, null=True)
     is_package = models.BooleanField(_("Це фасування"), default=False)
     is_sticker = models.BooleanField(_("Це наклейка"), default=False)
+    printed_stickers_count = models.PositiveIntegerField(_("Надруковано наліпок"), default=0)  # <-- НОВЕ ПОЛЕ
     is_boxing = models.BooleanField(_("Це тара"), default=False)  # <-- Додали нове поле
     info = models.TextField(_("Інформація/Опис"), blank=True, null=True)
     url = models.TextField(_("Посилання на сайт"), blank=True, null=True)
@@ -186,7 +188,8 @@ class ProductStock(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE, db_column="location_id",
                                  verbose_name=_("Локація"))
     price = models.DecimalField(_("Ціна"), max_digits=10, decimal_places=2, default=0.0)
-    balance = models.DecimalField(_("Залишок"), max_digits=10, decimal_places=2, default=0.0)
+    balance = models.DecimalField(_("Загальний залишок"), max_digits=10, decimal_places=2, default=0.0)
+    packaged_balance = models.DecimalField(_("Спакований залишок"), max_digits=10, decimal_places=2, default=0.0)
     storage_address = models.CharField(_("Адреса зберігання (комірка)"), max_length=50, blank=True, null=True)
     is_active = models.BooleanField(_("Активний"), default=True)
 
@@ -195,6 +198,12 @@ class ProductStock(models.Model):
         unique_together = ('product', 'location')
         verbose_name = _("Залишок/Ціна товару")
         verbose_name_plural = _("Залишки та ціни")
+
+    def save(self, *args, **kwargs):
+        # Якщо спакований залишок більший за загальний — автоматично підтягуємо загальний
+        if self.balance < self.packaged_balance:
+            self.balance = self.packaged_balance
+        super().save(*args, **kwargs)
 
 
 class ProductComponent(models.Model):
