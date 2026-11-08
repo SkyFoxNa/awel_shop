@@ -1,3 +1,4 @@
+# handlers/product_package.py
 import asyncio
 import logging
 from aiogram import Router, F, types
@@ -33,6 +34,7 @@ async def delete_kit_messages(callback: types.CallbackQuery, state: FSMContext):
 
 async def get_safe_photo_for_kit(product: Product):
     """Отримує фото для компонента (TG file_id або Google Drive)"""
+    # Використовуємо асинхронну перевірку наявності фото через заздалегідь завантажений кєш або запит
     photo_record = await product.photos.afirst()
     if not photo_record:
         return None
@@ -66,11 +68,11 @@ async def show_product_kit(callback: types.CallbackQuery, state: FSMContext):
     """
     parent_code = callback.data.replace("kit_", "")
 
-    # Отримуємо компоненти через Django ORM
+    # Отримуємо компоненти разом із пов'язаним товаром та його фото в одному запиті
     components = []
     qs = ProductComponent.objects.filter(
         parent_code=parent_code
-    ).order_by('is_boxing', 'is_sticker')
+    ).select_related('component_code').order_by('is_boxing', 'is_sticker')
 
     async for comp in qs:
         components.append(comp)
@@ -81,9 +83,8 @@ async def show_product_kit(callback: types.CallbackQuery, state: FSMContext):
     kit_msg_ids = []
 
     for comp in components:
-        try:
-            product = await Product.objects.prefetch_related('photos').aget(code=comp.component_code)
-        except Product.DoesNotExist:
+        product = comp.component_code  # Це вже готовий об'єкт Product завдяки select_related!
+        if not product:
             continue
 
         if comp.is_boxing:
