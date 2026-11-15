@@ -11,7 +11,7 @@ from shop.models import Product, User, Location, ProductPhoto
 from handlers.product_package import delete_kit_messages
 from utils.product_helper import get_product_display_data
 from utils.states import CatalogState
-from utils.drive_utils import drive
+from utils.drive_utils import drive, GoogleDriveHandler
 from keyboards.reply import BTN_CATALOG
 
 router = Router()

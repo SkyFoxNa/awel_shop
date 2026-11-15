@@ -88,3 +88,9 @@ class AddProductState(StatesGroup):
 class KitComponentAdd(StatesGroup):
     choosing_category = State()  # Вибір категорії
     choosing_product = State()   # Вибір конкретного товару з категорії
+
+
+class KitAddProcess(StatesGroup):
+    searching = State()         # Введення тексту пошуку товару/тари/наліпки
+    waiting_quantity = State()  # Очікування введення кількості (штук)
+    confirming = State()        # Підтвердження додавання (перегляд перед збереженням)

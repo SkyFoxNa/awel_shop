@@ -10,6 +10,7 @@ from .admin_users import router as admin_users_router
 from .admin_promos import router as admin_promos_router
 # from .admin_shares import router as admin_shares_router
 from .user_promos import router as user_promos_router
+from handlers.product_kit_add import router as product_kit_add_router
 from .errors import router as errors_router
 from .unknown_message import router as unknown_message_router
 
@@ -26,6 +27,7 @@ routers = [
     admin_promos_router,
     # admin_shares_router,
     user_promos_router,
+    product_kit_add_router,
     errors_router, # Завжди перед останній!
     unknown_message_router # Завжди останній!
 ]
