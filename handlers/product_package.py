@@ -94,11 +94,10 @@ async def send_kit_list(event: types.TelegramObject, parent_code: str, state: FS
         else:
             label = "⚙️ ТОВАР КОМПЛЕКТУ"
 
-        # Формуємо блок інформації про наявність та склади (так само, як у повній картці)
+        # Формуємо блок інформації про наявність та склади
         stock_lines = ["<b>📊 Наявність на складах:</b>"]
         current_stocks = {s.location_id: s async for s in product.stocks.all()}
 
-        # Отримуємо всі склади (Location)
         async for loc in Location.objects.all():
             stock_item = current_stocks.get(loc.id)
             addr = f" (📍 {stock_item.storage_address if stock_item and stock_item.storage_address else '—'})"
@@ -109,7 +108,6 @@ async def send_kit_list(event: types.TelegramObject, parent_code: str, state: FS
 
         stocks_text = "\n".join(stock_lines)
 
-        # Збираємо повний опис картки компонента
         caption = (
             f"<b>{label}</b>\n\n"
             f"🔹 Назва: <b>{product.name_ua}</b>\n"
@@ -134,7 +132,6 @@ async def send_kit_list(event: types.TelegramObject, parent_code: str, state: FS
                         photo=photo, caption=caption, reply_markup=builder.as_markup(), parse_mode="HTML"
                     )
                 except Exception:
-                    # Якщо file_id в Telegram застарів/пошкодився — відправляємо текстом без падіння
                     msg = await target.answer(
                         f"🖼 <i>(Недійсне фото)</i>\n\n{caption}",
                         reply_markup=builder.as_markup(),
@@ -154,7 +151,7 @@ async def send_kit_list(event: types.TelegramObject, parent_code: str, state: FS
         except Exception as e:
             logger.error(f"Error sending kit part {product.code}: {e}")
 
-    # Панель швидкого додавання та управління
+    # Панель управління додаванням
     add_builder = InlineKeyboardBuilder()
     add_builder.row(
         InlineKeyboardButton(text="➕ Додати товар", callback_data=f"add_kit_item:{parent_code}:product"),
@@ -201,7 +198,6 @@ async def delete_kit_component(callback: types.CallbackQuery, state: FSMContext)
     else:
         await callback.answer("❌ Компонент не знайдено.", show_alert=True)
 
-    # Оновлюємо список без мутації замороженого callback.data
     await send_kit_list(callback, parent_code, state)
 
 
