@@ -36,6 +36,13 @@
                     }
                 });
 
+                // Відновлюємо позицію скролу, якщо збереження було з інлайну
+                var savedScrollY = sessionStorage.getItem('product_admin_scroll_y');
+                if (savedScrollY) {
+                    window.scrollTo(0, parseInt(savedScrollY, 10));
+                    sessionStorage.removeItem('product_admin_scroll_y');
+                }
+
                 // 2. Перевірка, підсвічування та коригування залишків при збереженні (Submit)
                 form.addEventListener('submit', function(e) {
                     var stockRows = document.querySelectorAll('.product-stocks-inline tr.form-row');
@@ -51,10 +58,8 @@
                             var packaged = parseFloat(packagedInput.value.replace(',', '.')) || 0;
 
                             if (balance < packaged) {
-                                // Автоматично вирівнюємо значення
                                 balanceInput.value = packaged;
 
-                                // ДИНАМІЧНЕ ПІДСВІЧУВАННЯ ПОЛЯ (жовто-оранжевий відтінок)
                                 balanceInput.style.backgroundColor = "#fff3cd";
                                 balanceInput.style.borderColor = "#ffeeba";
                                 balanceInput.style.transition = "background-color 0.5s ease";
@@ -69,7 +74,6 @@
                         }
                     });
 
-                    // Якщо є зміни — показуємо глобальний баннер угорі
                     if (adjustedMessages.length > 0) {
                         var banner = document.getElementById('stock-warning-banner');
                         var bannerText = document.getElementById('stock-warning-text');
@@ -81,22 +85,83 @@
                     }
                 });
 
-                // 3. Збереження режиму продовження редагування
+                // 3. Збереження режиму продовження редагування для нижніх кнопок
                 var saveButtons = form.querySelectorAll('input[type="submit"]');
                 saveButtons.forEach(function(button) {
                     button.addEventListener('click', function(e) {
                         if (this.name === '_save') {
                             e.preventDefault();
-                            var continueInput = document.createElement('input');
-                            continueInput.type = 'hidden';
-                            continueInput.name = '_continue';
-                            continueInput.value = '1';
-                            form.appendChild(continueInput);
-
-                            form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
-                            form.submit();
+                            triggerSaveAndContinue();
                         }
                     });
+                });
+
+                // Універсальна функція відправки форми з прапорцем _continue
+                function triggerSaveAndContinue() {
+                    sessionStorage.setItem('product_admin_scroll_y', window.scrollY);
+
+                    var existingContinue = form.querySelector('input[name="_continue"]');
+                    if (!existingContinue) {
+                        var continueInput = document.createElement('input');
+                        continueInput.type = 'hidden';
+                        continueInput.name = '_continue';
+                        continueInput.value = '1';
+                        form.appendChild(continueInput);
+                    }
+
+                    form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+                    form.submit();
+                }
+
+                // 4. Додавання кнопки "Зберегти і продовжити редагування" в блоки комплектації
+                var kitInlineSelectors = [
+                    '.product-components-inline',
+                    '.product-boxing-inline',
+                    '.product-sticker-inline'
+                ];
+
+                kitInlineSelectors.forEach(function(selector) {
+                    var inlineEl = document.querySelector(selector);
+                    if (!inlineEl) return;
+
+                    var inlineGroup = inlineEl.closest('.inline-group') || inlineEl;
+                    var header = inlineGroup.querySelector('h2');
+                    if (!header) return;
+
+                    // Налаштовуємо flex-вирівнювання заголовка блоку
+                    header.style.display = 'flex';
+                    header.style.justifyContent = 'space-between';
+                    header.style.alignItems = 'center';
+
+                    var quickSaveBtn = document.createElement('button');
+                    quickSaveBtn.type = 'button';
+                    quickSaveBtn.innerText = '💾 Зберегти і продовжити редагування';
+                    quickSaveBtn.style.cssText = [
+                        'background: #417690',
+                        'color: #fff',
+                        'border: none',
+                        'border-radius: 4px',
+                        'padding: 5px 12px',
+                        'font-size: 12px',
+                        'font-weight: 600',
+                        'cursor: pointer',
+                        'text-transform: none',
+                        'letter-spacing: normal'
+                    ].join(';');
+
+                    quickSaveBtn.addEventListener('mouseenter', function() {
+                        this.style.background = '#205067';
+                    });
+                    quickSaveBtn.addEventListener('mouseleave', function() {
+                        this.style.background = '#417690';
+                    });
+
+                    quickSaveBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        triggerSaveAndContinue();
+                    });
+
+                    header.appendChild(quickSaveBtn);
                 });
             });
         })();

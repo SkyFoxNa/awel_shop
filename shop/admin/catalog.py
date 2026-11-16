@@ -122,7 +122,7 @@ class ProductStockInline(admin.TabularInline):
 
 class BaseComponentInline(admin.TabularInline):
     extra = 1
-    autocomplete_fields = ("component_code",)  # <-- ПОВЕРНУТО ШВИДКИЙ ПОШУК SELECT2
+    autocomplete_fields = ("component_code",)
 
     readonly_fields = (
         "component_thumbnail",
@@ -378,6 +378,30 @@ class ProductAdmin(admin.ModelAdmin):
             )
 
         return mark_safe("<br>".join(result))
+
+
+    def save_formset(self, request, form, formset, change):
+        # Якщо це залишки — викликаємо власну логіку ProductStockInline
+        if formset.model == ProductStock:
+            for inline in self.get_inline_instances(request, form.instance):
+                if isinstance(inline, ProductStockInline):
+                    return inline.save_formset(request, form, formset, change)
+
+        instances = formset.save(commit=False)
+        for obj in instances:
+            if isinstance(obj, ProductComponent):
+                if formset.prefix.endswith("boxing") or "boxing" in formset.prefix:
+                    obj.is_boxing = True
+                    obj.is_sticker = False
+                elif formset.prefix.endswith("sticker") or "sticker" in formset.prefix:
+                    obj.is_boxing = False
+                    obj.is_sticker = True
+            obj.save()
+
+        for obj in formset.deleted_objects:
+            obj.delete()
+
+        formset.save_m2m()
 
 
 # ==============================================================================
