@@ -567,10 +567,17 @@ class IncomingOrder(models.Model):
         choices=IncomingOrderStatus.choices, default=IncomingOrderStatus.DRAFT
     )
 
+    # Хто створив документ (Хто вводив)
+    created_by = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name="created_incoming_orders", verbose_name=_("Хто створив (Ввів)")
+    )
+    # Хто провів / прийняв на складі
     accepted_by = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, blank=True,
-        related_name="accepted_incoming_orders", verbose_name=_("Хто прийняв")
+        related_name="accepted_incoming_orders", verbose_name=_("Хто прийняв (Провів)")
     )
+
     is_from_email = models.BooleanField(_("Завантажено з пошти"), default=False)
     is_manager_notified = models.BooleanField(_("Менеджера сповіщено"), default=False)
     note = models.TextField(_("Примітка"), blank=True, null=True)
